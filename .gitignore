@@ -1,0 +1,5 @@
+#Testing ignoreing a file
+aemmaGitIgnoreTest.txt
+
+#Ignoring Public Site Images
+/webDevelopment/images

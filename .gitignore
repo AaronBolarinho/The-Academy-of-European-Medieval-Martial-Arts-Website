@@ -34,5 +34,8 @@ aemmaGitIgnoreFileTest.txt
 #Ignoring Members Only Large Files
 /webDevelopment/members_only/twg
 
+#Ignoring Members Only Large Files
+/webDevelopment/notes.txt
+
 
 

@@ -1,5 +1,38 @@
 #Testing ignoreing a file
-aemmaGitIgnoreTest.txt
+aemmaGitIgnoreFileTest.txt
 
 #Ignoring Public Site Images
 /webDevelopment/images
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/archive/images
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/archive/video
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/armoury
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/content/arms_armour_collections
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/content/articles
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/content/bios
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/docs
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/images
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/publications
+
+#Ignoring Members Only Large Files
+/webDevelopment/members_only/twg
+
+
+

@@ -1,0 +1,4 @@
+<?php
+// ********** NOTE: this file contains the session save path value the online environment **********
+session_save_path("/home/users/web/b2211/nf.aemma/cgi-bin/tmp");
+?>

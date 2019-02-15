@@ -1,0 +1,210 @@
+/*
+$File:		menu_expanded.css
+$Author:	David M. Cvet
+$Date:		Nov 01, 2015
+$description:	This CSS incorporates responsive design in order to present menu items 
+$		differently on desktops versus mobile devices. This version has comments
+$		inserted for development purposes. It is also "fatter", so if changes are
+$		made to this one, it should be reflected in the compressed version.
+$----------------------------------------------------------------
+//		2015 ---------------
+//		nov 23	expanded version of menu.css
+//		dec 09:	the remaining background colour and colour of font after selecting a menu item for all sub-menu items is done in the menu.php!!!
+*/
+#menu_bar {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 1000;
+/*	background-color: #552e89;	*/			/* background colour of the menu <div> which goes across the screen, on which the menu resides (#552e89 == purple) */
+	background-color: #7c613e;				/* background colour of the menu <div> which goes across the screen, on which the menu resides (#cb9d61 == dark gold) */
+	}
+ul#css3menu {
+	padding:1px 1px 1px 0;					/* padding around the menu strip proper */
+	display:block;
+	font-size:0;
+	float:left;						/* placement of menu strip, pushed to the left of the menu div object */
+	margin:0 auto;						/* starting position (margin) of menu bar, "0 auto" pushes it to the left of the div objects */
+	z-index: 1000;
+	}
+ul#css3menu,ul#css3menu ul {
+	margin:0;
+	list-style:none;
+	background-color:#000;					/* colour of the background of the menu bar, appearing as a border around each menu item in the menu bar */
+/*background-image:url("../images/menu_bits/menubk.png");	/* the gradient image background for the main menu bar */
+	background-repeat:repeat;
+	border-width:0px;					/* width of border around menu bar */
+	border-style:solid;
+/*	border-color:#999999;*/
+/*	-moz-border-radius:4px;
+	-webkit-border-radius:4px;*/
+	border-radius:4px;					/* radius of the corners in the drop-down menu boxes */
+	}
+ul#css3menu ul {
+	display:none;
+	position:absolute;					/* absolute ensures that the drop-down overlaps the div object below it */
+	left:-1px;
+	top:98%;						/* % overlap of drop-down menu over the menu bar */
+	-moz-box-shadow:3.5px 3.5px 5px #4d4d4d;		/* characteristics of the box shadow of the drop-down menu boxes */
+	-webkit-box-shadow:3.5px 3.5px 5px #4d4d4d;		/* characteristics of the box shadow of the drop-down menu boxes */
+	box-shadow:3.5px 3.5px 5px #4d4d4d;			/* characteristics of the box shadow of the drop-down menu boxes */
+/*	padding:0 1px 1px;*/
+	}
+ul#css3menu li:hover>*{
+	display:block;}
+ul#css3menu li:hover{
+	position:relative;}
+ul#css3menu ul ul {
+	position:absolute;					/* absolute ensures that the second level of drop-down menu overlaps the div below it */
+	left:99%;						/* the overlap of the secondary drop-down menu in terms of how much of the arrow is covered */
+	top:-2px;
+	}
+ul#css3menu li{
+	display:block;white-space:nowrap;font-size:0;float:left;}
+ul#css3menu>li,ul#css3menu li {
+	margin:0 0 0 1px;					/* first value = width of bar (space) along the top of menu items, second value the 1px denotes the margin width of each menu item on left, the third on the right, in other words, the space between each menu item */
+	}
+ul#css3menu ul>li{
+	margin:1px 0 0;}
+ul#css3menu a:active, ul#css3menu a:focus{
+	outline-style:none;}
+ul#css3menu a {
+	display:block;
+	vertical-align:middle;
+	background-color:#7c613e;				/* the background colour of the menu strip */
+	background-image:url("../images/menu_bits/menubk.png");	/* background image of the menu strip, providing a gradient look to the strip (default look - not hovering) */
+	background-position:0 50%;
+	border-width:0px;
+	border-style:none;
+	border-color:#6655FF;
+	text-align:left;
+	text-decoration:none;					/* default text decoration within menu strip only */
+	padding:10px;
+	font-family: Arial, Helvetica, sans-serif;		/* style of font in the  menu strip and drop-down menus */
+/*	font-size: .78vw;					/* responsive size of font in the  menu strip and drop-down menus */
+	font-size: 12px;					/* fixed size of font in the  menu strip and drop-down menus */
+	font-weight:bold;					/* font weight of font in the  menu strip and drop-down menus */
+/*	font:bold 12px Arial,sans-serif;			/* size and style of fonts in the  menu strip and drop-down menus */
+	color:#cccccc;						/* default colour of the font in the menu strip only */
+	cursor:pointer;
+	}
+ul#css3menu ul li{
+	float:none;}
+ul#css3menu ul a{
+	text-align:left;}
+ul#css3menu li:hover>a,ul#css3menu li > a.pressed {
+/*	background-color:#c71e25;	*/			/* background colour of menu item in the menu strip when hovered over (#c71e25 == red)*/
+/*	background-color:#cb9d61;	*/			/* background colour of menu item in the menu strip when hovered over (#cb9d61 == gold)*/
+	background-color:#552e89;				/* background colour of menu item in the menu strip when hovered over (#552e89 == purple)*/
+	border-color:#665500;
+	border-style:none;
+	font-family: Arial, Helvetica, sans-serif;		/* style of font in the  menu strip and drop-down menus on hover */
+/*	font-size: .78vw;					/* responsive size of font in the  menu strip and drop-down menus on hover */
+	font-size: 12px;					/* fixed size of font in the  menu strip and drop-down menus */
+	font-weight:bold;					/* font weight of font in the  menu strip and drop-down menus on hover */
+	color:#ffffff;						/* colour of font on menu strip when hovered over */
+	text-decoration:none;					/* font decoration on menu strip when hovered over (NOT on the drop-down menu items!) */
+
+/*
+	background-image:url("../images/menu_bits/menubk.png");
+	background-position:0 100%;
+*/
+	}
+
+/* begin code for inserting mobile phone hide-away menu and icon */
+ul#css3menu > li.switch{
+	display:none;
+	cursor:pointer;
+	width:25px;
+	height:20px;						/* height of the hide-away menu icon bar across the window */
+	padding:8px;						/* padding around the 3-bar hide-away menu icon */
+	background-color:#000;					/* background colour of the menu bar on the smartphone version of the menu */
+	}
+ul#css3menu > li.switch:before{
+	content:"";
+	position:absolute;
+	display:block;
+	height:4px;						/* height of each bar of the hide-away menu icon */
+	width:25px;						/* width of each bar of the hide-away menu icon */
+	border-radius:4px;
+	background:#ffffff;					/* colour of background of the three bars of the hide-away menu icon */				
+	-moz-box-shadow:0 8px #ffffff, 0 16px #ffffff;
+	-webkit-box-shadow:0 8px #ffffff, 0 16px #ffffff;
+	box-shadow:0 8px #ffffff, 0 16px #ffffff;		/* colour of the bottom two bars of the hide-away menu icon */
+	}
+ul#css3menu > li.switch:hover:before{
+	background:#c71e25;					/* colour of background of the three bars of the hide-away menu icon when hovering */				
+	-moz-box-shadow:0 8px #c71e25, 0 16px #c71e25;
+	-webkit-box-shadow:0 8px #c71e25, 0 16px #c71e25;
+	box-shadow:0 8px #c71e25, 0 16px #c71e25;		/* colour of the bottom two bars of the hide-away menu icon */
+	}
+.c3m-switch-input{
+	display:none;}
+/* end code for inserting mobile phone hide-away menu */
+
+ul#css3menu img{
+	border:none;vertical-align:middle;margin-right:8px;}
+/*
+ul#css3menu ul img{
+	width:6px;height:12px;}
+ul#css3menu img.over{
+	display:none;}
+ul#css3menu li:hover > a img.def{
+	display:none;}
+ul#css3menu li:hover > a img.over{
+	display:inline;}
+*/
+/* for mobile devices, indicate menu items which have sub-menu-items by inserting a right-pointing arrow, but for anything larger, do NOT include the arrow */
+@media screen and (max-width: 512px) {
+	ul#css3menu span{display:block;overflow:visible;background-image:url("../images/menu_bits/arrow.gif");background-position:right center;background-repeat:no-repeat;padding-right:8px;}}
+@media screen and (min-width: 513px) {
+	ul#css3menu span{display:block;overflow:visible;background-position:right center;background-repeat:no-repeat;padding-right:0px;}}
+
+/* include an arrow pointing right for drop down menu-items which have a second level of menu items available */
+ul#css3menu ul span{background-image:url("../images/menu_bits/arrow.gif");padding-right:27px;}
+
+/* begin behaviour specs for main menu-strip items */
+ul#css3menu li.topfirst>a{height:16px;line-height:16px;border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;text-shadow:#000000 0px -1px 1px;}
+ul#css3menu li.topfirst:hover>a{line-height:16px;text-shadow:#3d3d3d 0px -1px 1px;}
+ul#css3menu li.topmenu>a{height:16px;line-height:16px;text-shadow:#000000 0px -1px 1px;}
+ul#css3menu li.topmenu:hover>a{line-height:16px;text-shadow:#3d3d3d 0px -1px 1px;}
+ul#css3menu li.toplast>a{height:16px;line-height:16px;border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;text-shadow:#000000 0px -1px 1px;}
+ul#css3menu li.toplast:hover>a{line-height:16px;text-shadow:#3d3d3d 0px -1px 1px;}
+
+ul#css3menu li.topmenu_logged_in{height:26px;line-height:16px;background-color:green;}
+ul#css3menu li.topmenu_logged_in:hover{line-height:16px;text-shadow:#3d3d3d 0px -1px 1px;background-color:#c71e25;background-image:url("../images/menu_bits/menubk.png");}
+ul#css3menu li.toplast_seclvl{height:26px;line-height:16px;border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;text-shadow:#000000 0px -1px 1px;background-color:purple;}
+ul#css3menu li.toplast_seclvl:hover{line-height:16px;text-shadow:#3d3d3d 0px -1px 1px;background-color:#c71e25;background-image:url("../images/menu_bits/menubk.png");}
+
+/* end behaviour specs for main menu-strip items */
+
+/* begin behaviour specs for drop-down menu items */
+ul#css3menu .submenu>li{margin:9px 0 0;}
+ul#css3menu .submenu{background-color:#444;background-image:none;border-width:1px;border-style:solid;border-color:#5A5E60;padding:0 9px 9px;z-index: 1001;}
+ul#css3menu li.subfirst>a{background-color:#444;background-image:none;border-width:0;border-style:none;padding:0;font:,;color:#cccccc;text-decoration:none;}
+ul#css3menu li.subfirst:hover>a{background-color:#444;background-image:none;border-style:none;font:'13px Arial,sans-serif","normal 13px Arial,sans-serif"';color:#c71e25;text-decoration:none;}
+ul#css3menu li.subitem>a{background-color:#444;background-image:none;border-width:1px 0 0 0;border-style:solid;border-color:#262626;padding:8px 0 0 0;font:,;color:#cccccc;text-decoration:none;}
+ul#css3menu li.subitem:hover>a{background-color:#444;background-image:none;border-style:solid;border-color:#262626;font:'13px Arial,sans-serif","normal 13px Arial,sans-serif"';color:#1F80AE;text-decoration:none;}
+/* end behaviour specs for drop-down menu items */
+
+/* for mobile devices, indicate menu items which have sub-menu-items by inserting a right-pointing arrow, but for anything larger, do NOT include the arrow */
+@media screen and (max-width: 512px) {
+	ul#css3menu span{
+		display:block;overflow:visible;background-image:url("<?=$path?>images/menu_bits/arrow.gif");background-position:right center;background-repeat:no-repeat;padding-right:8px;
+		}
+	ul#css3menu {
+		width: 100%;}
+	ul#css3menu > li {
+		display: none;position: relative;width: 100% !important;}
+	ul#css3menu > li.switch,.c3m-switch-input:checked + ul#css3menu > li + li {
+		display: block;}
+	ul#css3menu > li.switch > label {position: absolute;cursor: pointer;top: 0;left: 0;right: 0;bottom: 0;}
+	}
+@media screen and (min-width: 513px) {
+	ul#css3menu span{
+		display:block;overflow:visible;background-position:right center;background-repeat:no-repeat;padding-right:0px;
+		}
+	}
+/* end menu css code */
+

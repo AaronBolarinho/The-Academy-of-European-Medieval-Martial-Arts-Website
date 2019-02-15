@@ -1,0 +1,311 @@
+/*
+$File: default_page.css $
+$Author: David M. Cvet $
+$Updated: June 3, 2016 $
+*/
+
+/* 
+$ Academy of European Medieval Martial Arts (AEMMA) $
+$ color = #FFFFCC  - a chalk/yellow $
+$ color = #471d7f  - a purple - aemma colour $
+$ color = #e6347e - AEMMA red (like in the arms) $
+$ color = #35459c - OMSG blue
+$ syntax notes
+$----------------------------------------------------------------
+margin: [margin-top] [margin-right] [margin-bottom] [margin-left]
+
+*/
+
+/* HTML tag definitions */
+
+body	{
+	background-color: #FFFFFF;
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	color: #333333;
+/*	margin: 0px 0px 5px 0px;*/
+	margin: 0px 5px 5px 5px;
+/*	margin-top: 5px;*/
+/*	margin: 5px 10px 5px 10px;*/
+	}
+
+/* default linking style */
+a 		{font-size: 8.5pt; text-decoration: none;}
+a:link		{font-size: 8.5pt; color: #0066cc;}
+a:visited	{font-size: 8.5pt; color: gray;}
+a:active	{font-size: 8.5pt; color: yellow;}
+a:hover		{font-size: 8.5pt; color: red; text-decoration: underline;}
+/* end of default linking style */
+
+/* customized elements */
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+   opacity: 0.65;
+   }
+
+.box {
+  box-shadow: 5px 5px 5px 0px #444;
+}
+
+.library_title		{font-family: verdana,tahoma,sans-serif; font-size: 11.0pt; color: #461B7E; font-weight: bold;}
+.library_citation	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: #e6347e; font-weight: bold;}
+.library_caption	{font-family: verdana,tahoma,sans-serif; font-size: 7.5pt; color: black; font-style:italic;}
+.purplebar 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-color: #461B7E}
+.omsgbar 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-color: #35459c}
+.chalkbar 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; font-weight: bold; background-color: #FFFFCC}
+.chalk 		{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #FFFFCC}
+.graybar 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #E3E4FA}
+.highlight	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: yellow}
+.seagreen 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #C3FDB8}
+.seagreen2 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #B5EAAA}
+.thistle 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #FCDFFF}
+.steel	 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #C6DEFF}
+.cyan	 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; background-color: #CFECEC}
+.ns_blue 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-color: #0031b1}
+.uoft_blue 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-color: #2a4a7d}
+.login	 	{font-family: verdana,tahoma,sans-serif; font-size: 10.5pt; color: #461B7E; font-weight: bold;}
+.uoft_blue 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-color: #2a4a7d}
+.red_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-image:url('../../images/navigation/navBar_red_gradient.jpg')}
+.purple_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-image:url('../../images/navigation/navBar_purple_gradient.jpg')}
+.gold_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; font-weight: bold; background-image:url('../../images/navigation/navBar_gold_gradient.jpg')}
+.purpleIndex_grad 	{background-image:url('../../images/navigation/indexFrame_purple_grad.jpg')}
+
+
+/* end customized elements */
+
+h1 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:14pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+h2 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:12pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+h3 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:10pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+p 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:8.5pt;
+	line-height:12pt;
+	color: #333333;
+	}
+
+li 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	line-height: 12pt;
+	color: #333333;
+	}
+
+td 	{
+	vertical-align: top;
+	font-family:verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	color: #333333;
+	}
+
+/* custom effects */
+.floatmenu
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:link
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:visited
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:hover
+         {
+         font-family:verdana,tahoma,sans-serif;
+ 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:black;
+         }
+
+a.linksgrad
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:yellow;
+         }
+a.linksgrad:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:yellow;
+         }
+a.linksgrad:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+	 font-weight: bold;
+         text-decoration:underline;
+         font-size:8pt;
+         color:orange;
+         }
+
+a.linkspurple
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:#461B7E;
+         }
+a.linkspurple:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:#461B7E;
+         }
+a.linkspurple:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+	 font-weight: bold;
+         text-decoration:underline;
+         font-size:8pt;
+         color:red;
+         }
+
+.image_shadow {
+	box-shadow: 5px 5px 5px #888888;
+
+/* end custom effects */
+
+.calen_day
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8pt;
+	color: black;
+	font-weight: bold;
+}
+
+.calen_date
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 9pt;
+	color: black;
+	font-weight: bold;
+}
+
+.calen_event
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+	color: black;
+}
+
+.calen_class
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+	color: #461B7E;
+}
+
+a.calen_links
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+	color: black;
+}
+a.calen_links:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+	color: red;
+	font-weight: bold;
+}
+
+.subtickertapefont
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7.5pt;
+	color: white;
+	font-weight: bold;
+}
+
+a.subtickertapefont_link		{font-family: verdana,tahoma,sans-serif; font-weight: bold; font-size: 7.5pt; color: white; text-decoration: none;}
+a.subtickertapefont_link:link		{font-family: verdana,tahoma,sans-serif; font-weight: bold; font-size: 7.5pt; color: white;}
+a.subtickertapefont_link:visited	{font-family: verdana,tahoma,sans-serif; font-weight: bold; font-size: 7.5pt; color: white;}
+a.subtickertapefont_link:active		{font-family: verdana,tahoma,sans-serif; font-weight: bold; font-size: 7.5pt; color: white;}
+a.subtickertapefont_link:hover		{font-family: verdana,tahoma,sans-serif; font-weight: bold; font-size: 7.5pt; color: yellow; text-decoration: underline;}
+
+.footer
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+	color: black;
+}
+
+a.footer_link		{font-family: verdana,tahoma,sans-serif; font-size: 7pt; text-decoration: none;}
+a.footer_link:link	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: #0066cc;}
+a.footer_link:visited	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: gray;}
+a.footer_link:active	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: yellow;}
+a.footer_link:hover	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: red; text-decoration: underline;}
+
+
+/* beginning of search field attributes on the home page */
+.searchField  {	 
+/*		background: transparent url (images/navBar_purple_gradient.jpg) no-repeat left top;	*/
+		background-position: 0 0px;	
+		_background-position: 0 2px;	
+		border:none; 
+/*		height: 16px;	 */
+		height: 10px;	 
+		padding: 3px 0 0 3px; 
+		color: #686868;
+		font-size: 8.5pt;	
+/*		width: 178px;	*/
+		width: 150px;		     
+}	
+
+.dropdownform {	   
+		color: #222;	  
+		background: #f4f4f4;	
+/*		font: 11px verdana,tahoma,sans-serif ;  */
+		font-family: verdana,tahoma,sans-serif ;  
+		font-size: 8.5pt;	
+		border: 1px solid #666; 
+}
+
+.fbutton  {	font: 8.5pt verdana,tahoma,sans-serif; } 
+
+
+/* end of search field attributes on the home page */
+
+

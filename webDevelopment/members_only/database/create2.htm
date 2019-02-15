@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>create.html</title>
+	</head>
+	<body align="center" valign="top">
+		<form method="post" action="post.php">
+			<table width="650" border="1" align="center" cellpadding="1" bordercolor="#000000">
+			<tr><td align="center" colspan="2"><B><U>PERSONAL INFORMATION</U></B></td></tr>
+
+			<tr><td valign="top" align="right">
+			Sir Name:	<input type="text" name="LName"><br>
+			First Name:	<input type="text" name="FName"><br>
+			Middle Initial:	<input type="text" name="MName"><br>
+			Salutation:	<input type="text" name="Salutation"><br>
+			Protocol:	<input type="text" name="Protocol"><br>
+
+			Address 1:	<input type="text" name="Addy1"><br>
+			Address 2:	<input type="text" name="Addy2"><br>
+			Address 3:	<input type="text" name="Addy3"><br>
+			City:		<input type="text" name="City"><br>
+			Prov/State:	<input type="text" name="ProvState"><br>
+			PC/Zip:		<input type="text" name="PCZip"><br>
+
+			Country:	<input type="text" name="Country"><br>
+			</td><td valign="top" align="right">
+			Home #:		<input type="text" name="HomeNum"><br>
+			Office #:	<input type="text" name="OffNum"><br>
+			Fax #:		<input type="text" name="Faxnum"><br>
+			Mobile #:	<input type="text" name="CellNum"><br>
+
+			E-Mail:		<input type="text" name="EMail"><br>
+			Occupation:	<input type="text" name="Job"><br>
+			Spouse:		<input type="text" name="Spouse"><br>
+			Deceased:	<input type=checkbox name="Deceased"><br>
+			Post-Nominals:	<input type="text" name="PN"><br>
+			Other PN's:	<input type="text" name="OPN"><br>
+
+			Interests:	<input type="text" name="Interests"><br>
+
+			Armigeous:	<input type="text" name="Arm"><br>
+			Date Joined:	<input type="text" name="Joined"><br>
+			Heard From:	<input type="text" name="Reffer"><br>
+
+			</td></tr><tr><td valign="top" align="center">
+			<p><b><U>BRANCH MEMBERSHIP</U></b>
+
+			</td><td valign="top" align="center">
+			<p><b><U>FINANCIALS</U></b><br>
+			</td></tr><tr><td valign="top" align="right">
+
+			Toronto:		<input type=checkbox name="Toronto"><br>
+			Laurentian:		<input type=checkbox name="Laurentian"><br>
+			Ottawa:			<input type=checkbox name="Ottawa"><br>
+
+			British Columbia:	<input type=checkbox name="BC"><br>
+			Prarie:			<input type=checkbox name="Prarie"><br>
+
+			</td><td valign="top" align="right">
+
+			Membership Year:	<input type="text" name="MemYear"><br>
+			Membership Type:	<select name="MemType">
+						<option selected>Regular
+						<option>Institutional
+						<option>Institutional-Exchange
+						<option>Life
+						<option>Honorary
+						<option>Student
+					 	</select><br>
+
+			Satus:			<select name="MemStatus">
+						<option selected>New
+						<option>Renewal
+						<option>Inactive
+						</select><br>
+			Payment Date:		<input type="text" name="PayDate"><br>
+			Method:			<select name="PayMethod">
+						<option selected>Cash
+						<option>Cheque
+						<option>Money Order
+						<option>Online Payment
+						<option>Credit Card
+						</select><br>
+
+			</td></tr><tr><td colspan="2">
+			<br>Your comments:<br>
+			<textarea name="Comments" rows=4 cols=90></textarea><br>
+			<center><input type="button" value="Insert" >&nbsp;<input type="button" value="Update" >&nbsp;<input type="button" value="Delete" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Search" >&nbsp;<input type="text" name="search">&nbsp;<input type="button" value="Previous" >&nbsp;<input type="button" value="Next" >&nbsp;</center>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<?php
+// Program: content_members_roll_en.php
+//	Description: source for the English textual content on the members only roll of arms cover page (members_roll.php)
+//	2015 ------------------
+//
+// English content -------------------
+$title[0] = "Roll of Arms";
+$armoury_caption[0] = "The Duke of Bourbon reviews and comments on the blazons presented by the heralds prior to the tournament. (Olivier de la Marche, Hardoun de la Jaille, Anthoine de la Sale..., 1878, \"Traicté de la Forme et Devis comme on Faict les Tournois\")";
+$herald_caption[0] = "A knightly herald bearing the armorial banners of the tournament participants. Heraldry played an important role in tournaments of the period, rather like branding today at high-end sports events. (Olivier de la Marche, Hardoun de la Jaille, Anthoine de la Sale..., 1878, \"Traicté de la Forme et Devis comme on Faict les Tournois\")";
+$armoury_p1[0]	= "Rolls of arms or armorials began to appear during the mediaeval period. They were collections of armorial illustrations beginning simply as sketches of arms representing the armigerous knights who were present on a certain occasion or at a particular event. From this the roll of arms format evolved during succeeding historical periods to cover groups and organizations of armigers - both military and civil. Although they have acquired various distinctive features, rolls still retain the same essential elements: drawings of shields, usually coloured, accompanied by captions identifying the owner of each. These inscriptions (especially when the designs are not coloured) include descriptive notes forming blazons.";
+$armoury_p2[0]	= "Coats of arms regardless of their origins, became military status symbols, and their popularity increased along with the popularity of the tournament which were first recorded in the mid-eleventh century in France (reportedly by Godfrey de Preuilly). The tournament became a training ground for knights, and its pageantry became more elaborate as time passed. Some knights made their living (and their reputations) roaming from tournament to tournament. William the Marshal and Roger de Gaugi were two such enterprising men, not only excelling at tournaments but extorting ransoms from the families of knights they captured.";
+$armoury_p3[0]	= "By 1400 A.D., bearing a coat of arms had become a prerequisite to participation in a tournament, and due to the importance of social standing in such pageants, a coat of arms also became a mark of noble status. In the early days, most coats of arms were assumed by the bearers and not \"granted\" by any authority. King Richard I changed his coat of arms from two lions combatant (or a lion rampant) to three gold leopards (or lions passant guardant).";
+$armoury_total[0] = "Total number of armorial bearings in this online roll (".$roll_updated[0]."): ";
+$armoury_instructions[0] = "Instructions";
+$armoury_p4[0]	= "To view a particular member's arms, click on the letter below which is the first letter of their surname.  A new window will materialize showing \"thumbnail\" images of all members' arms whose surname begins with the letter clicked on earlier.  On this page, find the surname of interest, and click on the \"thumbnail\" image in order to retrieve a page containing a full colour presentation of the arms, including its blazon.";
+?>

@@ -1,0 +1,47 @@
+/*
+$File:		responsive_media.css
+$Author:	David M. Cvet
+$Date:		Nov 01, 2015
+description:	targeting specific devices with respect to the width of the TWG iframe located in "members_gallery.php"
+$----------------------------------------------------------------
+margin: [margin-top] [margin-right] [margin-bottom] [margin-left]
+//	2016 ---------------
+//	
+*/
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait) {
+.iframe_stuff { width:310px;height:480px; }
+}
+@media only screen and (min-device-width: 320px) and (orientation: landscape) {
+.iframe_stuff { width:460px;height:480px; }
+}
+
+@media only screen and (min-device-width: 480px) and (orientation: portrait) {
+.iframe_stuff { width:460px;height:600px; }
+}
+@media only screen and (min-device-width: 480px) and (orientation: landscape) {
+.iframe_stuff { width:600px;height:600px; }
+}
+
+@media only screen and (min-device-width: 640px) and (orientation: portrait) {
+.iframe_stuff { width:620px;height:600px; }
+}
+@media only screen and (min-device-width: 640px) and (orientation: landscape) {
+.iframe_stuff { width:960px;height:600px; }
+}
+
+@media only screen and (min-device-width: 1024px) and (orientation: portrait) {
+.iframe_stuff { width:1024px;height:725px; }
+}
+@media only screen and (min-device-width: 1024px) and (orientation: landscape) {
+.iframe_stuff { width:1090px;height:725px; }
+}
+
+@media only screen and (min-width: 960px) and (orientation: landscape) {
+.iframe_stuff { width:940px;height:725px; }
+}
+
+@media only screen and (min-width: 1240px) and (orientation: landscape) {
+.iframe_stuff { width:1090px;height:725px; }
+}
+

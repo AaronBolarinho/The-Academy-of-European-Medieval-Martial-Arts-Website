@@ -1,0 +1,170 @@
+/* Form Start Here */
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+   opacity: 0.35;
+   }
+
+/*
+.form_box {
+/*    background-color: #fdfdfd;
+    border: 1px solid #CBCBCB;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);*/
+/*    display: block;*/
+    /*margin: 20px 0 50px 180px;*/
+/*    margin: 20px auto;*/
+/*    padding: 25px;*/
+/*    width: 28%;*/
+/*    clear: both;*/
+/*float:right;*/
+/*margin-top:5%;
+}
+*/
+
+.form_box {
+    float:left;position:relative;width:90%;margin-top:195px;margin-left:15px;
+}
+
+/*.form_box input[type=text], input[type=password], input[type=email],input[type=tel], .form_box textarea, .form_box select {*/
+.form_box {
+
+/*    background: none repeat scroll 0 0 #F5F5F5;*/
+    background: none;
+    border: 1px solid #CCCCCC;
+/*    border-radius: 5px;*/
+    box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+    color: #666666;
+/*    font-family: TitilliumText22LBold,ArtifikaMedium,Arial,Helvetica,sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+    padding: 8px;		/* padding within the input fields - affects the hight and length of input field */
+    vertical-align: top;
+    width: 380px;		/* width of input fields (name, email) */
+    }
+
+.inputcaptcha {
+	width:100px !important;	/* width of the captchat input field */
+	float:left;
+  }
+.inputmessage {
+	width:280px !important;	/* width of the message input field */
+	height:130px;
+	float:left;
+   }
+@media only screen and (min-width:513px) and (max-width:639px) {
+.inputcaptcha{
+	width:180px !important;	/* width of the captchat input field */
+	float:left;
+   }
+.inputmessage {
+	width:380px !important;	/* width of the message input field */
+	height:130px;
+	float:left;
+   }
+}
+@media only screen and (min-width:640px) and (max-width: 979px) {
+.inputcaptcha{
+	width:260px !important;	/* width of the captchat input field */
+	float:left;
+   }
+.inputmessage {
+	width:520px !important;	/* width of the message input field */
+	height:130px;
+	float:left;
+   }
+}
+@media only screen and (min-width:980px) {
+.inputcaptcha{
+	width:40% !important;	/* width of the captchat input field */
+	float:left;
+	margin-top:10px;
+   }
+.inputmessage {
+	width:680px !important;	/* width of the message input field */
+	height:130px;
+	float:left;
+   }
+}
+
+.imgcaptcha{
+    border:0;
+    margin: 4px 0px;	/* space above the imgcaptcha with input box above */
+    float:left;
+   }
+.submit_button {
+   position:absolute;overflow:hidden;width:88px;margin-left:-405px;margin-top:140px;background-color:white;
+   }
+
+.check_box {
+   position:absolute;overflow:hidden;width:20px;height:20px;margin-left:20px;margin-top:-45px;
+   }
+
+
+/*
+.form_box input[type=radio]{
+    margin: 8px 0;
+    padding: 8px;
+    vertical-align: top;
+    width: 30px
+}
+*/
+input[type="checkbox"] {
+  transform:scale(1.5,1.5);
+}
+
+/*
+.form_box input.submit {
+    background: -moz-linear-gradient(center bottom , #0391fe 12%, #4ea0ee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #0080e5;
+/*    border-radius: 5px;*/
+/*
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 16px;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    width: auto;
+    letter-spacing: 1px;
+}
+*/
+/*
+.form_box input.submit:hover {
+    background: -moz-linear-gradient(center bottom , #4ea0ee 12%,#0391fe  100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #d7e3ee;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+*/
+.otherinputs{
+	width: 350px;
+	margin: 8px 0;
+	color: #333;
+    font-family: TitilliumText22LBold,ArtifikaMedium,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+
+}
+.otherinputs span{
+	 line-height: 30px;
+    margin: 0 20px 0 0;
+}
+
+
+
+.refresh{
+	float: left;
+	margin: 14px 5px;
+	cursor: pointer;
+}
+
+
+
+/*     */

@@ -1,0 +1,11 @@
+<?php
+//
+// For Program: DB.php
+// Database on localhost
+// copy this file to "DB.stuff"
+//
+$DB      = "AEMMA_membership";
+$DB_HOST = "localhost";
+$DB_USER = "aemma_access";
+$DB_PASS = "raven623";
+?>

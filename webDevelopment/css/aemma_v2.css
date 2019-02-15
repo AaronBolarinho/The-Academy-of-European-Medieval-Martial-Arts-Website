@@ -1,0 +1,558 @@
+/* general */
+body 	{
+  	margin-top: 0px;
+  	padding: 0px;
+  	border: 0;
+	background-color:#2C3539;
+	overflow-x:hidden;
+	font-family: QuanSlimLight;
+/*	font-family: Calibri;*/
+/*	font-family: verdana,tahoma,sans-serif;*/
+	font-size:15pt;
+	color:#333333;
+	}
+   h2,h3 {
+ 	text-align: left;
+	font-weight: bold;
+	}
+   h2 {
+	font-size: 24px;
+	}
+   h3 {
+	font-size: 20px;
+	}
+
+   p,li,blockquote {
+ 	text-align: justify;
+	}
+   p {						/* p inherits the properties of p listed above and adds the indentation as specified */
+	line-height: 1.25;
+	}
+
+/* smartphone oriented e.g. portrait on iPhone 6+ */
+@media only screen and (max-width: 480px) {
+.div_main {float:left;width:100%;}
+.div_main_postit {float:left; padding-bottom:12px;margin-top:15px;width:100%;margin-bottom:30px;}
+.div_main_paragraph {float:left;width:100%;}
+
+.login_image {float:left; margin-right:15px; margin-bottom:15px; width:35%;}
+.login_form {width:100%;}
+.login_panel_wireframe {float:left;width:100%;}
+.login_panel {float:left;position:relative;width:90%;margin-left:5%;margin-top:30px;margin-bottom:30px;border-style:solid;border-width:1px;border-radius:10px;background-color:#E5E4E2;padding-top:12px;}
+
+.fadeslideshow_banner {display:none;}
+.officers_div {float:left; margin-right:15px; margin-bottom:10px; max-width:30%;}
+.officers_arms {float:right; margin-left:10px; margin-bottom:5px; width:30%;}
+.history_image_portrait {float:left;margin-right:15px;width:33%;}
+.history_image_right {float:left;margin-bottom:15px;width:100%;}
+.history_image_left {float:left;margin-bottom:15px;width:100%;}
+
+.about_image_arms {float:left;margin-right:15px;width:30%;}
+.about_image_right {float:left;width:100%;margin-bottom:10px;margin-top:15px;}
+
+.arms_image_arms {float:left;margin-left:2%;width:95%;}
+.arms_paragraph_1 {float:left;margin-left:2%;width:95%;}
+.arms_paragraph_2 {float:left;margin-left:2%;width:95%;}
+.arms_image_evolution {display:none;}
+
+.contact_salles {float:left;width:95%;margin-left:3%;}
+.contact_salles_image {float:left;margin-bottom:10px;width:100%;}
+.contact_salles_p {float:left;width:100%;margin-left:40px;}
+
+.ttcmap {float:left;width:95%;margin-right:3%;margin-top:15px;margin-bottom:15px;}
+
+.about_photos {float:left;width:95%;margin-left:3%;}
+.about_photos2 {float:left;width:95%;margin-left:3%;}
+.about_photo_images {float:left;width:100%;margin-bottom:15px;}
+
+.visit_form {float:left;width:100%;margin-bottom:20px;}
+.td_width {width:100px;}
+
+/* training pages */
+.arte_fola {float:left;width:48%;margin-right:2%;}
+.arte_folb {display:none}
+.arte_folc {display:none}
+
+.arte_fiore_dei_liberi_prologue {float:left;width:90%;margin-bottom:3%;margin-left:5%;margin-right:5%}
+.arte_fiore_dei_liberi_premariacco {float:left;width:90%;margin-left:5%;margin-right:5%;margin-bottom:15px;}
+
+.trng_poleweapons {float:left;width:100%;}
+
+.scholler_div {float:left;width:96%;margin-left:2%;margin-right:2%;}
+.scholler_badges {float:left;width:50%;text-align:center;}
+
+} /* (max-width: 480px) */
+
+/* smartphone and other small mobile devices oriented e.g. landscape on iPhone 6+ */
+@media only screen and (min-width: 481px) and (max-width: 750px) {
+.div_main {float:left; padding-bottom:12px;width:100%;}
+.div_main_postit {float:left;margin-bottom:30px;width:100%;}
+.div_main_paragraph {float:left;width:100%;}
+
+.login_image {float:left; margin-right:15px; margin-bottom:15px; max-width:20%;}
+.login_form {width:50%;}
+.login_panel_wireframe {float:left;width:90%;margin-left:5%;}
+.login_panel {float:left;position:relative;width:80%;margin-left:10%;margin-top:30px;margin-bottom:30px;border-style:solid;border-width:1px;border-radius:10px;background-color:#E5E4E2;padding-top:12px;}
+
+.fadeslideshow_banner {float:left;width:100%;}
+.officers_div {float:left; margin-right:15px; margin-bottom:10px; max-width:30%;}
+.officers_arms {float:right; margin-left:10px; margin-bottom:5px; width:30%;}
+.history_image_portrait {float:left;margin-right:15px;width:23%;}
+.history_image_right {float:right;margin-left:15px;margin-bottom:5px;width:40%;}
+.history_image_left {float:left;margin-right:15px;margin-bottom:5px;width:40%;}
+
+.about_image_arms {float:left;margin-right:15px;width:18%;}
+.about_image_right {float:right;margin-left:15px;width:30%;margin-bottom:10px;}
+
+.arms_image_arms {float:left;margin-right:15px;width:25%;}
+.arms_paragraph_1 {float:left;width:68%;}
+.arms_paragraph_2 {float:left;width:95%;}
+.arms_image_evolution {display:none;}
+
+.contact_salles {float:left;width:95%;margin-left:3%;}
+.contact_salles_image {float:left;margin-bottom:10px;width:40%;margin-right:15px;}
+.contact_salles_p {float:left;width:45%;margin-left:20px;}
+
+.ttcmap {float:right;margin-left:15px;width:40%;}
+
+.about_photos {float:left;width:90%;margin-left:5%;margin-right:5%;}
+.about_photos2 {float:left;width:90%;margin-left:5%;margin-right:5%;margin-top:15px;margin-bottom:20px;}
+.about_photo_images {float:left;width:45%;margin-right:2%;}
+
+.visit_form {float:left;width:90%;margin-left:5%;margin-right:5%;margin-bottom:20px;}
+.td_width {width:100px;}
+
+/* training pages */
+.arte_fola {float:left;width:23%;margin-right:2%;}
+.arte_folb {float:left;width:23%;margin-right:2%;}
+.arte_folc {display:none}
+
+.arte_fiore_dei_liberi_prologue {float:left;width:30%;margin-right:3%;}
+.arte_fiore_dei_liberi_premariacco {float:right;width:30%;margin-left:3%;margin-bottom:15px;}
+
+.trng_poleweapons {float:right;width:50%;margin-left:15px;}
+
+.scholler_div {float:left;width:90%;margin-left:5%;margin-right:5%;}
+.scholler_badges {float:left;width:24%;text-align:center;}
+
+} /* (min-width: 481px) and (max-width: 750px) */
+
+/* tablets/desktops oriented landscape e.g XPS8700, iPad 3 landscape & portrait */
+@media only screen and (min-width: 751px) {
+.div_main {float:left;padding-right:12px;padding-bottom:3%;width:55%;}
+.div_main_postit {float:left;margin-left:5%;padding-bottom:3%;width:35%;}
+.div_main_paragraph {float:left;margin-left:2%;width:98%;}
+
+.login_image {float:left; margin-right:15px; margin-bottom:15px; max-width:15%;}
+.login_form {width:40%;}
+.login_panel_wireframe {float:left;width:80%;margin-left:10%;}
+.login_panel {float:left;position:relative;width:50%;margin-left:25%;margin-top:30px;margin-bottom:30px;border-style:solid;border-width:1px;border-radius:10px;background-color:#E5E4E2;padding-top:12px;}
+
+.fadeslideshow_banner {float:left;width:100%;}
+.officers_div {float:left; margin-right:15px; max-width:12%;}
+.officers_arms {float:left; margin-right:10px; margin-bottom:5px; width:8%;}
+
+.history_image_portrait {float:left;margin-right:15px;width:13%;}
+.history_image_right {float:right;margin-left:15px;margin-bottom:5px;width:30%;}
+.history_image_left {float:left;margin-right:15px;margin-bottom:5px;width:30%;}
+
+.about_image_arms {float:left;margin-right:15px;width:18%;}
+.about_image_right {float:right;margin-left:15px;width:30%;margin-bottom:10px;}
+
+.arms_image_arms {float:left;margin-right:15px;width:25%;}
+.arms_paragraph_1 {float:left;width:55%;}
+.arms_paragraph_2 {float:left;width:81%;}
+.arms_image_evolution {float:right;margin-left:15px;width:15%;}
+
+.contact_salles {float:left;width:95%;margin-left:3%;}
+.contact_salles_image {float:left;margin-bottom:10px;width:60%;margin-right:15px;}
+.contact_salles_p {float:left;width:35%;margin-left:20px;}
+
+.ttcmap {float:right;margin-left:15px;width:40%;}
+
+.about_photos {float:left;width:80%;margin-left:10%;margin-right:10%;}
+.about_photos2 {float:left;width:80%;margin-left:10%;margin-right:10%;margin-top:15px;margin-bottom:20px;}
+.about_photo_images {float:left;width:45%;margin-right:2%;}
+
+.visit_form {float:left;width:80%;margin-left:10%;margin-right:10%;margin-bottom:20px;}
+.td_width {width:150px;}
+
+/* training pages */
+.arte_fola {float:left;width:18%;margin-right:2%;}
+.arte_folb {float:left;width:18%;margin-right:2%;}
+.arte_folc {float:left;width:18%;margin-right:2%;}
+
+.arte_fiore_dei_liberi_prologue {float:left;width:35%;margin-right:3%;margin-bottom:15px;}
+.arte_fiore_dei_liberi_premariacco {float:right;width:25%;margin-left:3%;margin-bottom:15px;}
+
+.trng_poleweapons {float:right;width:40%;margin-left:15px;}
+
+.scholler_div {float:left;width:80%;margin-left:10%;margin-right:10%;}
+.scholler_badges {float:left;width:14%;text-align:center;}
+
+} /* (min-width: 751px) */
+
+.officers_portrait {float:left; margin-right:15px;box-shadow:5px 5px 5px #888888; max-width:100%;}
+.officers_td {text-indent:0;text-align:left;font-size:19px;}
+
+#container {
+	background-color:#fff;
+	max-width:1090px;
+  	margin-top: 0px;
+	margin: 0 auto;
+	overflow: hidden;
+	-webkit-box-shadow: 5px 5px 5px 0px #666;
+	-moz-box-shadow: 5px 5px 5px 0px #666;
+	box-shadow: 5px 5px 5px 0px #666;
+	}
+
+#main_content {
+	float: left;
+	position: relative;
+	background-color: #fff;
+	max-width:1090px;
+	margin: 0 auto;
+	padding-left:2%;
+	padding-right:2%;
+	}
+
+#banner {
+	margin: 0 auto;
+	position: relative;
+	line-height: 0;
+	float: left;
+	width: 100%;
+	height: auto;
+	}
+
+#footer {
+	background: linear-gradient(to left, #fff -80%, #351c57 45%);
+	margin: 0 auto;
+	position: relative;
+	line-height:0;
+	float: left;
+	width: 100%;
+	height: 40px;
+	}
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+   opacity: 0.65;
+   }
+
+.box {
+  box-shadow: 5px 5px 5px 0px #444;
+}
+
+.text_transparent {
+  display: none;
+  z-index: -1;
+}
+
+.caption {
+	font-size: 16px;
+	font-style: italic;
+	text-align: justify;
+	}
+
+/* begin: post-it note CSS statements */
+/* smartphone oriented e.g. portrait on iPhone 6+ */
+@media only screen and (max-width: 480px) {
+.quote-container {
+	margin-top: 50px;
+	position: relative;
+	float:left;
+	margin-left:15%;
+	}
+} /* (max-width: 480px) */
+/* smartphone and other small mobile devices oriented e.g. landscape on iPhone 6+ */
+@media only screen and (min-width: 481px) and (max-width: 750px) {
+.quote-container {
+	margin-top: 50px;
+	position: relative;
+	float:left;
+	margin-left:15%;
+	}
+} /* (min-width: 481px) and (max-width: 750px) */
+/* tablets/desktops oriented landscape e.g XPS8700, iPad 3 landscape & portrait */
+@media only screen and (min-width: 751px) {
+.quote-container {
+	margin-top: 50px;
+	position: relative;
+	float:left;
+	margin-left:3%;
+	}
+} /* (min-width: 751px) */
+
+.note {
+ 	text-align: left;
+	color: #333;
+	position: relative;
+	width: 275px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: Satisfy;
+	font-size: 30px;
+	box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+	}
+.note .author {
+	display: block;
+	margin: 40px 0 0 0;
+	text-align: right;
+	}
+.yellow {
+	background: #eae672;
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+	}
+.pin {
+	background-color: #aaa;
+	display: block;
+	height: 32px;
+	width: 2px;
+	position: absolute;
+	left: 50%;
+	top: -16px;
+	z-index: 1;
+	}
+.pin:after {
+	background-color: #A31;
+	background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+		inset 3px 3px 3px hsla(0,0%,100%,.2),
+		inset -3px -3px 3px hsla(0,0%,0%,.2),
+		23px 20px 3px hsla(0,0%,0%,.15);
+	content: '';
+	height: 12px;
+	left: -5px;
+	position: absolute;
+	top: -10px;
+	width: 12px;
+	}
+.pin:before {
+	background-color: hsla(0,0%,0%,0.1);
+	box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+	content: '';
+
+	height: 24px;
+	width: 2px;
+	left: 0;
+	position: absolute;
+	top: 8px;
+
+	transform: rotate(57.5deg);
+	-moz-transform: rotate(57.5deg);
+	-webkit-transform: rotate(57.5deg);
+	-o-transform: rotate(57.5deg);
+	-ms-transform: rotate(57.5deg);
+
+	transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	}
+/* end: post-it note CSS statements */
+
+.mainpagetext {font-family: verdana,tahoma,sans-serif; font-size: 11px; color:black}
+
+A:link {text-decoration: none;}
+A:visited {text-decoration: none;}
+A:active {text-decoration: none;}
+A:hover {text-decoration: underline; color: green;}
+
+/* end of general */
+
+/* coloured bar specifics */
+.bluebar {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: white; font-weight: bold; background-image: url("../images/bluebar_grad.jpg")}
+.goldbar {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: black; font-weight: bold; background-image: url("../images/goldbar_grad.jpg")}
+.greenbar {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: white; font-weight: bold; background-image: url("../images/greenbar_grad.jpg")}
+.redbar {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: white; font-weight: bold; background-image: url("../images/redbar_grad.jpg")}
+/*.redbar {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: white; font-weight: bold; background-color: #CC0000}*/
+.graybar	{background-color:#E5E4E2;}
+.chalkbar	{font-weight:bold;background-color:#FFFFCC;}
+.chalk {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color: black; background-color: #FFFFCC}
+.red_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-image:url('../images/navigation/navBar_red_gradient.jpg')}
+.purple_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background-image:url('../images/navigation/navBar_purple_gradient.jpg')}
+.gold_grad 	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: black; font-weight: bold; background-image:url('../images/navigation/navBar_gold_gradient.jpg')}
+
+/* end coloured bar specifics */
+
+
+A.linksgray
+
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}	
+A.linksgray:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
+A.linksred
+{
+/*	font-family: verdana,tahoma,sans-serif;*/
+/*	font-size: 11px;*/
+/*	font-weight: bold; */
+/*	color: black;*/
+	text-decoration: underline;
+}
+A.linksred:hover
+{
+/*	font-family: verdana,tahoma,sans-serif;*/
+/*	font-size: 11px;*/
+/*	font-weight: bold; */
+	color: red;
+	text-decoration: underline;
+}
+
+A.linksredgreen
+{
+/*	font-family: verdana,tahoma,sans-serif;
+	font-size: 11px;*/
+	color: red;
+	text-decoration: underline;
+}
+A.linksredgreen:hover
+{
+/*	font-family: verdana,tahoma,sans-serif;
+	font-size: 11px;*/
+	color: green;
+	text-decoration: underline;
+}
+
+A.linksredmem
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 11px;
+/*	font-weight: bold; */
+	color: grey;
+	text-decoration: underline;
+}
+A.linksredmem:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 11px;
+/*	font-weight: bold; */
+	color: red;
+	text-decoration: underline;
+}
+
+A.linksyellow
+
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: yellow;
+	text-decoration: none;
+}	
+A.linksyellow:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+a.linksgrad
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:yellow;
+         }
+a.linksgrad:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:8pt;
+         color:yellow;
+         }
+a.linksgrad:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+	 font-weight: bold;
+         text-decoration:underline;
+         font-size:8pt;
+         color:orange;
+         }
+
+/* the google search input field in the left navigation bar */
+.searchField  {	 
+/*		background: transparent url (../images/graphicStructures/form_input_background_grey.gif) no-repeat left top;	*/
+		background-position: 0 0px;	
+		_background-position: 0 2px;	
+		border:none; 
+		height: 16px;	 
+		padding: 3px 0 0 3px; 
+		color: #686868;
+		font-size:11px;	
+		width:100%;		   
+}	
+
+/* begin rstyles */
+.rslides {position:relative;list-style:none;overflow:hidden;width:100%;padding:0;margin:0;-moz-box-shadow:10px 10px 5px #888888;-webkit-box-shadow:10px 10px 5px #888888;box-shadow:10px 10px 5px #888888;}
+.rslides li {-webkit-backface-visibility:hidden;position:absolute;display:none;width:100%;left:0;top:0;}
+.rslides li:first-child {position:relative;display:block;float:left;}
+.rslides img {display:block;height:auto;float:left;width:100%;border:0;}
+/* end rslides */
+
+/* begin CSS code for standardized buttons */
+.button{
+ border:1px solid #7d99ca; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 5px 5px 5px 5px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a5b8da; background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+ background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: linear-gradient(to bottom, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+
+.button:hover{
+ border:1px solid #5d7fbc;color:orange;text-decoration:none;cursor:pointer;
+ background-color: #819bcb; background-image: -webkit-gradient(linear, left top, left bottom, from(#819bcb), to(#536f9d));
+ background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+ background-image: linear-gradient(to bottom, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+}
+
+.button.disabled:hover {
+border:1px solid #7d99ca; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 5px 5px 5px 5px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a5b8da; background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+ background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: linear-gradient(to bottom, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+.button.disabled {
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
+/* end CSS code for standardized buttons */
+

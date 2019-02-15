@@ -1,0 +1,385 @@
+/*
+$File: default.css $
+$Author: David M. Cvet $
+$Date: May 12, 2008 $
+*/
+
+/* 
+$ Academy of European Medieval Martial Arts (AEMMA) $
+$ color = #FFFFCC  - a chalk/yellow $
+$ color = #461B7E  - a purple - aemma colour $
+$ color = #CC3300 - AEMMA red (like in the arms) $
+*/
+
+
+/* HTML tag definitions */
+
+body	{
+	background-color: #FFFFFF; 
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	color: #333333;
+	margin: 5px 10px 5px 10px;
+	}
+
+/* default linking style */
+a 		{font-size: 8.5pt; text-decoration: none;}
+a:link	{font-size: 8.5pt; color: #0066cc;}
+a:visited	{font-size: 8.5pt; color: gray;}
+a:active	{font-size: 8.5pt; color: yellow;}
+a:hover	{font-size: 8.5pt; color: red; text-decoration: underline;}
+/* end of default linking style */
+
+h1 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:14pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+h2 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:12pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+h3 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:9pt;
+	font-weight:bold;
+	color: #333333;
+	}
+
+p 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:8.5pt;
+	line-height:12pt;
+	color: #333333;
+	}
+
+li 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	line-height: 12pt;
+	color: #333333;
+	}
+
+td 	{
+	vertical-align: top;
+	font-family:verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	color: #333333;
+	}
+
+/* some customized fonts */
+.mainpagetextpurple8 {font-family: verdana,tahoma,sans-serif; font-size: 8pt; color:#461B7E;}
+.mainpagetextblue {font-family: verdana,tahoma,sans-serif; font-size: 9pt; color:#004A8A;}
+.mainpagetext {font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: #333333;}
+.mainpagetextgrey {font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color:gray;}
+/* end of customized fonts */
+
+
+/* left purple navigation frame */
+.leftDefault {font-family: verdana,tahoma,sans-serif; font-size: 8pt; color:#cccccc; font-weight: bold;}
+a.linksgray
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8pt;
+/*	font-weight: bold;*/
+	color: #cccccc;
+	text-decoration: none;
+}	
+
+a.linksgray: hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #ffff99;
+	text-decoration: none;
+}
+
+A {font-size: 12px; font-weight:normal;	font-family: verdana,tahoma,sans-serif; color: black; }
+
+A.linksredblue
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 9pt;
+/*	font-weight: bold; */
+	color: #004A8A;
+	text-decoration: underline;
+}
+A.linksredblue:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 9pt;
+/*	font-weight: bold; */
+	color: red;
+	text-decoration: underline;
+}
+
+a.linksyellow
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+a.linksyellow:link
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+/*a.linksyellow:visited
+         {
+         font-family:arial,helvetica;
+	 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:orange;
+         }*/
+a.linksyellow:hover
+         {
+         font-family:verdana,tahoma,sans-serif;
+	 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:yellow;
+         }
+
+a.linkspurple
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:9pt;
+         color:#461B7E;
+         }
+a.linkspurple:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:underline;
+         font-size:9pt;
+         color:#461B7E;
+         }
+a.linkspurple:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+	 	 font-weight: bold;
+         text-decoration:underline;
+         font-size:9pt;
+         color:red;
+         }
+
+a.linkstextpurple8
+         {
+         font-family: verdana,tahoma,sans-serif;
+         text-decoration:underline;
+         font-size:8pt;
+         color:#461B7E;
+         }
+a.linkstextpurple8:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+         text-decoration:underline;
+         font-size:8pt;
+         color:#461B7E;
+         }
+a.linkstextpurple8:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+	 font-weight: bold;
+         text-decoration:underline;
+         font-size:8pt;
+         color:red;
+         }
+
+a.menuTop
+	{
+        text-decoration:none;
+        font-family:verdana,tahoma,sans-serif;
+        font-size:10pt;
+	font-weight: bold;
+        width:100%;
+	height:100%;
+	vertical-align:middle;
+	}
+
+a.menuTop:link
+         {
+         color:white;
+         background:"#9097C1";
+         }
+a.menuTop:visited
+         {
+         color:white;
+         background:"#9097C1";
+         }
+a.menuTop:hover
+         {
+         color:yellow;
+	 font-weight: bold;
+         background:"#A9AFD1";
+         }
+	 
+a.bottom:link
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+a.bottom:visited
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+a.bottom:hover
+         {
+         font-family:verdana,tahoma,sans-serif;
+	 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:yellow;
+         }
+
+a.bottomRed:link
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:black;
+         }
+a.bottomRed:visited
+         {
+         font-family:verdana,tahoma,sans-serif;
+/*	 	 font-weight: bold;*/
+         text-decoration:none;
+         font-size:8pt;
+         color:black;
+         }
+a.bottomRed:hover
+         {
+         font-family:verdana,tahoma,sans-serif;
+	 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:yellow;
+         }
+
+	
+.floatmenu
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:link
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:visited
+         {
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:8pt;
+         color:white;
+         }
+.floatmenu:hover
+         {
+         font-family:verdana,tahoma,sans-serif;
+ 	 font-weight: bold;
+         text-decoration:none;
+         font-size:8pt;
+         color:black;
+         }
+
+ 
+a.copyright
+	{
+        text-decoration:none;
+        font-family:verdana,tahoma,sans-serif;
+        font-size:8pt;
+	font-weight: bold;
+        width:100%;
+	height:100%;
+	vertical-align:middle;
+	}
+
+a.copyright:link
+         {
+         color:white;
+         background:"#9097C1";
+         }
+a.copyright:visited
+         {
+         color:white;
+         background:"#9097C1";
+         }
+a.copyright:hover
+         {
+         color:yellow;
+	 font-weight: bold;
+         background:"#A9AFD1";
+	 }
+
+a.menuSub
+	{
+         font-family:verdana,tahoma,sans-serif;
+         text-decoration:none;
+         font-size:7pt;
+         width:100%;
+	 line-height: 20px;
+	 vertical-align:middle;
+	}
+a.menuSub:link
+         {
+         color:#FFFFCC;
+         background:#330033;
+	 font-weight: bold;
+         }
+
+a.menuSub:visited
+         {
+         color:black;
+         background:#FFFFCC;
+         }
+
+a.menuSub:hover
+         {
+         color:#FFFFCC;
+         background:#330033;
+	 font-weight: bold;
+         }
+                
+td.menuSub
+	{
+ 	border-style:solid;
+ 	border-width:1;
+ 	border-color:#A9AFD1;
+	border-top-width:0;
+	height:100%;
+	background:#FFFFCC;
+	}
+
+td.menuTop
+	{
+	text-align:center;
+	}
+
+

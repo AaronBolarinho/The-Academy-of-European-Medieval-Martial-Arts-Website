@@ -1,0 +1,134 @@
+/*
+$File: jwma.css $
+$Author: David M. Cvet $
+$Date: Apr 10, 2011 $
+*/
+
+/* 
+$ Journal of Western Martial Art (JWMA) $
+$ color = #999900  - kaki colour for fonts $
+$ color = #004A8A  - default font colour $
+$----------------------------------------------------------------
+margin: [margin-top] [margin-right] [margin-bottom] [margin-left]
+*/
+
+/* HTML tag definitions */
+
+body	{
+	background-color: #FFFFFF;
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 8.5pt;
+	color: #004A8A;
+/*	margin: 0px ;*/
+	margin: 0px 5px 5px 5px;
+	}
+
+/* default linking style */
+a 		{font-size: 8.5pt; text-decoration: underline;}
+a:link		{font-size: 8.5pt; color: #0066cc;}
+a:visited	{font-size: 8.5pt; color: gray;}
+a:active	{font-size: 8.5pt; color: yellow;}
+a:hover		{font-size: 8.5pt; color: red; text-decoration: none;}
+
+/* end of default linking style */
+
+h1 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:12pt;
+	font-weight:bold;
+	color: #999900;
+	}
+h2 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:11pt;
+	font-weight:bold;
+	color: #004A8A;
+	}
+h3 	{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:10pt;
+	font-weight:bold;
+	color: #004A8A;
+	}
+
+/* End of default linking style */
+
+/* about the author paragraph */
+.author {font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: #999900;}
+
+a.author:link
+         {
+         font-family: verdana,tahoma,sans-serif;
+         text-decoration: underline;
+         font-size: 8.5pt;
+         color: #999900;
+         }
+a.author:visited
+         {
+         font-family: verdana,tahoma,sans-serif;
+         text-decoration: underline;
+         font-size: 8.5pt;
+         color: gray;
+         }
+a.author:hover
+         {
+         font-family: verdana,tahoma,sans-serif;
+         text-decoration: none;
+         font-size: 8.5pt;
+         color: red;
+         }
+/* end about the author paragraph */
+
+/* custom affects */
+
+.home_title {font-family: "times new roman",georgia,serif; font-size: 18.0pt; color: black; font-weight:bold;}
+.home_text {font-family: "times new roman",georgia,serif; font-size: 11.0pt; color: black;}
+.yellowText {font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: #ffff01;}
+.column {font-family: verdana,tahoma,sans-serif; font-size: 8.0pt; color: #004A8A;}
+.yearly	{font-family: verdana,tahoma,sans-serif; font-size: 8.5pt; color: white; font-weight: bold; background: transparent url("../images/graphicStructures/boxhead-blue.gif") 0 0 repeat-x;}
+
+a.linksredyellow 		{font-size: 9pt; text-decoration: underline;}
+a.linksredyellow:link		{font-size: 9pt; color: blue;}
+a.linksredyellow:visited	{font-size: 9pt; color: purple;}
+a.linksredyellow:active		{font-size: 9pt; color: blue;}
+a.linksredyellow:hover		{font-size: 9pt; color: red; text-decoration: underline;}
+
+A.linksredblack
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 9pt;
+/*	font-weight: bold; */
+	color: #000000;
+	text-decoration: underline;
+}
+A.linksredblack:hover
+{
+	font-family: verdana,tahoma,sans-serif;
+         font-size: 8.5pt;
+/*	font-weight: bold; */
+	color: red;
+	text-decoration: underline;
+}
+
+.caption
+{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:7pt;
+	font-style:italic;
+/*	color: black;*/
+}
+
+.footer
+{
+	font-family: verdana,tahoma,sans-serif;
+	font-size: 7pt;
+/*	color: black;*/
+}
+
+a.footer_link		{font-family: verdana,tahoma,sans-serif; font-size: 7pt; text-decoration: none;}
+a.footer_link:link	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: #0066cc;}
+a.footer_link:visited	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: gray;}
+a.footer_link:active	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: yellow;}
+a.footer_link:hover	{font-family: verdana,tahoma,sans-serif; font-size: 7pt; color: red; text-decoration: underline;}
+
+

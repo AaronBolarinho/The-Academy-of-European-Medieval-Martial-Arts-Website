@@ -1,0 +1,4 @@
+<?php
+// ********** NOTE: this file contains the session save path value the Toronto development environment **********
+//session_save_path("/home/dcvet/tmp");
+?>

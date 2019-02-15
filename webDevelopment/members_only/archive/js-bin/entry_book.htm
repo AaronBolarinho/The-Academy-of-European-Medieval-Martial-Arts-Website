@@ -1,0 +1,58 @@
+<HTML><HEAD><TITLE>VMP Order Entry</TITLE></HEAD>
+<BODY BGCOLOR='#FFFFFF' TEXT='#000000'>
+<script src='../../../js-bin/orderEntry.js'></script>
+<FORM><TABLE width='560' border='0' cellspacing='0' cellpadding='3'>
+<TR>
+	<TD align=right valign=middle bgcolor='#DDDDDD'><B><FONT face='arial,helvetica,sans-serif' size='-2'>Item Requested: </B></FONT><BR></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='60' VALUE='Hammerterz Forum: The International Journal of Western Swordplay Traditions' MAXLENGTH='60' NAME='itemRequested'></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline bgcolor='#DDDDDD'><B><FONT face='arial,helvetica,sans-serif' size='-2'>Item Type: </B></FONT></TD>
+	<TD align=left valign=middle><INPUT TYPE='text' SIZE='12' VALUE='magazine' MAXLENGTH='12' NAME='itemType'><FONT face='arial,helvetica,sans-serif' size='-2'>&nbsp;&nbsp;Subscription Selection: <INPUT type='radio' name='radio' value='1-year' checked> 1-year  <INPUT type='radio' name='radio' value='2-year'> 2-year</FONT></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline bgcolor='#DDDDDD'><B><FONT face='arial,helvetica,sans-serif' size='-2'>Quantity:  </B></FONT></TD>
+	<TD align=left valign=middle><INPUT TYPE='text' SIZE='4' VALUE='1' MAXLENGTH='4' NAME='quantity' onChange='changeQuantity(this.form)'> <FONT face='arial,helvetica,sans-serif' size='-1'><B>@  </B></FONT><INPUT TYPE='text' SIZE='10' VALUE='$35.00' MAXLENGTH='10' NAME='price'>  <FONT face='arial,helvetica,sans-serif' size='-1'><B>=</B>  </FONT><INPUT TYPE='text' SIZE='12' VALUE='$35.00' MAXLENGTH='10' NAME='subTotal'><FONT face='arial,helvetica,sans-serif' size='-2'>  (Shipping & Taxes not included)</TD>
+</TR>
+<TR>
+	<TD  bgcolor='#DDDDDD'> </FONT></TD>
+	<TD  bgcolor='#DDDDDD'> </FONT></TD>
+</TR>
+<TR>
+	<TD align=right valign=top> </TD>
+	<TD align=left valign=top><IMG src='../../../images/required.gif' width=10 height=10 alt='Optional field' border=0> <FONT face='arial,helvetica,sans-serif' size='-2'>Optional field for non-North American destinations</FONT></TD>
+</TR>
+<TR>
+	<TD align=right valign=top><FONT face='arial,helvetica,sans-serif' size='-2'>E-Mail Address:<BR>(userid@domain.com) </FONT></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='60' NAME='email'></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline><FONT face='arial,helvetica,sans-serif' size='-2'>Name:  </FONT></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='60' NAME='name'></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><FONT face='arial,helvetica,sans-serif' size='-2'>Address 1:</FONT></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='40' NAME='street1'></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><IMG src='../../../images/required.gif' width=10 height=10 alt='Optional field' border=0> <FONT face='arial,helvetica,sans-serif' size='-2'>Address 2:</FONT><BR></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='40' NAME='street2'></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline><FONT face='arial,helvetica,sans-serif' size='-2'>City: </FONT></TD>
+	<TD align=left valign=middle><INPUT TYPE='text' SIZE='15' VALUE='' MAXLENGTH='22' NAME='city'>  <IMG src='../../../images/required.gif' width=10 height=10 alt='Optional field for non-North American destinations' border=0> <FONT face='arial,helvetica,sans-serif' size='-2'> Prov/State: </FONT><SELECT NAME='prov_state'><OPTION selected value=''> </OPTION><OPTION value='AB'>Alberta</OPTION><OPTION value='BC'>British Columbia</OPTION><OPTION value='ON'>Ontario</OPTION><OPTION value='PQ'>Quebec</OPTION><OPTION value='PEI'>Prince Edward Island</OPTION><OPTION value='NF'>Newfoundland</OPTION><OPTION value='NS'>Nova Scotia</OPTION><OPTION value='NB'>New Brunswick</OPTION><OPTION value='SK'>Saskatchewan</OPTION><OPTION value='MN'>Manitoba</OPTION><OPTION value='YK'>Yukon Territory</OPTION><OPTION value='NY'>New York</OPTION><OPTION value='NH'>New Hampshire</OPTION><OPTION value='OI'>Ohio</OPTION><OPTION value='ME'>Maine</OPTION></SELECT></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><IMG src='../../../images/required.gif' width=10 height=10 alt='Optional field' border=0> <FONT face='arial,helvetica,sans-serif' size='-2'>Postal Code/ZIP:</FONT></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='11' VALUE='' MAXLENGTH='11' NAME='postalCode'></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><FONT face='arial,helvetica,sans-serif' size='-2'>Country:</FONT></TD>
+	<TD align=left><SELECT NAME='country'><OPTION selected value='CAN'>Canada</OPTION><OPTION value='ENG'>England</OPTION><OPTION value='ITL'>Italy</OPTION><OPTION value='USA'>United States</OPTION></SELECT></TD>
+</TR></TABLE>
+<BR><CENTER><INPUT type='button' name='button_submit' value='Submit Request'> <INPUT type='reset' name='Clear all fields' value='Clear all fields'> <INPUT type='submit' name='cancel' value='Cancel' onClick='self.close()'>
+</FORM>
+<B><I><FONT color='#CC3300'>Please wait a moment for confirmation of your book order entry request</FONT></I></B></CENTER>
+
+</BODY>
+</HTML>

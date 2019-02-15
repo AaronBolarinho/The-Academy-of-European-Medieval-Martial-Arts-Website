@@ -1,0 +1,15 @@
+<?php
+//
+// For Program: DB.php
+// Database on www.aemma.org
+// specs:
+//	- MySQL Version: 5.5.32 (Sep 29, 2015)
+//	- PHP Version: 5.3.13 (Sep 29, 2015)
+//	- Platform Type: Debian (Sep 29, 2015)
+// copy this file to "DB.stuff" and upload to aemma.org
+//
+$DB      = "AEMMA_database_2016";
+$DB_HOST = "localhost";
+$DB_USER = "aaron";
+$DB_PASS = "Starwars1";
+?>

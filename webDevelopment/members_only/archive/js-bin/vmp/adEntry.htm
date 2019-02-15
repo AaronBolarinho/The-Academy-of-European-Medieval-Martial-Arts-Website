@@ -1,0 +1,229 @@
+<html><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <link rel="stylesheet" type="text/css" href="../misc/css/default.css" />
+   <meta name="Author" content="ICE: Webmaster">
+   <title>Virtual Market Place Ad Entry Form</title>
+<script src="../js-bin/javaScriptCommon.js"></script>
+<script src="../js-bin/vmp/adEntry.js"></script>
+</head>
+<body class="mainpagetext">
+<center><table class="mainpagetext" width=420><tr><td><IMG SRC="../images/aemma_crest_90.gif"></td><td><font size=2><b>Academy of European Medieval Martial Arts</b></font><br>Virtual Market Place<br>Advertisement Application Form</td></tr>
+<tr><td colspan=2><font color="purple">In order to process your request, you must fill out this form, print it, and then mail to AEMMA at the postal address indicated below, along with a cheque for the amount indicated, made out to AEMMA.</td></tr>
+</table></center>
+<br>
+<form method="post"><table width="560" border="0" cellspacing="0" cellpadding="3" class="mainpagetext">
+        <tr>
+		<td align=right valign=middle bgcolor="#DDDDDD"><b>Category: </b></font><BR></td>
+		<td align=left valign=top><SELECT NAME="ad_category">
+		<OPTION selected value="">&nbsp;</OPTION>
+		<OPTION value="accessories">Accessories</OPTION>
+		<OPTION value="armour">Arms & Armour</OPTION>
+		<OPTION value="arts">Arts & Music</OPTION>
+		<OPTION value="arts">Books</OPTION>
+		<OPTION value="tours">Destinations/Tours</OPTION>
+		<OPTION value="garments">Garments</OPTION>
+		<OPTION value="leather">Leather</OPTION>
+		<OPTION value="magazines">Periodicals / Magazines</OPTION>
+		<OPTION value="videos">Multi-media</OPTION>
+		</SELECT>
+<!--adNum-->
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advertisement No:&nbsp;&nbsp;<INPUT TYPE="text" SIZE="6" MAXLENGTH="6" NAME="adNum" VALUE="101"></td>
+        </tr>
+        <tr>
+                <td align=right valign=baseline bgcolor="#DDDDDD">Advertisement Title:&nbsp;&nbsp;</td>
+                <td align=left valign=top><INPUT TYPE="text" SIZE="40" VALUE="" MAXLENGTH="60" NAME="ad_title" onChange="titleCheck(value),getTodaysDate(form)"></td>
+        </tr>
+        <tr>
+                <td align=right valign=baseline bgcolor="#DDDDDD">Date of Entry:&nbsp;&nbsp;</td>
+                <td align=left valign=top><INPUT TYPE="text" SIZE="12" VALUE="" MAXLENGTH="12" NAME="entryDate" onChange="getTodaysDate(form)"></td>
+        </tr>
+        <tr>
+                <td align=right valign=baseline bgcolor="#DDDDDD">Fee for Ad Placement:&nbsp;&nbsp;</td>
+                <td align=left valign=top><!--<input type="radio" name="radio_duration" onClick="setDur(this.form,'1')">&nbsp;1 month&nbsp;&nbsp;<input type="radio" name="radio_duration" onClick="setDur(this.form,'3')" checked>&nbsp;3 months&nbsp;&nbsp;<input type="radio" name="radio_duration" onClick="setDur(this.form,'6')">&nbsp;6 months&nbsp;&nbsp;<input type="radio" name="radio_duration" onClick="setDur(this.form,'12')">&nbsp;1 year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>-->
+		<INPUT TYPE='text' SIZE='8' VALUE='$40.00' MAXLENGTH='10' NAME='total'>&nbsp;CAD <font color="red">(one time fee - $20 per update thereafter)</font></td>
+        </tr>
+<tr>
+	<td bgcolor="#DDDDDD" colspan=2><b>Note: </b>In order to install your advertisement in the desired VMP category, the graphic image (gif/jpeg format) must be sent to AEMMA.  When this form is completed, an email will be transmitted to you.  When you receive this email, forward it to AEMMA at '<script language="javascript"><!--
+				var link = "info";
+				var tag1 = "mail";
+				var tag2 = "to:";
+				var tag3 = "class=linksred";
+				var email1 = "%20info";
+				var email2 = "aemma";
+				var email3 = ".org";
+				var subject = "AEMMA VMP entry request";
+				var cc = "";
+				var bcc = "";
+				var body = "";
+				document.write("<a " + tag3 + " h" + "ref=" + tag1 + tag2 + email1 + "@" + email2 + email3 + "?cc=" + cc + "&bcc=" + bcc + "&subject=" + escape(subject) + "&body=" + escape(body) + ">" + link + "</a>")
+				//--></script>' with the graphic file as an attachment.</td>
+</tr>
+        <tr>
+                <td align=right valign=top>&nbsp;</td>
+		<td align=left valign=top><img src="../images/required.gif" width=10 height=10 alt="Optional field" border=0>&nbsp;Optional field/optional for non-North American addresses</td>
+        </tr>
+        <tr>
+                <td align=right valign=top>E-Mail Address:<br>(userid@domain.com) </td>
+                <td align=left valign=top><INPUT TYPE="text" SIZE="40" VALUE="" MAXLENGTH="40" NAME="email" onChange="emailCheck(value)"></td>
+        </tr>
+        <tr>
+                <td align=right valign=top>URL:<br>(http://www.name.com) </td>
+                <td align=left valign=top><INPUT TYPE="text" SIZE="40" VALUE="" MAXLENGTH="60" NAME="url" onChange="urlCheck(form)"></td>
+        </tr>
+<TR>
+	<TD align=right valign=baseline>Vendor Name:  </td>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='60' NAME='vendor'></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline>Contact Name:  </td>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='60' NAME='contact'></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle>Address 1:</td>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='40' NAME='street1'></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><IMG src='../images/required.gif' width=10 height=10 alt='Optional field' border=0> Address 2:</FONT><BR></TD>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='40' VALUE='' MAXLENGTH='40' NAME='street2'></TD>
+</TR>
+<TR>
+	<TD align=right valign=baseline>City: </td>
+	<TD align=left valign=middle><INPUT TYPE='text' SIZE='15' VALUE='' MAXLENGTH='22' NAME='city'>  <IMG src='../images/required.gif' width=10 height=10 alt='Optional field for non-North American destinations' border=0>  Prov/State: </FONT>
+	<SELECT NAME='prov_state'>
+	<OPTION selected value=''>&nbsp;</OPTION>
+	<option value='AL'>ALABAMA</option>
+	<option value='AB'>ALBERTA</option>
+	<option value='AK'>ALASKA</option>
+	<option value='AS'>AMERICAN SAMOA</option>
+	<option value='AZ'>ARIZONA</option>
+	<option value='AR'>ARKANSAS</option>
+	<option value='BC'>BRITISH COLUMBIA</option>
+	<option value='CA'>CALIFORNIA</option>
+	<option value='CO'>COLORADO</option>
+	<option value='CT'>CONNECTICUT</option>
+	<option value='DE'>DELAWARE</option>
+	<option value='DC'>DISTRICT OF COLUMBIA</option>
+	<option value='FL'>FLORIDA</option>
+	<option value='GA'>GEORGIA</option>
+	<option value='GU'>GUAM</option>
+	<option value='HI'>HAWAII</option>
+	<option value='ID'>IDAHO</option>
+	<option value='IL'>ILLINOIS</option>
+	<option value='IN'>INDIANA</option>
+	<option value='IA'>IOWA</option>
+	<option value='KS'>KANSAS</option>
+	<option value='KY'>KENTUCKY</option>
+	<option value='LA'>LOUISIANA</option>
+	<option value='ME'>MAINE</option>
+	<option value='MB'>MANITOBA</option>
+	<option value='MH'>MARSHALL ISLANDS</option>
+	<option value='MD'>MARYLAND</option>
+	<option value='MA'>MASSACHUSETTS</option>
+	<option value='MI'>MICHIGAN</option>
+	<option value='MN'>MINNESOTA</option>
+	<option value='MS'>MISSISSIPPI</option>
+	<option value='MO'>MISSOURI</option>
+	<option value='MT'>MONTANA</option>
+	<option value='NE'>NEBRASKA</option>
+	<option value='NB'>NEW BRUNSWICK</option>
+	<option value='NF'>NEWFOUNDLAND</option>
+	<option value='NV'>NEVADA</option>
+	<option value='NH'>NEW HAMPSHIRE</option>
+	<option value='NJ'>NEW JERSEY</option>
+	<option value='NM'>NEW MEXICO</option>
+	<option value='NY'>NEW YORK</option>
+	<option value='NC'>NORTH CAROLINA</option>
+	<option value='ND'>NORTH DAKOTA</option>
+	<option value='NT'>NORTHWEST TERRITORY</option>
+	<option value='OH'>OHIO</option>
+	<option value='OK'>OKLAHOMA</option>
+	<option value='ON'>ONTARIO</option>
+	<option value='OR'>OREGON</option>
+	<option value='PW'>PALAU</option>
+	<option value='PA'>PENNSYLVANIA</option>
+	<option value='PE'>PRINCE EDWARD ISLAND</option>
+	<option value='PR'>PUERTO RICO</option>
+	<option value='QC'>QUEBEC</option>
+	<option value='RI'>RHODE ISLAND</option>
+	<option value='SK'>SASKATCHEWAN</option>
+	<option value='SC'>SOUTH CAROLINA</option>
+	<option value='SD'>SOUTH DAKOTA</option>
+	<option value='TN'>TENNESSEE</option>
+	<option value='TX'>TEXAS</option>
+	<option value='UT'>UTAH</option>
+	<option value='VT'>VERMONT</option>
+	<option value='VI'>VIRGIN ISLANDS</option>
+	<option value='VA'>VIRGINIA</option>
+	<option value='WA'>WASHINGTON</option>
+	<option value='WV'>WEST VIRGINIA</option>
+	<option value='WI'>WISCONSIN</option>
+	<option value='WY'>WYOMING</option>
+	<option value='YK'>YUKON</option>
+	</SELECT></TD>
+</TR>
+<TR>
+	<TD align=right valign=middle><IMG src='../images/required.gif' width=10 height=10 alt='Optional field' border=0> Postal Code/ZIP:</td>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='11' VALUE='' MAXLENGTH='11' NAME='postalCode'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country:</FONT>
+	<SELECT NAME="country">
+	<OPTION selected value="Canada">Canada</OPTION>
+	<OPTION value="Australia">Australia</option>
+	<OPTION value="Belgium">Belgium</option>
+	<OPTION value="Brasil">Brasil</option>
+	<OPTION value="France">France</option>
+	<OPTION value="Germany">Germany</option>
+	<OPTION value="Great Britain">Great Britian</option>
+	<OPTION value="Italy">Italy</option>
+	<OPTION value="New Zealand">New Zealand</option>
+	<OPTION value="Poland">Poland</option>
+	<OPTION value="Russia">Russia</option>
+	<OPTION value="Scotland">Scotland</option>
+	<OPTION value="Slovakia">Slovakia</option>
+	<OPTION value="Slovenia">Slovenia</option>
+	<OPTION value="South Africa">South Africa</option>
+	<OPTION value="Sweden">Sweden</option>
+	<OPTION value="USA">USA</option>
+	<OPTION value="Other">Other</OPTION>
+	</SELECT></td>
+</tr>
+<TR>
+	<TD align=right valign=middle>Telephone:</td>
+	<TD align=left valign=top><INPUT TYPE='text' SIZE='16' VALUE='' MAXLENGTH='24' NAME='phone'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src='../images/required.gif' width=10 height=10 alt='Optional field' border=0> Fax: </font><INPUT TYPE='text' SIZE='16' VALUE='' MAXLENGTH='24' NAME='fax'></TD>
+</TR>
+
+<tr>
+	<td bgcolor="#DDDDDD" colspan=2><b>Note: </b>In order to process your request, you must a) print this form, b) cut a cheque of the above amount made out to the "AEMMA", c) mail both printed form and cheque to:<center><b>AEMMA,</b>&nbsp;822-18&nbsp;Concorde&nbsp;Place.,&nbsp;Toronto,&nbsp;ON&nbsp;&nbsp;M3CA&nbsp;3T9,&nbsp;Canada</font></center></td>
+</tr>
+</TABLE>
+<BR><CENTER><INPUT type='button' value="1. Validate" onClick="validateForm(form,0)"><INPUT type='button' value="2. Print" onClick="validateForm(form,1)"><INPUT type='submit' value="3. Email" onClick="return validateForm(form,2)">&nbsp;<INPUT type='reset' value='Clear all fields'><INPUT type='button' value='Cancel' onClick="self.close()"><INPUT type='button' value='Help' onClick="helpMe()">
+<input type="hidden" value=0  name="formValidate">
+<input type="hidden" value="info" name="aemmaEmail">
+<input type="hidden" value="AEMMA: VMP Ad submission" name="subjectEmail">
+<input type="hidden" value="This is a confirmation for a request for your advertisement entry request," name="messageEmail1">
+<input type="hidden" value="originated from AEMMA's Virtual Market Place. The completed form and money" name="messageEmail2">
+<input type="hidden" value="order will be mailed out to the address provided on the form. Your request" name="messageEmail3">
+<input type="hidden" value="will be  processed upon  receipt  of the money order. Please allow approx." name="messageEmail4">
+<input type="hidden" value="3 - 5 business days upon  receipt of money order for AEMMA upload your ad." name="messageEmail5">
+<input type="hidden" value="AEMMA thanks you for supporting our efforts through this order." name="messageEmail6">
+<input type="hidden" value="  " name="messageEmail7">
+<input type="hidden" value="Now, forward this email to AEMMA, with the graphics file as an attachment." name="messageEmail8">
+</form>
+<p><b><i><font color="#CC3300">Please wait a moment for confirmation of your<br>VMP advertisement entry request</font></i></b></center>
+<hr>
+
+<center>Send your comments, suggestions or criticisms on the Virtual Market Place to the <script language="javascript"><!--
+				var link = "AEMMA Webmaster";
+				var tag1 = "mail";
+				var tag2 = "to:";
+				var tag3 = "class=linksgray";
+				var email1 = "%20webmaster";
+				var email2 = "i2ce";
+				var email3 = ".com";
+				var subject = "AEMMA VMP Comments";
+				var cc = "";
+				var bcc = "";
+				var body = "";
+				document.write("<a " + tag3 + " h" + "ref=" + tag1 + tag2 + email1 + "@" + email2 + email3 + "?cc=" + cc + "&bcc=" + bcc + "&subject=" + escape(subject) + "&body=" + escape(body) + ">" + link + "</a>")
+				//--></script></center>
+</body>
+</html>

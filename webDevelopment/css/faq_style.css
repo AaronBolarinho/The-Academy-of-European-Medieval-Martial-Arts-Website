@@ -1,0 +1,9 @@
+.accordion-toggle {cursor:pointer;}
+.accordion-toggle:hover {background-color:yellow;}
+.accordion-content {display:none;background-color:white;border:1px solid;border-radius:15px;background-color:#efefef;margin-bottom:50px;padding-left:3%;padding-right:3%;padding-bottom:2%;box-shadow: 0 10px 6px -6px grey;}
+
+.accordion_hosts-toggle {cursor:pointer;}
+.accordion_hosts-toggle:hover {background-color:yellow;}
+.accordion_hosts-content {display:none;width:50%;margin-left:10%;background-color:white;border:1px solid;border-radius:15px;background-color:#efefef;margin-bottom:50px;padding-left:3%;padding-right:3%;padding-bottom:2%;box-shadow: 0 10px 6px -6px grey;}
+
+

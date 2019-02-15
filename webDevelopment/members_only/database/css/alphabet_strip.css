@@ -1,0 +1,99 @@
+ul#Tabs {
+	margin-top:0px;
+	margin-bottom:1px;
+	background-color:lightgray;		/* background colour of the strip in which the letter blocks are placed */
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	height:22px;
+	padding: 0;
+	list-style: none;
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+
+}
+
+ul#Tabs li {
+	display: inline;
+	margin-top:3px;
+}
+
+ul#Tabs li a:link {
+	text-decoration: none;
+	font-size: 14px;			/* size of the letters in the navigation strip of letters*/
+	color:green;
+}
+/*
+ul#Tabs li a:visited {
+	color:blue;
+}
+*/
+ul#Tabs li a:hover {
+	color:red;
+	font-size: 16px;
+}
+ul#Tabs li a:active {
+	color:yellow;
+}
+
+
+ul .left {
+	background-image: url(../images/down.gif);
+	background-position: bottom left;
+	padding: 2px;
+	padding-right: 3px;
+}
+
+ul .right {
+	background-image: url(../images/down.gif);
+	background-position: bottom right;
+	padding: 2px 9px 2px 0;
+
+}
+
+ul#NavList {
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	width: 10em;
+	background-color: #036;
+}
+
+ul#NavList li {
+	display: block;
+	margin-left: 0;
+	padding-left: 0;
+	border: 1px solid #003;
+	border-color: #369 #003 #003 #369;
+}
+
+ul#NavList li a {
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 10px;
+	padding-left: 4%;
+	color: #fff;
+	font-family: arial, verdana, sans-serif;
+	border-left: 0.5em solid #369;
+}
+
+ul#NavList li a:hover {
+	border-color: #003 #369 #369 #003;
+	background-color: #69c;
+}
+
+caption {
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #c00;
+	color: #fff;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+

@@ -1,0 +1,125 @@
+/*
+Modal CSS: modal_popups.css
+source: http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+*/
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1001;
+	overflow: auto; 				/* Enable scroll if needed */
+	width: 100%; 					/* Full width */
+	height: 100%; 					/* Full height */
+	background-color: rgb(0,0,0); 			/* Fallback color */
+	background-color: rgba(0,0,0,0.6); 		/* Black w/ opacity */
+	opacity:0;					/* indicates the complete transparency of the modal window when not "activated" */
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	}
+
+.modalDialog:target {
+	opacity:1;					/* when the modal window is actived, "1" indicates that it is completely visible */
+	pointer-events: auto;
+	}
+
+.modalDialog > div {
+	width: 60%;
+	position: relative;
+	margin-top:10%;margin-left:18%;			/* relative position of the modal window from the top of the browser window and from the left ofthe window */
+	border: 1px solid black;
+	font-size:13px;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.6),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+	}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+	}
+
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+	}
+
+.close {
+	background: #606061;				/* background colour of the "X" circle */
+	color: #FFFFFF;					/* colour of the "X" text character */
+	line-height: 25px;				/* line height of the "X", any larger than 25px, makes it into a vertical oval*/
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	z-index:1002;					/* ensure that the circle "X" is positioned ON TOP of the green header band */
+	}
+
+/*	.close:hover { background: #00d9ff; }*/
+	.close:hover { background:red;color:white;text-decoration:none; }
+/*.close:hover,
+.close:focus {
+background:red;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+*/
+.bggreen	{color:white;background-color:green;font-size:14px;} 	/* colour of top-most band on the modal window */
+
+.button{
+ border:1px solid #7d99ca; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 5px 5px 5px 5px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a5b8da; background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+ background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: linear-gradient(to bottom, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+.button:hover{
+ border:1px solid #5d7fbc;color:orange;text-decoration:none;cursor:pointer;
+ background-color: #819bcb; background-image: -webkit-gradient(linear, left top, left bottom, from(#819bcb), to(#536f9d));
+ background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+ background-image: linear-gradient(to bottom, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+}
+
+.button.disabled:hover {
+border:1px solid #7d99ca; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 5px 5px 5px 5px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a5b8da; background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+ background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: linear-gradient(to bottom, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+.button.disabled {
+  opacity: 0.65; 
+  cursor: not-allowed;
+}

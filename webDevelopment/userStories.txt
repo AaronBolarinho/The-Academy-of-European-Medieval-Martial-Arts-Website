@@ -1,0 +1,428 @@
+------------------------------------------------------------------
+------------------------------------------------------------------
+AEMMA WIKI CONTENT (In general)
+
+---------------------------------
+As an content contributor
+I want this content to be accessible only to AEMMA students
+Because some of the content cannot be legally made public(ie. Translations)
+---------------------------------
+As a logged in aemma student
+I want to compare any play in any manuscript to any other play in any other manuscript
+Because it will help me study
+---------------------------------
+
+
+
+Re: Manuscripts
+---------------------------------
+As a logged in aemma student
+I want to access all the manuscripts we study in class
+So that I can study them myself at home
+---------------------------------
+As a logged in aemma student
+I want to easily browse each page of each manuscript
+So that I can study and research the manuscripts efficiently
+---------------------------------
+As a logged in aemma student
+I want each manuscript to be presented in a way which facilitates its study
+Because I want to browse and study efficiantly
+
+^------ Re: Fiore (example)
+
+Fiore => Getty => Grappling section => The Guards => Posta Longa F.6.r.a
+
+or
+
+Fiore => PD => Sword in Two Hands => Zogho Stretto => First Masters => First Scholar Carta 22.A.b
+---------------------------------
+As a logged in aemma student
+I want to browse the content of each manuscript efficiently and with an attractive interface
+Because the manuscripts are large and I do not want to click too many times.
+---------------------------------
+
+As a logged in aemma student
+I want each page of each browseable part of each manuscript to contain all relevent information
+Because I do not want to click too many times to find that information
+
+^------ Re: Fiore
+0. Navigation tools
+1. High Rez Image
+2. Folio Notation
+3. All Transcriptions
+4. All Translations
+5. All AEMMA glosses
+---------------------------------
+As a logged in aemma student
+I want to compare any play in one of Fiore's Ms's to any other in Fiore's Ms's
+Because the comparison will help me study
+---------------------------------
+As a logged in aemma scholar, free scholar, or provost
+I want to be able to easily add my gloss to any page in Fiore
+Because I want to share my oppinion with others about that play
+---------------------------------
+As an a logged in aemma student
+I want to download the total glosses of those who have made them
+So that I can study them on paper at home
+---------------------------------
+
+Re: Training
+---------------------------------
+as a logged in aemma student
+I want access to everything that will directly affect my training
+Because these things have the most practical use for me as a student.
+---------------------------------
+as a logged in aemma student
+I want to see, view, and download all documents and information about AEMMA's rank tests
+Because I want to use that information to study for my rank tests
+---------------------------------
+as a logged in aemma student
+I want to see, view, and download all documents designed to affect my training
+Because these things have the most practical use for me as a student.
+---------------------------------
+
+Re: Scholarship
+---------------------------------
+as a logged in aemma student
+I want to view all documents that AEMMA sees fit to host
+Because I want to read and study
+---------------------------------
+as a logged in aemma student
+I want to see, view, and download all documents written by AEMMA members
+Because I want to study these things as a student.
+---------------------------------
+as a logged in aemma student
+I want to see, view, and download all documents written by non-AEMMA members
+Because I want to study these things as a student.
+---------------------------------
+as a logged in aemma scholar, free scholar, or provost
+I want to upload a document to the AEMMA members document list
+Because I want to share my document with all of AEMMA
+---------------------------------
+as a logged in aemma scholar, free scholar, or provost
+I want to upload a document to the non-AEMMA members document lists
+Because I want to share my document with all of AEMMA
+---------------------------------
+as a logged in aemma student
+I want the documents I am browsing through to be organised in an intelligent way
+Because I want to find the documents I am interested in reading as fast as possible
+
+Re: Video Library
+---------------------------------
+as a logged in aemma student
+I want to browse and access aemma's collection of videos
+Because I want to use the videos to study
+---------------------------------
+as a logged in aemma student
+I want to efficiently search and find vidoes in aemma's video collection based on some search terms
+Because I want to find the video I am looking for as quickly as possible
+---------------------------------
+as a logged in aemma student
+I want to add a video to the collection by filing in a form
+Because the video was just added to our youtube channel and I want it to be in our collection
+------------------------------------------------------------------
+------------------------------------------------------------------
+AEMMA PUBLIC SITE
+
+As a non aemma member
+I want to see an attractive home page
+Because I want to be intrigued and excited about AEMMA right away
+------------------------------------------------------------------
+As a non aemma member
+I want to find this basic information on the public site:
+1. What is AEMMA
+  1.1 - Who is aemma - summary
+  1.2 - AEMMA's ranks - summary
+2. What does AEMMA do
+  2.1 - What is HEMA
+  2.2 - What is Armizare/Who is Fiore
+3. Where does AEMMA exist
+  3.1 - Where are AEMMA's Chapters
+  3.2 - What are their training hours
+  3.3 - What is each chapters contact info?
+  3.4 - Pictures of each chapter?
+4. How can I join
+  4.1 - What do you need to do to join each chapter
+  4.2 - What does it cost to join each chapter
+  4.3 - Link to training hours and locations
+5. How can I contact AEMMA
+  5.1 - Link to chapters page (where contact info exists)
+  5.2 - Link to Facebook
+6. Where does AEMMA exist online?
+  6.1 - links to aemma's online locations in nav bar:
+        Facebook, Youtube, Instagram, Twitter?
+Because this is the most important information for me
+------------------------------------------------------------------
+AEMMA MEMBERR ONLY SITE
+
+As an aemma member
+I want
+Because
+------------------------------------------------------------------
+As an aemma member
+I want to find this basic information on the members site:
+Because this is the most important information for me
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+Public Site Menu Pages
+
+Home
+
+About AEMMA
+  About AEMMA
+    About the Academy
+    The Academy's armorial bearings
+    The history of AEMMA
+    Contact Us
+    Disclaimer
+    Privacy & Security
+  Governance
+    Executive Committee
+    Instructors
+  AEMMA Chapters
+    Guelph
+    Digby
+    Stratford
+    Ottawa
+  Training Fees
+  Training Schedule
+  Location of the salle d'armes
+  Photos of the salle d'armes
+  Visit the Academy
+  New to this? Start Here
+  FAQs
+  Visit us on Facebook
+
+l'arte dell'armizare
+  Italian art of arms
+  Maestro Fiore dei Liberi
+
+Training
+  Introduction to armizare
+  Styles of combat training
+    Grappling
+    Dagger
+    Sword
+    Spear and Poleaxe
+    Armoured
+    Sword and Buckler
+  ranks @ AEMMA
+    Introduction
+    Recruit
+    Scholar
+    Free Scholar
+    Provost
+    Maestro
+  equipment requirements
+    Recruit gear
+  Private lessons
+  Longbow and recurve archery
+
+Resources
+  AEMMA Blog
+  AEMMA Facebook
+  AEMMA Faqs
+  AEMMA Archery facebook
+  AEMMA Youtube Channel
+  Heraldry
+    what is heraldry?
+    Common misconceptions
+    History of Heraldry
+    reccomended books
+    Royal heraldry society
+  Online Library
+    overview and usage
+    11-14th centuries
+    15th century
+    16th century
+    17th century
+    18th century
+    19th century
+    20th century
+    21st century
+  Contact us
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+Members Only Site Menu Pages
+
+Home
+Logout
+About AEMMA
+  About AEMMA
+    about the Academy
+    the Academy's armorial bearings
+    history of AEMMA (detailed)
+    contact AEMMA
+    rules of the salle d'armes
+    disclaimer
+    privacy and security
+  Governance
+    executive commitee
+    instructors
+  AEMMA Chapters
+    Guelph
+    Digby
+    Stratford
+    Ottawa
+  Contributing member
+  Training Fees
+  Training Schedule
+  Locations of the academies
+    the salle d'armes in Toronto
+    Guelph Ontario
+    Digby
+    Stratford
+    Ottawa
+  Calendar of Training and events
+  FAQs
+  news and press releases
+  Visit us on facebook
+
+l'arte dell'armizare
+  Italian art of arms
+  Maestro Fiore dei Liberi
+  Medieval codicies of the art
+    Getty
+    PD
+    Morgan
+    Paris
+    Codices LXXXIV and CX
+
+Training
+  Introduction to Armizare
+  styles of combat training
+    grappling
+    dagger
+    sword
+    spear & poleaxe
+    armoured
+    sword and buckler
+  ranks@AEMMA
+    recruit
+    Scholar
+    free Scholar
+    provost
+    maestro
+  equipment requirements
+    recruit gear
+    scholar
+    armoured kit
+    period garments
+  curriculum
+    recruit training
+    scholar training
+  private lessons
+  Traditional archery
+  pas d'armes
+    undertaking a pas d'armes
+    planning the event
+    armour inspections
+    pas-d'armes officials
+      patrons of the pas darmes
+      king or arms
+      the procession herald
+      the heralds
+      the squires
+      the marshals
+    protocols and ceremony
+      combatant accoutrements
+      opening the pas d'armes
+      setup of the bouts
+      closing the pas d'arms
+    victory conditions
+    rule of engagment
+    harness requirements
+    arms requirements
+    selected videos
+    references
+  trial by combat
+    on the trial by combat
+  unarmoured tournament
+    on the unarmoured tourney
+  past pas d'armes
+
+Resources
+  calendar
+  gallery
+  video library
+  AEMMA facebook
+  AEMMA Wiki
+  AEMMA Youtube Channel
+  Heraldry
+    what is heraldry?
+    common misconceptions
+    history of heraldry
+    reccomended Books
+    heraldry forums
+    RHSC
+    RHSC facebook
+  Online library
+    overview and usage
+    11-14th centuries
+    15th century
+    16th century
+    17th century
+    18th century
+    19th century
+    20th century
+    21st century
+  Links to resources
+    arms and armour sources
+    armour (historical reproductions)
+    archery supplies
+    associations, federations
+    heraldry resources
+    WMA schools
+    museums & academic inst.
+    re-enactment groups
+    stage combat
+    sword smithies and distributors
+  Roll of Arms
+  Members Listings
+    recruits
+    scholars
+    free scholars
+    provosts
+    honourary
+    traditional archery
+    members, toronto salla
+    members, Guelph chapter
+    members, digby chapter
+    members, stratford chapter
+    members, Ottawa chapter
+  change password
+  glossary of terms
+  arms and armour collections
+  articles
+    articles by aemma
+    jrnl of manly arts
+    jrnl of Western Martial Arts
+    Use of force and the law
+  Publications by AEMMA
+  Booklist references
+  Online references, treatises and works
+    historical treatises and works
+      material related to Fiore dei liberi
+      Fiore's world
+      free scholar submissions
+    Reference books and resources
+      dictionaries
+      the crusades
+      Geoffrey Chaucer
+    Flos duellatorum video
+    educational resources
+  Admin
+

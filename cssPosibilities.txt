@@ -11,3 +11,28 @@ http://www.csszengarden.com/171/ - interesting; maybe a long page could be navig
 http://www.csszengarden.com/169/- interesting statue and column frame.
 
 http://www.csszengarden.com/162/ - interesting manuscripty backround idea.
+
+https://forgeandsmith.com/scrolling-vs-clicking-whats-the-preferred-user-experience/
+
+http://www.nytimes.com/projects/2012/snow-fall/index.html#/?part=tunnel-creek - good parallax stuff.
+
+- Clicks ask the visitor to make a decision, so placing clicks too early in their journey can also be a deterrent. For example, your homepage should provide enough information for someone to understand who you are, what you offer, and which area of your website is their next logical step. They shouldn’t have to click and navigate to other pages to find this most basic information.
+
+-When it comes to delivering all of the awesome information on your website and keeping users engaged, scrolling is the most natural and efficient means of navigation.
+
+More pros of the scroll:
+
+It delivers content more quickly, because there is no need to wait for pages to load
+It doesn’t require a commitment by forcing users to choose a button — or pick between multiple buttons — and abandon their current page
+It allows visitors to digest information at their own rate
+
+WHICH CONTENT SHOULD BE SCROLLED, AND WHICH SHOULD BE CLICKED?
+We asked our awesome team of designers and developers to break down exactly where you would want to use scrolling website navigation for a winning user experience, and where you should use clicking. For a typical website, this is what they recommend:
+
+Top-level content should be scannable, CTA-focused, accessible, and be a decision-making tool. Scrolling navigation is optimal for your primary landing pages.
+Secondary content is more specific, but still has the same needs as far as accessibility. Scrolling is also ideal for interior landing pages, such as product categories.
+Tertiary content is typically accessed when the user is committed and ready to get down to business. Clicking works well on pages like individual products or services, and for lateral navigation between recommended related content to foster continued exploration and discovery.
+
+https://www.dtelepathy.com/blog/inspiration/14-beautiful-content-heavy-websites-for-inspiration
+
+https://www.fastcompany.com/section/audio - I very much like this organisation; I think it could accomodate the AEMMA menu system.

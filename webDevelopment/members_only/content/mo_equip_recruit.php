@@ -30,24 +30,9 @@ $header = $path_members."php-bin/members_only_header.php"; include "$header";
 $header2 = $path_members."php-bin/members_only_header2.php"; include "$header2";
 $num = rand(1,3);
 ?>
-<?php
- //include CSS Style Sheet
- echo "<link rel='stylesheet' type='text/css' href='../css/test.css' />";
 
- //include a javascript file
- echo "<script type='text/javascript' src='../js-bin/test.js'></script>";
-
-  //include a jquery
- echo '<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>';
-
-  //include fancybox
- echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />';
-
-  //include a javascript file for fancybox
- echo '<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>';
-?>
 	<!-- begin main_content -->
-	<iframe src="http://localhost:3000/" width="100%" height="1200px" />
+	<iframe src="http://localhost:3000/test" width="100%" height="1200px" />
 
 	<!-- begin footer -->
 <?php

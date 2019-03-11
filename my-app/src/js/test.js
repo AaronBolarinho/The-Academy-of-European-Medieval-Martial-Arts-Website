@@ -18,7 +18,8 @@ class test extends Component {
       activeTabGp3: '5',
          nameFirst: '',
         nameMiddle: '',
-          nameLast: ''
+          nameLast: '',
+             users: []
     };
   }
 
@@ -46,18 +47,69 @@ class test extends Component {
     }
   }
 
-  componentDidMount() {
-    // fetch('/users')
-    //   .then(res => res.json())
-    //   .then(users => this.setState({ users }));
-    //   console.log(this.state.users)
-    //   console.log(this.state.activeTabGp3)
+  getTableBodyAsReactElement() {
+    let inv = this.state.users;
+    console.log('inv: ', inv);
+
+    return (!inv) ? null : (
+      <tbody>
+        {inv.map((item) => {                                // changed here
+          console.log('item: ', item);
+          return (
+            <tr>
+              {Object.entries(item).map((field) => {        // changed here
+                console.log('field: ', field);
+                return <td>{field[1]}</td>
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    );
   }
+
+componentDidMount() {
+
+function status(response) {
+ if (response.status >= 200 && response.status < 300) {
+   return Promise.resolve(response)
+ } else {
+   return Promise.reject(new Error(response.statusText))
+ }
+}
+
+function json(response) {
+ return response.json()
+}
+
+fetch('http://localhost:3003/users')
+ .then(status)
+ .then(json)
+ .then( (data) => {
+   // console.log('Request succeeded with JSON response', data)
+   // const testData = data
+   // console.log('This data has been stringified', JSON.stringify(data))
+   // console.log('This is the test data variable', testData)
+    this.setState({ users: data })
+   console.log("This is the component state", this.state)
+ }).catch(function(error) {
+   console.log('Request failed', error);
+ });
+}
 
   render() {
     return (
 
       <div>
+        <div>
+          Create a user!
+          <form action="/user_create" method="POST">
+            <input placeholder="First Name" name="createFirstName"/>
+            <input placeholder="Middle Name" name="createMiddleName"/>
+            <input placeholder="Last Name" name="createLastName"/>
+            <button>Submit</button>
+          </form>
+        </div>
         <h1 className="test textFont">Equipment Requirements</h1>
         <p className="textFont">&nbsp;&nbsp;&nbsp;&nbsp;Equipment costs for recruits in all AEMMA salles is quite low. What gear you do need will be provided for you during your first few months; this will give you time to organise your finances and your future purchases.</p>
         <p className="textFont">&nbsp;&nbsp;&nbsp;&nbsp;Talk to your salle's Free Scholar and senior students when you are ready to start purchasing gear. While you are encouraged to make purchases yourself, there are semi-regular group orders which you may have access to.</p>
@@ -89,18 +141,9 @@ class test extends Component {
                   <h4>Tab 1 Contents</h4>
                   <p>This is test text</p>
                   <p>This is test text</p>
-                  <table className="width">
-                    <tr>
-                      <th>FirstName</th>
-                      <th>MiddleName</th>
-                      <th>LastName</th>
-                    </tr>
-                    <tr>
-                      <td>Jill</td>
-                      <td>Smith</td>
-                      <td>50</td>
-                    </tr>
-                   </table>
+                  <table border="1">
+                    {this.getTableBodyAsReactElement()}
+                  </table>
                 </Col>
               </Row>
             </TabPane>

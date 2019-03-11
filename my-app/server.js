@@ -1,37 +1,43 @@
-const express = require('express');
-const path = require('path');
+const express = require('express')
+const app = express()
+const morgan =  require('morgan')
 const mysql = require('mysql');
+const bodyParser = require('body-parser')
 
-const app = express();
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(express.static('./public'))
+app.use(morgan('short'))
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-// An api endpoint that returns a short list of items
-app.get('/api/getList', (req,res) => {
-    var list = ["item1", "item2", "item3"];
-    res.json(list);
-    console.log('Sent list of items');
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
-// Handles any requests that don't match the ones above
-app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// These are all my routes
+const router = require('./routes/user.js')
+
+app.use(router)
+//----------------------------------
+
+// This is my functon to connect to the AEMMA Database
+function getConnection() {
+  return mysql.createConnection({
+      host: 'localhost',
+      user: 'aaron',
+      password: 'Starwars1',
+      database: 'AEMMA_database_2016'
+    })
+}
+// -------------------------------------
+
+app.get("/", (req, res) => {
+  console.log("Responding to root route")
+  res.send("Helloooo from route")
+})
+
+// localhost:3003
+app.listen(3003, () => {
+  console.log("Server is up an listening on port 3003...")
 });
-
-const con = mysql.createConnection({
-  host: "localhost",
-  user: "aaron",
-  password: "Starwars1",
-  database: "AEMMA_database_2016"
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
-
-const port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log('App is listening on port ' + port);

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import '../css/test.css';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import ModalToggle from './ModalToggle.js';
 
 class test extends Component {
 
@@ -13,16 +16,16 @@ class test extends Component {
     this.toggleGp3 = this.toggleGp3.bind(this);
 
     this.state = {
+             modal: false,
       activeTabGp1: '1',
       activeTabGp2: '3',
       activeTabGp3: '5',
-         nameFirst: '',
-        nameMiddle: '',
-          nameLast: '',
-             users: []
+          products: [],
+           reviews: [],
     };
   }
 
+// These are the functions that govern the switching of tabs in each tabbed div
   toggleGp1(tab) {
     if (this.state.activeTabGp1 !== tab) {
       this.setState({
@@ -47,30 +50,57 @@ class test extends Component {
     }
   }
 
-  getTableBodyAsReactElement() {
-    let inv = this.state.users;
-    console.log('inv: ', inv);
+// These are the functions that govern the switching of tabs in each tabbed div
 
-    return (!inv) ? null : (
-      <tbody>
-        {inv.map((item) => {                                // changed here
-          console.log('item: ', item);
-          return (
-            <tr>
-              {Object.entries(item).map((field) => {        // changed here
-                console.log('field: ', field);
-                return <td>{field[1]}</td>
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
-    );
-  }
+getTableBodyAsReactElement() {
+  let inv = this.state.products;
+  console.log('inv: ', inv);
 
-componentDidMount() {
+  // let heroes = this.state.heroes;
+  // console.log('These are the heroes', heroes);
 
-function status(response) {
+  // var marvelHeroes =  heroes.filter(function(hero) {
+  //   return hero.franchise == 'Marvel';
+  // });
+
+  // console.log('This is the hero filter working ', marvelHeroes);
+
+  return (
+   <tbody>
+   {inv.map(({id, brand_name, web_link}) => {
+
+      let productID = {id}.id
+      console.log("this is the individual product id", productID)
+
+      let reviews = this.state.reviews;
+      console.log('this is the reviews: ', reviews);
+
+      var specificReviews =  reviews.filter(function(review) {
+        return review.product_number == productID;
+      });
+      console.log('This is the aaron filter working ', specificReviews);
+
+      // this.setState({tableKey : productID})
+
+      return (
+        <tr>
+          <td key={id}>{id}</td>
+          <td key={id}>{brand_name}</td>
+          <td key={id}><a href={web_link}>Link</a></td>
+          <td key={id}>
+            <ModalToggle filteredRevs={specificReviews} tableKey={productID}/>
+          </td>
+        </tr>
+      )
+  })}
+  </tbody>
+  )
+
+}
+
+componentWillMount() {
+
+  function status(response) {
  if (response.status >= 200 && response.status < 300) {
    return Promise.resolve(response)
  } else {
@@ -82,32 +112,42 @@ function json(response) {
  return response.json()
 }
 
-fetch('http://localhost:3003/users')
+fetch('http://localhost:3003/runningShoesReviews')
  .then(status)
  .then(json)
  .then( (data) => {
-   // console.log('Request succeeded with JSON response', data)
-   // const testData = data
-   // console.log('This data has been stringified', JSON.stringify(data))
-   // console.log('This is the test data variable', testData)
-    this.setState({ users: data })
-   console.log("This is the component state", this.state)
+ this.setState({ reviews: data })
+ console.log("This is the component state after getting the reviews", this.state)
  }).catch(function(error) {
    console.log('Request failed', error);
  });
+
+fetch('http://localhost:3003/runningShoesProducts')
+ .then(status)
+ .then(json)
+ .then( (data) => {
+ this.setState({ products: data })
+ console.log("This is the component state after getting the products", this.state)
+ }).catch(function(error) {
+   console.log('Request failed', error);
+ });
+
+}
+
+componentDidMount() {
+
 }
 
   render() {
-    return (
 
+    return (
       <div>
         <div>
-          Create a user!
-          <form action="/user_create" method="POST">
-            <input placeholder="First Name" name="createFirstName"/>
-            <input placeholder="Middle Name" name="createMiddleName"/>
-            <input placeholder="Last Name" name="createLastName"/>
-            <button>Submit</button>
+          Add A Product
+          <form action="/runningShoesDataAdd" method="POST">
+            <input placeholder="Brand Name" name="createBrandName"/>
+            <input placeholder="Web Link" name="createWebLink"/>
+            <button onSubmit={this.submitForm}>Submit</button>
           </form>
         </div>
         <h1 className="test textFont">Equipment Requirements</h1>
@@ -224,3 +264,5 @@ fetch('http://localhost:3003/users')
 }
 
 export default test;
+
+

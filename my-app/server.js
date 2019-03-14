@@ -17,8 +17,10 @@ app.use((req, res, next) => {
 
 // These are all my routes
 const router = require('./routes/user.js')
+const router1 = require('./routes/recruitEquipment.js')
 
 app.use(router)
+app.use(router1)
 //----------------------------------
 
 // This is my functon to connect to the AEMMA Database

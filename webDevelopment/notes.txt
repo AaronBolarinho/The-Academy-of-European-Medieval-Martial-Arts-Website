@@ -22,6 +22,6 @@ myphpadmin
 aaron
 Starwars1
 
-- Also note, to run everything you have to npm start in my-app, and also enter node server.js to start the express server.
+- Also note, to run everything you have to npm start in my-app, and also enter nodemon server.js to start the express server.
 
 ---------------------------------------------

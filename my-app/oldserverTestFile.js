@@ -1,3 +1,4 @@
+// --------------------------------------------
 const app = express();
 
 const path = require('path');
@@ -59,9 +60,9 @@ const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log('App is listening on port ' + port);
+// --------------------------------------------
 
-
-
+// --------------------------------------------
 getTableBodyAsReactElement() {
   let inv = this.state.products;
   console.log('inv: ', inv);
@@ -165,3 +166,225 @@ getTableBodyAsReactElement() {
   )
 
 }
+// --------------------------------------------
+
+
+// --------------------------------------------
+<form action="/runningShoesDataAdd" method="POST" className="form">
+  <input placeholder="Brand Name" name="createBrandName" className="formFields"/>
+  <input placeholder="Web Link" name="createWebLink" className="formFields"/>
+  <button onSubmit={this.submitForm} className="formButton">Add a Product</button>
+</form>
+// ---------------------------------
+// ---------------------------------
+    <tbody>
+     {this.state.products.map(({id, brand_name, web_link}) => {
+
+        let productID = {id}.id
+
+        let reviews = this.state.reviews;
+
+        var specificReviews =  reviews.filter(function(review) {
+          return review.product_number == productID;
+        });
+
+        return (
+          <tr>
+            <td key={id}>{id}</td>
+            <td key={id}>{brand_name}</td>
+            <td key={id}><a href={web_link}>Link</a></td>
+            <td key={id}>
+              <ModalToggle filteredRevs={specificReviews} tableKey={productID}/>
+            </td>
+          </tr>
+        )
+      })}
+    </tbody>
+// ---------------------------------
+
+
+{this.state.products.map(({id, brand_name, web_link}) => {
+
+        let productID = {id}.id
+
+        let reviews = this.state.reviews;
+
+        var specificReviews =  reviews.filter(function(review) {
+          return review.product_number == productID;
+        });
+
+
+            })}
+
+
+
+<tbody>
+        <tr>
+          <th scope="row" key={id}>{id}</th>
+          <td key={id}>{brand_name}</td>
+          <td key={id}><a href={web_link}>Link</a></td>
+          <td key={id}>rating</td>
+          <td key={id}>
+            <ModalToggle filteredRevs={specificReviews} tableKey={productID}/>
+          </td>
+        </tr>
+      </tbody>
+
+
+
+
+    <Table hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Website Link</th>
+          <th>Overall Rating</th>
+          <th>Reviews and Ratings</th>
+        </tr>
+      </thead>
+      <tbody>
+      {this.state.products.map(({id, brand_name, web_link}) => {
+
+        let productID = {id}.id
+
+        let reviews = this.state.reviews;
+
+        var specificReviews =  reviews.filter(function(review) {
+          return review.product_number == productID;
+        });
+        <div>
+        <tr>
+          <th scope="row" key={id}>{id}</th>
+          <td key={id}>{brand_name}</td>
+          <td key={id}><a href={web_link}>Link</a></td>
+          <td key={id}>rating</td>
+          <td key={id}>
+            <ModalToggle filteredRevs={specificReviews} tableKey={productID}/>
+          </td>
+        </tr>
+        </div>
+        })}
+      </tbody>
+    </Table>
+//-----------------------------
+    <Table hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Website Link</th>
+          <th>Overall Rating</th>
+          <th>Reviews and Ratings</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+    </Table>
+//-----------------------------
+
+
+{this.state.products.map(({id, brand_name, web_link}) => {
+
+        let productID = {id}.id
+        console.log("This is product ID", productID)
+
+        let reviews = this.state.reviews;
+        console.log("This is reviews", reviews)
+
+        var specificReviews =  reviews.filter(function(review) {
+          return review.product_number == productID;
+        });
+        console.log("This is specificReviews", specificReviews)
+
+
+{this.state.products.map(({id, brand_name, web_link}) => {
+
+        let productID = {id}.id
+        console.log("This is product ID", productID)
+
+        let reviews = this.state.reviews;
+        console.log("This is reviews", reviews)
+
+        var specificReviews =  reviews.filter(function(review) {
+          return review.product_number == productID;
+        });
+        console.log("This is specificReviews", specificReviews)
+  })}
+
+
+// This is the function that maps each tab's table data
+getTableBodyAsReactElement() {
+
+      let products = this.state.products
+      console.log("these are the products", products)
+
+        return (
+          <div>
+            {products.map(products =>
+            <h4 key={products.id}>
+              {products.id}
+            </h4>
+            )}
+          </div>
+        )
+}
+//-----------------------------------------------------
+
+
+      products.forEach(function (arrayItem) {
+          var x = arrayItem.id;
+          console.log("this is the prodcuts values", x)
+      });
+
+
+  overallRating(filteredReviews, itemId) {
+
+    var rv = {};
+
+    function toObject(arr) {
+      for (var i = 0; i < arr.length; ++i)
+        rv[i] = arr[i];
+      return rv;
+    }
+
+    const totalRating = [0]
+
+    toObject(filteredReviews);
+
+    console.log("these are the filtered reviews as an object", rv)
+
+    for (let elem in rv) {
+
+      let singleObject = rv[elem]
+
+      console.log("these are the individal review objects", rv[elem] )
+
+      totalRating.push(singleObject.review_rating);
+      console.log("these are the total ratings array", totalRating )
+    }
+
+    let total = this.getAverage(totalRating)
+
+    console.log("this is the final total", total)
+
+    return total
+  }

@@ -74,7 +74,7 @@ getConnection().query(queryString, [brandName, webLink], (err, results, fields) 
       console.log("inserted new data!")
       res.end()
   })
-res.redirect('http://localhost:3000/test');
+res.redirect('http://localhost:3000/RecruitEquipment');
 res.end()
 })
 

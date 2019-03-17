@@ -30,7 +30,16 @@ class ModalToggle extends React.Component {
   }
 
   render() {
-    // const Modal = this.props.modal;
+
+    var allReviews = this.props.allReviews
+    var key = this.props.tableKey
+
+    var specificReviews =  allReviews.filter(function(review) {
+          return review.product_number == key;
+        });
+
+    this.props.overallRating(specificReviews, key)
+
     return (
       <div>
         <Button type="primary" onClick={this.toggle}>click me!</Button>
@@ -38,7 +47,7 @@ class ModalToggle extends React.Component {
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
               <tbody>
-                {this.props.filteredRevs.map(({id, product_number, reviewer_name, review_text, review_rating}) => {
+                {specificReviews.map(({id, product_number, reviewer_name, review_text, review_rating}) => {
                     return (
                       <tr>
                         <td key={id}>{id}</td>

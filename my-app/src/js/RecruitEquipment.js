@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import '../css/RecruitEquipment.css';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import { Table } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input} from 'reactstrap';
 import classnames from 'classnames';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ModalToggle from './ModalToggle.js';
 import IntroImage from '../css/images/Knightstraining.jpg'
 import ShoesExampleImage from '../css/images/shoesExample.jpg'
@@ -73,9 +73,9 @@ this.overallRating = this.overallRating.bind(this);
 
     console.log("this is the one old rating", rating)
 
-    if ((rating != undefined) && (totalRatings.length <= 3)){
+    if ((rating !== undefined) && (totalRatings.length <= 3)){
       this.setState(prevState => ({
-        totalRatings: [...prevState.totalRatings, rating]
+        totalRatings: [...prevState.totalRatings, rating.toFixed(1)]
       }))
       console.log("this setstate ran!")
       console.log("this is the new total ratings", totalRatings)
@@ -296,7 +296,7 @@ componentDidMount() {}
                 <Col sm="7">
                   <div>
                     <p className="formTitle">Reccomended Running Shoes</p>
-                    <Table hover>
+                    <Table hover className="flexy">
                     <thead>
                       <tr>
                         <th>#</th>

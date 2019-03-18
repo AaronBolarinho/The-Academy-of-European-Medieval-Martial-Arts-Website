@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import React from 'react';
+import { Button} from 'reactstrap';
+import '../css/ModalToggle.css';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class ModalToggle extends React.Component {
@@ -35,14 +36,14 @@ class ModalToggle extends React.Component {
     var key = this.props.tableKey
 
     var specificReviews =  allReviews.filter(function(review) {
-          return review.product_number == key;
+          return review.product_number === key;
         });
 
     this.props.overallRating(specificReviews, key)
 
     return (
       <div>
-        <Button type="primary" onClick={this.toggle}>click me!</Button>
+        <Button type="primary" onClick={this.toggle} className="reviewButton">Rate and Review!</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>

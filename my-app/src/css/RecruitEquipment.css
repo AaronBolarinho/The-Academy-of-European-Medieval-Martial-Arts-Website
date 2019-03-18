@@ -132,3 +132,38 @@ font-family: 'Almendra Sc',serif;
 .formButton:hover {
   border: 3px solid;
 }
+
+.flexy {
+    display: block;
+    width: 90%;
+    border: 1px solid #eee;
+    max-height: 320px;
+    overflow: auto;
+}
+
+.flexy thead {
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+}
+
+.flexy thead tr {
+    padding-right: 15px;
+    display: -webkit-flex;
+    width: 100%;
+    -webkit-align-items: stretch;
+}
+
+.flexy tbody {
+    display: -webkit-flex;
+    height: 11em;
+    overflow: auto;
+    -webkit-flex-flow: row wrap;
+}
+.flexy tbody tr{
+    display: -webkit-flex;
+    width: 87%;
+}
+
+.flexy tr td {
+    width: 22%;
+}

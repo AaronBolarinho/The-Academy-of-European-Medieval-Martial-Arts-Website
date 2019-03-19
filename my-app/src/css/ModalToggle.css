@@ -2,3 +2,18 @@
   font-size: 0.8em;
   width: 10em;
 }
+
+.modal {
+    top: 30em!important;
+}
+.modalTitle {
+	padding: 1em;
+	text-align: -webkit-center;
+	font-size: 1.5em;
+}
+
+.reviewFormButton {
+	font-family: 'Almendra Sc',serif;
+	margin: 1em;
+	font-size: 1.5em;
+}

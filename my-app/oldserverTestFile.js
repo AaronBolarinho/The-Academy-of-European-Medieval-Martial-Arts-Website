@@ -388,3 +388,37 @@ getTableBodyAsReactElement() {
 
     return total
   }
+
+                  <Form action='/runningShoesDataAdd' method='POST'>
+                    <FormGroup>
+                      <Label for='exampleEmail'>Product Name</Label>
+                      <Input type='textarea'
+                        name='createBrandName'
+                        id='exampleText'
+                        placeholder='REEBOK ENDLESS ROAD'/>
+                      <FormText>Please Indicate the Name of the Product</FormText>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for='examplePassword'>Website Link</Label>
+                      <Input type='textarea'
+                        name='createWebLink'
+                        id='exampleText'
+                        placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'/>
+                      <FormText>Copy and Paste an Accurate Website Link</FormText>
+                    </FormGroup>
+                    <div className='addProductFormButton'>
+                      <Button onSubmit={this.submitForm}>Submit</Button>
+                    </div>
+                  </Form>
+
+
+
+{specificReviews.map(({ id, product_number, reviewer_name, review_text, review_rating }) => {
+                return (
+                  <tr>
+                    <td key={id}>{id}</td>
+                    <td key={id}>{product_number}</td>
+                    <td key={id}>{reviewer_name}</td>
+                    <td key={id}>{review_text}</td>
+                    <td key={id}>{review_rating}</td>
+                  </tr>

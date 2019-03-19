@@ -62,10 +62,10 @@ font-family: 'Almendra Sc',serif;
 
 .shoes {
   /*border-style: solid;*/
-  margin-left: 13%;
-  margin-right: 13%;
-  margin-bottom: 1em;
-  width: 70%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 1em;
+    width: 88%;
 }
 
 .shirt {
@@ -161,9 +161,32 @@ font-family: 'Almendra Sc',serif;
 }
 .flexy tbody tr{
     display: -webkit-flex;
-    width: 87%;
+    width: 100%;
 }
 
 .flexy tr td {
     width: 22%;
+}
+
+textarea.form-control {
+    height: 2em !important;
+}
+
+.addProductFormButton {
+  text-align: center;
+}
+
+.generalAdvice {
+  font-family: 'Almendra Sc',serif;
+  width: 73%;
+  text-align: -webkit-center;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-top: 1%;
+}
+
+.generalAdviceTitle {
+  font-family: 'Almendra Sc',serif;
+  text-align: -webkit-center;
+  margin-top: 2%;
 }

@@ -317,7 +317,7 @@ class RecruitEquipment extends Component {
                     Reccomended Conventional Shoes
                       <i class='fas fa-chess-pawn'></i>
                     </p>
-                    <Table hover className='flexy'>
+                    <Table hover className='flexy1'>
                       <thead>
                         <tr>
                           <th>#</th>

@@ -4,12 +4,6 @@ const router1 = express.Router()
 
 const connection = getConnection()
 
-// This was just a test
-// router1.get('/runningShoesTest', (req, res) => {
-//   console.log('this is the router1 response...')
-//   res.end()
-// })
-
 // This gets the conventional shoes data from database
 router1.get('/conventionalShoesProducts', (req, res) => {
   const connection = getConnection()
@@ -38,7 +32,7 @@ router1.get('/conventionalShoesReviews', (req, res) => {
   })
 })
 
-// This is my functon to connect to the AEMMA Database
+// This is my functon to post data to the database for Conventional Shoes
 router1.post('/conventionalShoesProductAdd', (req, res) => {
   const brandName = req.body.createBrandName
   const webLink = req.body.createWebLink
@@ -51,6 +45,27 @@ router1.post('/conventionalShoesProductAdd', (req, res) => {
       return
     }
 
+    console.log('inserted new data!')
+    res.end()
+  })
+  res.redirect('http://localhost:3000/RecruitEquipment')
+  res.end()
+})
+
+// This is my functon to post data to the database for Conventional Shoes Reviews
+router1.post('/conventionalShoesReviewsAdd', (req, res) => {
+  const ProductNumber = req.body.createProductNumber
+  const ReviewerName = req.body.createReviewerName
+  const Rating = req.body.createRating
+  const ReviewText = req.body.createReviewText
+
+  const queryString = 'INSERT INTO Recruit_Equip_Running_Shoes_Reviews(product_number, reviewer_name, review_text, review_rating) VALUES (?, ?, ?, ?)'
+  getConnection().query(queryString, [ProductNumber, ReviewerName, ReviewText, Rating], (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
     console.log('inserted new data!')
     res.end()
   })

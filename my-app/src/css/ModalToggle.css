@@ -17,3 +17,16 @@
 	margin: 1em;
 	font-size: 1.5em;
 }
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.productNumber {
+	display: none!important;
+}

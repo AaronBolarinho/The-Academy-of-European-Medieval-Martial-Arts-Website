@@ -422,3 +422,31 @@ getTableBodyAsReactElement() {
                     <td key={id}>{review_text}</td>
                     <td key={id}>{review_rating}</td>
                   </tr>
+
+  <Table striped className='flexy table-bordered'>
+              <thead className="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Review</th>
+                  <th scope="col">Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                {specificReviews.map(({ id, product_number, reviewer_name, review_text, review_rating }) => {
+                  return (
+                    <tr>
+                      <th scope="row"></th>
+                      <td key={id}>{reviewer_name}</td>
+                      <td key={id} colspan="2">{review_text}</td>
+                      <td key={id}>{review_rating}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </Table>
+
+    console.log('this is now the state of this modal', this.state.productNumer)
+
+    this.setState(state => ({ productNumer: { product_number } })
+                    )

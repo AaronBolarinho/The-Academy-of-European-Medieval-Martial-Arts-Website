@@ -149,7 +149,7 @@ class RecruitEquipment extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/runningShoesReviews')
+    fetch('http://localhost:3003/conventionalShoesReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -159,7 +159,7 @@ class RecruitEquipment extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/runningShoesProducts')
+    fetch('http://localhost:3003/conventionalShoesProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -286,7 +286,7 @@ class RecruitEquipment extends Component {
                   Reccomend A Product!
                     <i class='fas fa-chess-pawn'></i>
                   </p>
-                  <Form action='/runningShoesDataAdd' method='POST'>
+                  <Form action='/conventionalShoesProductAdd' method='POST'>
                     <FormGroup>
                       <Label for='exampleEmail'>Product Name</Label>
                       <Input type='textarea'

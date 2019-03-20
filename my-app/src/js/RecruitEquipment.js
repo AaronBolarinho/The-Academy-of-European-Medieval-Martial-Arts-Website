@@ -228,6 +228,26 @@ class RecruitEquipment extends Component {
                 Conventional Shoes
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: this.state.activeTabGp1 === '3' })}
+                onClick={() => {
+                  this.toggleGp1('3')
+                }}
+              >
+                Conventional Shoes
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: this.state.activeTabGp1 === '4' })}
+                onClick={() => {
+                  this.toggleGp1('4')
+                }}
+              >
+                Conventional Shoes
+              </NavLink>
+            </NavItem>
           </Nav>
           <TabContent activeTab={this.state.activeTabGp1}>
             <TabPane tabId='1'>
@@ -334,6 +354,10 @@ class RecruitEquipment extends Component {
                   </div>
                 </Col>
               </Row>
+            </TabPane>
+            <TabPane tabId='3'>
+            </TabPane>
+            <TabPane tabId='4'>
             </TabPane>
           </TabContent>
         </div>

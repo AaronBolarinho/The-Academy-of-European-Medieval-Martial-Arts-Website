@@ -53,21 +53,21 @@ class ModalToggle extends React.Component {
           </div>
           <ModalBody>
             <div className='table-wrapper-scroll-y my-custom-scrollbar'>
-              <Table striped className='table-bordered'>
+              <Table striped className='table-bordered tableProportions'>
                 <thead>
-                  <tr>
-                    <th scope='col'>Name</th>
-                    <th scope='col'>Review</th>
-                    <th scope='col'>Rating</th>
+                  <tr className='d-flex'>
+                    <th scope='col' className='col-2'>Name</th>
+                    <th scope='col' className='col-8'>Review</th>
+                    <th scope='col' className='col-2'>Rating</th>
                   </tr>
                 </thead>
                 <tbody>
                   {specificReviews.map(({ id, product_number, reviewer_name, review_text, review_rating }) => {
                     return (
-                      <tr>
-                        <td key={id} scope='row'>{reviewer_name}</td>
-                        <td key={id} scope='row'>{review_text}</td>
-                        <td key={id} scope='row'>{review_rating}</td>
+                      <tr className='d-flex'>
+                        <td key={id} scope='row' className='col-2'>{reviewer_name}</td>
+                        <td key={id} scope='row' className='col-8'>{review_text}</td>
+                        <td key={id} scope='row' className='col-2'>{review_rating}</td>
                       </tr>
                     )
                   })}
@@ -123,6 +123,7 @@ class ModalToggle extends React.Component {
                       <Input type='textarea'
                         placeholder='This is a great product'
                         name='createReviewText'
+                        maxlength='249'
                         required/>
                       <FormText>
                         250 Characters Max; Your review goes here

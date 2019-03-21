@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import '../css/RecruitEquipment.css'
+import '../../../css/Equipment/Recruit/RecruitEquipment.css'
 import { TabContent, TabPane, Nav,
   NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap'
 import { Table } from 'reactstrap'
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import classnames from 'classnames'
-import ModalToggle from './ModalToggle.js'
-import IntroImage from '../css/images/Knightstraining.jpg'
-import ShoesExampleImage from '../css/images/shoesExample.jpg'
+import AddReviewsModal from './AddReviewsModal.js'
+import IntroImage from '../../../css/images/Equipment/Knightstraining.jpg'
+import ShoesExampleImage from '../../../css/images/Equipment/shoesExample.jpg'
+import ConventionalShoeGeneric from '../../../css/images/Equipment/conventionalShoeGeneric.jpeg'
+import AthleticShoesExample from '../../../css/images/Equipment/AthleticShoesExample.jpg'
+import PeriodShoesExample from '../../../css/images/Equipment/periodShoesExample.jpg'
 
 class RecruitEquipment extends Component {
   constructor(props) {
@@ -37,8 +40,8 @@ class RecruitEquipment extends Component {
   getAverage(array) {
     let count = array.length - 1
     let arrayAverage = array
-    arrayAverage = array.reduce((previous, current) => current += previous);
-    arrayAverage /= count;
+    arrayAverage = array.reduce((previous, current) => current += previous)
+    arrayAverage /= count
     return arrayAverage
   }
 
@@ -110,20 +113,20 @@ class RecruitEquipment extends Component {
     return (
       <>
         {products.map((products) => (
-          <tr>
-            <th scope='row' key={products.id}>{products.id}</th>
-            <td>{products.brand_name}</td>
-            <td>
-              <a href={products.web_link} 
+          <tr className='d-flex'>
+            <th scope='row' className='col-2'>{products.id}</th>
+            <td scope='row' className='col-2'>{products.brand_name}</td>
+            <td scope='row' className='col-2'>
+              <a href={products.web_link}
                 target='_blank'
                 rel='noopener noreferrer'>
                 Link
               </a>
             </td>
             {this.grabVariable()}
-            <td>{finalRatings[products.id - 1]}</td>
-            <td>
-              <ModalToggle allReviews={reviews}
+            <td scope='row' className='col-2'>{finalRatings[products.id - 1]}</td>
+            <td scope='row' className='col-4'>
+              <AddReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -235,7 +238,7 @@ class RecruitEquipment extends Component {
                   this.toggleGp1('3')
                 }}
               >
-                Conventional Shoes
+                Athletic Shoes
               </NavLink>
             </NavItem>
             <NavItem>
@@ -245,11 +248,11 @@ class RecruitEquipment extends Component {
                   this.toggleGp1('4')
                 }}
               >
-                Conventional Shoes
+                Period Shoes
               </NavLink>
             </NavItem>
           </Nav>
-          <TabContent activeTab={this.state.activeTabGp1}>
+          <TabContent activeTab={this.state.activeTabGp1} className='animated fadeIn'>
             <TabPane tabId='1'>
               <Row>
                 <Col sm='12'>
@@ -288,17 +291,17 @@ class RecruitEquipment extends Component {
             <TabPane tabId='2'>
               <Row>
                 <Col sm='12'>
-                  <h4 className='generalAdviceTitle'>General Advice:</h4>
-                  <p className='generalAdvice'> While
-                  conventional shoes are not ideal, they are what many people
-                  start with - usually because they already have a pair on hand.
-                  <br></br> The major disadvantages of typical running
+                  <p className='textFont introText'>
+                    <img src={ConventionalShoeGeneric} className='conventionalShoeImage'/>
+                    <span className='generalAdviceTitle'>General Advice:</span><br></br>While conventional shoes are not ideal, they are what many people start with - usually because they already have a pair on hand.
+                    <br></br> The major disadvantages of typical running
                   shoes are: potential clunkyness, and thick soles.
                   Big, heavy or clunky shoes make it difficult to
                   do proper footwork. A shoe with a think sole makes
                   it more diffult to move or turn on the balls of
                   your feet, as the shoe fights you to flatten your
-                  foot to the ground. </p>
+                  foot to the ground.
+                  </p>
                 </Col>
                 <Col sm='5'>
                   <p className='formTitle'>
@@ -313,6 +316,7 @@ class RecruitEquipment extends Component {
                         name='createBrandName'
                         id='exampleText'
                         placeholder='REEBOK ENDLESS ROAD'
+                        maxlength='49'
                         required/>
                       <FormText>Please Indicate the Name of the Product</FormText>
                     </FormGroup>
@@ -321,6 +325,7 @@ class RecruitEquipment extends Component {
                       <Input type='textarea'
                         name='createWebLink'
                         id='exampleText'
+                        maxlength='199'
                         placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
                         required/>
                       <FormText>Copy and Paste an Accurate Website Link</FormText>
@@ -337,20 +342,22 @@ class RecruitEquipment extends Component {
                     Reccomended Conventional Shoes
                       <i class='fas fa-chess-pawn'></i>
                     </p>
-                    <Table hover className='flexy1'>
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Product Name</th>
-                          <th>Website Link</th>
-                          <th>Overall Rating</th>
-                          <th>Reviews and Ratings</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {this.getTableBodyAsReactElement()}
-                      </tbody>
-                    </Table>
+                    <div className='table-wrapper-scroll-y my-custom-scrollbar'>
+                      <Table hover className=' tableProportions'>
+                        <thead>
+                          <tr className='d-flex'>
+                            <th scope='col' className='col-2'>#</th>
+                            <th scope='col' className='col-2'>Product Name</th>
+                            <th scope='col' className='col-2'>Website Link</th>
+                            <th scope='col' className='col-2'>Overall Rating</th>
+                            <th scope='col' className='col-4'>Reviews and Ratings</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {this.getTableBodyAsReactElement()}
+                        </tbody>
+                      </Table>
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -361,67 +368,6 @@ class RecruitEquipment extends Component {
             </TabPane>
           </TabContent>
         </div>
-
-        <div className='shirt'>
-          <Nav tabs>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: this.state.activeTabGp2 === '3' })}
-                onClick={() => {
-                  this.toggleGp2('3')
-                }}
-              >
-                Tab1
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: this.state.activeTabGp2 === '4' })}
-                onClick={() => {
-                  this.toggleGp2('4')
-                }}
-              >
-                Moar Tabs
-              </NavLink>
-            </NavItem>
-          </Nav>
-          <TabContent activeTab={this.state.activeTabGp2}>
-            <TabPane tabId='3'>
-              <Row>
-                <Col sm='12'>
-                  <h4>Tab 1 Contents</h4>
-                  <p>This is test text</p>
-                  <p>This is test text</p>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane tabId='4'>
-              <Row>
-                <Col sm='6'>
-                  <Card body>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below
-                     as a natural lead-in to additional
-                      content.
-                    </CardText>
-                    <Button>Go somewhere</Button>
-                  </Card>
-                </Col>
-                <Col sm='6'>
-                  <Card body>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below
-                     as a natural lead-in to additional
-                      content.
-                    </CardText>
-                    <Button>Go somewhere</Button>
-                  </Card>
-                </Col>
-              </Row>
-            </TabPane>
-          </TabContent>
-        </div>
-
       </div>
     )
   }

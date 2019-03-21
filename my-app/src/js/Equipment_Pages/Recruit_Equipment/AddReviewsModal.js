@@ -1,10 +1,10 @@
 import React from 'react'
-import '../css/ModalToggle.css'
+import '../../../css/Equipment/Recruit/AddReviewsModal.css'
 import { Modal, ModalBody, Table, Collapse,
   CardBody, Card, Button, Col, Row,
   Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 
-class ModalToggle extends React.Component {
+class AddReviewsModal extends React.Component {
   constructor(props) {
     super(props)
 
@@ -94,6 +94,7 @@ class ModalToggle extends React.Component {
                           <Input type='textarea'
                             placeholder='John Smith'
                             name='createReviewerName'
+                            maxlength='49'
                             required/>
                           <FormText>
                             Your First and Last Name
@@ -146,4 +147,4 @@ class ModalToggle extends React.Component {
   }
 }
 
-export default ModalToggle
+export default AddReviewsModal

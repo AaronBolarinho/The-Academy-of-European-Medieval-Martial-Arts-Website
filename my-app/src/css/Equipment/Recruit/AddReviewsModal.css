@@ -34,4 +34,15 @@
 .tableProportions {
 	table-layout: fixed;
     word-wrap: break-word;
+    text-align: center;
+}
+
+.modal-dialog {
+    max-width: 60em!important;
+}
+
+.btn-primary {
+	font-size: 1.3em!important;
+    background-color: #9940b5e0!important;
+    border-color: #0c0d0e!important;
 }

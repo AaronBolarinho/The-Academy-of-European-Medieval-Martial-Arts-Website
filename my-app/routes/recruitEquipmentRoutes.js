@@ -1,6 +1,9 @@
 const express = require('express')
 const mysql = require('mysql')
 const router1 = express.Router()
+// const exphpb = require('express-handlebars')
+// const nodemailer = require('nodemailer')
+// const path = require('path')
 
 const connection = getConnection()
 
@@ -37,6 +40,42 @@ router1.post('/conventionalShoesProductAdd', (req, res) => {
   const brandName = req.body.createBrandName
   const webLink = req.body.createWebLink
 
+// async function main(){
+//   const emailMsg = `<p>Someone added a conventional shoes product</p>`
+
+//     // create reusable transporter object using the default SMTP transport
+//   let transporter = nodemailer.createTransport({
+//     host: "localhost",
+//     port: 3003,
+//     secure: false, // true for 465, false for other ports
+//     auth: {
+//       user: 'aaron.bolarinho@gmail.com', // generated ethereal user
+//       pass: 'Finkelthehero' // generated ethereal password
+//     },
+//     tls:{
+//       rejectUnauthorized:false
+//     }
+//   });
+
+//   // setup email data with unicode symbols
+//   let mailOptions = {
+//     from: '"Aaron Foo 👻" <aaron.bolarinho@gmail.com>', // sender address
+//     to: "aaron.bolarinho@gmail.com", // list of receivers
+//     subject: "Hello ✔", // Subject line
+//     text: "A product was added to conventional shoes", // plain text body
+//     html: emailMsg // html body
+//   };
+
+//   // send mail with defined transport object
+//   let info = await transporter.sendMail(mailOptions)
+
+//   console.log("Message sent: %s", info.messageId);
+//   // Preview only available when sending through an Ethereal account
+//   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+//   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+//   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+// }
   const queryString = 'INSERT INTO Recruit_Equip_Conventional_Shoes(brand_name, web_link) VALUES (?, ?)'
   getConnection().query(queryString, [brandName, webLink], (err, results, fields) => {
     if (err) {

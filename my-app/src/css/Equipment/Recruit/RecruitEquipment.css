@@ -1,13 +1,24 @@
 @import url(https://www.1001fonts.com/almendra-sc-font.html);
 
 body{
-font-family: 'Almendra Sc',serif;
 }
+
+@font-face { font-family: KingsCross; 
+       src: url('../../Fonts/KingsCross.ttf'); } 
 
 .title {
   text-align: -webkit-center;
   font-family: 'Almendra Sc',serif;
   margin-bottom: 0.5em;
+  font-size: 4em;
+  padding-top: 0.5em;
+}
+.title1 {
+  text-align: -webkit-center;
+  font-family: 'KingsCross',serif;
+  margin-bottom: 0.2em;
+  font-size: 5em;
+  /*padding-top: 0.5em;*/
 }
 
 .textFont{
@@ -29,13 +40,16 @@ font-family: 'Almendra Sc',serif;
 
 
 .backgroundDiv {
-/*  background-image: url("./images/abstract-ancient-antique.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;*/
-  background-color: #dec3747d;
+background-image: url(/static/media/parchment-background.31a334fd.jpg);
+/* background-repeat: no-repeat; */
+/* background-position: center; */
+/* background-size: cover; */
+height: 125em;
+width: 77.5em;
+z-index: -1;
+position: absolute;
+/* background-color: #dec3747d; */
+/*background-color: #dec3747d;*/
 }
 
 .introImage {
@@ -44,6 +58,7 @@ font-family: 'Almendra Sc',serif;
   height: 15em;
   margin-left: 1em;
   margin-right: 1em;
+  border: solid 2px;
 }
 
 .introText {
@@ -60,6 +75,8 @@ font-family: 'Almendra Sc',serif;
   margin-left: 1em;
   text-align: -webkit-center;
   width: 90%;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .shoes {
@@ -169,11 +186,11 @@ table {
 }
 
 .conventionalShoeImage {
-  float: left;
+/*  float: left;*/
   width: 15em;
   height: 12em;
-  margin-left: 1em;
-  margin-right: 2em;
+  margin: 3em;
+  border: solid 2px;
 }
 
 .tab-pane.active { animation-name: fadeIn; animation-duration: 900ms; animation-timing-function: linear; }
@@ -192,3 +209,10 @@ table {
 .table td, .table th {
     border-top: 1px solid #0e1115!important;
 }
+
+.my-custom-scrollbar {
+    height: 12em!important;
+    margin-bottom: 2em!important;
+  }
+
+/*.container:hover ~ .cube { width: 2em!important; }*/

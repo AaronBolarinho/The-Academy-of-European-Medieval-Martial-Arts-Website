@@ -77,7 +77,7 @@ class AddReviewsModal extends React.Component {
             <Collapse isOpen={this.state.collapse}>
               <Card>
                 <CardBody>
-                  <Form action='/conventionalShoesReviewsAdd' method='POST'>
+                  <Form action='/conventionalShoesReviewsAdd' method='POST' target='_blank'>
                     <Row form>
                       <Col md={6}>
                         <FormGroup className='productNumber'>

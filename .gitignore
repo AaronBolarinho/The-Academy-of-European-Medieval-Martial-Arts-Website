@@ -4,6 +4,9 @@ aemmaGitIgnoreFileTest.txt
 #Ignoring Public Site Images
 /webDevelopment/images
 
+#Ignoring React App Images
+/my-app/src/css/images
+
 #Ignoring Members Only Large Files
 /webDevelopment/members_only/archive/images
 

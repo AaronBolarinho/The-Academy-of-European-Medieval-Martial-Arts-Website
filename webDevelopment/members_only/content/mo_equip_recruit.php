@@ -37,7 +37,7 @@ $num = rand(1,3);
 ?>
 
 	<!-- begin main_content -->
-	<iframe src="http://localhost:3000/RecruitEquipment" width="100%" height="2000px" class="frameSize"/>
+	<iframe src="http://localhost:3000/RecruitEquipment" width="100%" height="2000px" class="frameSize" scrolling="no" style="overflow:hidden;"/>
 
 	<!-- begin footer -->
 <?php

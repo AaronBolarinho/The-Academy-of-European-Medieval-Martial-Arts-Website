@@ -1,3 +1,5 @@
+// ----- This component is the main component for the Recruit Equipment page.
+
 import React, { Component } from 'react'
 import { TabContent, TabPane } from 'reactstrap'
 // ------These Are the Shoes Components
@@ -10,7 +12,7 @@ import PeriodShoesTab from './Shoes/PeriodShoesTab.js'
 import NavTabsShirts from './Shirts/NavTabsShirts.js'
 import GeneralInfoShirtsTab from './Shirts/GeneralInfoShirtsTab.js'
 import WhiteShirtsTab from './Shirts/WhiteShirtsTab.js'
-import SchoolShirtsTab from './Shirts/SchoolShirtsTab.js'
+import AEMMAShirtsTab from './Shirts/AEMMAShirtsTab.js'
 // ------These are the css and images used on the main equip page
 import '../../../css/Equipment/Recruit/RecruitEquipment.css'
 import '../../../css/Equipment/Recruit/AddReviewsModal.css'
@@ -88,8 +90,8 @@ class RecruitEquipment extends Component {
             <span className='introText col-4 animated fadeInRight delay-2s'>
               <p>
             &nbsp;&nbsp;&nbsp;&nbsp;Talk to your salle's Free
-            Scholar and senior students when you are ready to
-            start purchasing gear. While you are encouraged to
+            Scholar and senior students when you are ready to start
+             purchasing gear. While you are encouraged to
             make purchases yourself, there are semi-regular
             group orders which you may have access to.
               </p>
@@ -126,7 +128,7 @@ class RecruitEquipment extends Component {
                 <WhiteShirtsTab/>
               </TabPane>
               <TabPane tabId='3'>
-                <SchoolShirtsTab/>
+                <AEMMAShirtsTab/>
               </TabPane>
             </TabContent>
           </div>

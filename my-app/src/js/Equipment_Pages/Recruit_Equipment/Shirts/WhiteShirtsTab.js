@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import ConventionalShoesReviewsModal from './WhiteShirtsReviewsModal.js'
+import WhiteShirtsReviewsModal from './WhiteShirtsReviewsModal.js'
 import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
 
-class ConventionalShoes extends Component {
+class WhiteShirtsTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class ConventionalShoes extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-4'>
-              <ConventionalShoesReviewsModal allReviews={reviews}
+              <WhiteShirtsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class ConventionalShoes extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/conventionalShoesReviews')
+    fetch('http://localhost:3003/whiteShirtsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class ConventionalShoes extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/conventionalShoesProducts')
+    fetch('http://localhost:3003/whiteShirtsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,22 +143,16 @@ class ConventionalShoes extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br>While conventional shoes are not ideal, they are what many people start with - usually because they already have a pair on hand.
-	              <br></br><br></br> The major disadvantages of typical running
-	            shoes are: potential clunkyness, and thick soles.
-	            Big, heavy or clunky shoes make it difficult to
-	            do proper footwork. A shoe with a think sole makes
-	            it more diffult to move or turn on the balls of
-	            your feet, as the shoe fights you to flatten your
-	            foot to the ground.
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A clean, plain, white t-shirt is standard uniform for all AEMMA students.
+              <br></br><br></br> Most standard brands of white t-shirts which are commercially available will be suitable as a uniform shirt.
 	            </p>
 	          </Col>
           <Col sm='5'>
             <div className='tabImageDiv'>
-              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical Running Shoe'/>
+              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical White Shirt'/>
             </div>
             <div>
-              <span className='imageLable'> Conventional Shoes</span>
+              <span className='imageLable'> White Shirts</span>
             </div>
           </Col>
 	        </Row>
@@ -167,7 +161,7 @@ class ConventionalShoes extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Reccomended Conventional Shoes&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended White Shirts&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -191,16 +185,16 @@ class ConventionalShoes extends Component {
 	          <Col sm='4'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
-            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
+            &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/conventionalShoesProductAdd' method='POST'>
+            <Form action='/whiteShirtsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='REEBOK ENDLESS ROAD'
+                  placeholder='Old Navy White Shirt'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -211,7 +205,7 @@ class ConventionalShoes extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
+                  placeholder='https://oldnavy.gapcanada.ca/browse/product.do?pid=898233003&locale=en_CA&sdkw=soft-washed-crew-neck-tee-for-men-P898233&vid=1&sdReferer=https%3A%2F%2Fwww.oldnavy.ca%2Fproducts%2Fmens-t-shirts.jsp'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -227,4 +221,4 @@ class ConventionalShoes extends Component {
 	 }
 }
 
-export default ConventionalShoes
+export default WhiteShirtsTab

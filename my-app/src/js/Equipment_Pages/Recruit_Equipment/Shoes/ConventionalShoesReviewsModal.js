@@ -46,7 +46,7 @@ class ConventionalShoesReviewsModal extends React.Component {
         <Button
           type='primary' onClick={this.toggle} className='reviewButton'>Rate and Review!
         </Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className='modalShoes'>
           <div className='modalTitle'>
             {this.props.productName}: Ratings and Reviews
           </div>

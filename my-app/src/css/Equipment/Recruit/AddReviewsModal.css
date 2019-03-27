@@ -3,9 +3,14 @@
   width: 10em;
 }
 
-.modal {
+.modalShoes {
     top: 43em!important;
 }
+
+.modalShirts {
+    top: 67em!important;
+}
+
 .modalTitle {
 	padding: 1em;
 	text-align: -webkit-center;

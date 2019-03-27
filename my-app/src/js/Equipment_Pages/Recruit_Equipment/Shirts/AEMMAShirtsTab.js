@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import AthleticShoesReviewsModal from './SchoolShirtsReviewsModal.js'
+import AEMMAShirtsReviewsModal from './AEMMAShirtsReviewsModal.js'
 import AEMMA_Shirt_Placeholder from '../../../../css/images/Equipment/AEMMA_Shirt_Placeholder.png'
 
-class AthleticShoes extends Component {
+class AEMMAShirtsTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class AthleticShoes extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-4'>
-              <AthleticShoesReviewsModal allReviews={reviews}
+              <AEMMAShirtsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class AthleticShoes extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/AthleticShoesReviews')
+    fetch('http://localhost:3003/AEMMAShirtsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class AthleticShoes extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/AthleticShoesProducts')
+    fetch('http://localhost:3003/AEMMAShirtsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,8 +143,8 @@ class AthleticShoes extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Athletic shoes (like wrestling shoes) facilitate spritly footwork unlike most conventional shoes. They are highly reccomended over conventional shoes.
-	              <br></br><br></br> The disadvantage of athletic shoes is that they often have effective grip on their soles. Modern shoes with excelent grip allow students to perform footwork with a level of impresicsion which would not suffice in period shoes. Modern shoes compensate for excessive energy or weight distribution - either of which would result in a slip or slide with period shoes.
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> White AEMMA school shirts which include our school logo and other artwork may be worn in lieu of a plain white t-shirt.
+                  <br></br><br></br> Non-white AEMMA shirts may only be worn by those permitted by their individual chapter rules. Several Chapters have black uniform shirts that may be worn by Scholars or Free-Scholars only; if you are unsure if you are permitted to wear one in class, ask.
 	            </p>
 	          </Col>
           <Col sm='5'>
@@ -152,7 +152,7 @@ class AthleticShoes extends Component {
             <img src={AEMMA_Shirt_Placeholder} className='conventionalShoeImage' alt='Typical Running Shoe'/>
             </div>
             <div>
-              <span className='imageLable'> Athletic Shoes</span>
+              <span className='imageLable'> AEMMA Shirts</span>
             </div>
           </Col>
 	        </Row>
@@ -161,7 +161,7 @@ class AthleticShoes extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Reccomended Conventional Shoes&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended AEMMA Shirts&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -185,16 +185,16 @@ class AthleticShoes extends Component {
 	          <Col sm='4'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
-            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
+            &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/AthleticShoesProductAdd' method='POST'>
+            <Form action='/AEMMAShirtsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='REEBOK ENDLESS ROAD'
+                  placeholder='AEMMA School Shirt'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -205,7 +205,7 @@ class AthleticShoes extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
+                  placeholder='https://www.aemma.org/UniformShirtPlaceholderUrl'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -221,4 +221,4 @@ class AthleticShoes extends Component {
 	 }
 }
 
-export default AthleticShoes
+export default AEMMAShirtsTab

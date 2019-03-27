@@ -72,8 +72,8 @@ class ConventionalShoes extends Component {
       <>
         {products.map((products) => (
           <tr className='d-flex container'>
-            <th scope='row' className='col-2'>{products.id}</th>
-            <td className='col-2'>{products.brand_name}</td>
+            <th scope='row' className='col-1'>{products.id}</th>
+            <td className='col-4'>{products.brand_name}</td>
             <td className='col-2'>
               <a href={products.web_link}
                 target='_blank'
@@ -83,7 +83,7 @@ class ConventionalShoes extends Component {
             </td>
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
-            <td className='col-4'>
+            <td className='col-3'>
               <ConventionalShoesReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
@@ -174,18 +174,18 @@ class ConventionalShoes extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Reccomended Conventional Shoes&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Conventional Shoes&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
 	                <Table hover className=' tableProportions'>
 	                  <thead>
 	                    <tr className='d-flex'>
-	                      <th scope='col' className='col-2'>#</th>
-	                      <th scope='col' className='col-2'>Product Name</th>
+	                      <th scope='col' className='col-1'>#</th>
+	                      <th scope='col' className='col-4'>Product Name</th>
 	                      <th scope='col' className='col-2'>Website Link</th>
 	                      <th scope='col' className='col-2'>Overall Rating</th>
-	                      <th scope='col' className='col-4'>Reviews and Ratings</th>
+	                      <th scope='col' className='col-3'>Reviews and Ratings</th>
 	                    </tr>
 	                  </thead>
 	                  <tbody>
@@ -198,7 +198,7 @@ class ConventionalShoes extends Component {
 	          <Col sm='4'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
-            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
+            &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
             <Form action='/conventionalShoesProductAdd' method='POST'>

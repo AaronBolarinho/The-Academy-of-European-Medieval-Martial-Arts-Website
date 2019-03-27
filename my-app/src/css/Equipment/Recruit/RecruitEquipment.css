@@ -41,7 +41,7 @@ background-image: url(../../images/Equipment/parchment-background.jpg);
 /* background-repeat: no-repeat; */
 /* background-position: center; */
 /* background-size: cover; */
-height: 124em;
+height: 200em;
 width: 77.5em;
 z-index: -1;
 position: absolute;
@@ -78,19 +78,17 @@ position: absolute;
 }
 
 .shoes {
-  /*border-style: solid;*/
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-bottom: 1em;
-    width: 88%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 95%;
 }
 
 .shirt {
-  border-style: solid;
-  margin-left: 13%;
-  margin-right: 13%;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-bottom: 1em;
-  width: 70%;
+  width: 95%;
 }
 
 .shoesExample {

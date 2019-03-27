@@ -9,26 +9,21 @@ class GeneralInfoShoesTab extends Component {
 	   	<Row>
           <Col sm='12'>
             <span className='textFont introText'>
-              <img src={UniformShirtExample} className='shoesExample' alt='Medieval Shoe'/>
+              <img src={UniformShirtExample} className='shoesExample' alt='White Shirt'/>
               <br></br>
-              <h2>Indoor Footwear</h2>
+              <h2>Uniform Shirts</h2>
               <ul className='footwearList'>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;The footware you use should
-                   be reserved for use in class and not
-                    used outside.
+                  &nbsp;&nbsp;AEMMA Uniform for all students includes a plain white t-shirt and black athletic pants.
                 </li>
                 <li>
                   <i className='fas fa-chess-knight'></i>
-                  &nbsp;&nbsp;There are three options
-                   for footware: Conventional Shoes, Athletic Shoes, Period Shoes.
+                  &nbsp;&nbsp;Students may purchase a white AEMMA uniform shirt from their local club.
                 </li>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Conventional Shoes will
-                   suffice; Athletic Shoes are better,
-                    Period Shoes are prefered.
+                  &nbsp;&nbsp;Non-white AEMMA shirts may be worn on a per case basis as individual chapter rules permit.
                 </li>
               </ul>
               <span className='ClickTabsBanner'>

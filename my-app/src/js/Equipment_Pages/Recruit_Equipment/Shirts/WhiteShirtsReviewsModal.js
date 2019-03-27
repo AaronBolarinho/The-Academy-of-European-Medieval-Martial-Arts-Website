@@ -3,7 +3,7 @@ import { Modal, ModalBody, Table, Collapse,
   CardBody, Card, Button, Col, Row,
   Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 
-class ConventionalShoesReviewsModal extends React.Component {
+class WhiteShirtsReviewsModal extends React.Component {
   constructor(props) {
     super(props)
 
@@ -46,7 +46,7 @@ class ConventionalShoesReviewsModal extends React.Component {
         <Button
           type='primary' onClick={this.toggle} className='reviewButton'>Rate and Review!
         </Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className='modalShirts'>
           <div className='modalTitle'>
             {this.props.productName}: Ratings and Reviews
           </div>
@@ -76,7 +76,7 @@ class ConventionalShoesReviewsModal extends React.Component {
             <Collapse isOpen={this.state.collapse}>
               <Card>
                 <CardBody>
-                  <Form action='/conventionalShoesReviewsAdd' method='POST' target='_blank'>
+                  <Form action='/whiteShirtsReviewsAdd' method='POST' target='_blank'>
                     <Row form>
                       <Col md={6}>
                         <FormGroup className='productNumber'>
@@ -146,4 +146,4 @@ class ConventionalShoesReviewsModal extends React.Component {
   }
 }
 
-export default ConventionalShoesReviewsModal
+export default WhiteShirtsReviewsModal

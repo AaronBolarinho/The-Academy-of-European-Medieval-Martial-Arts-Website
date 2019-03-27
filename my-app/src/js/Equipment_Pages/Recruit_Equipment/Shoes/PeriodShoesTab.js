@@ -165,7 +165,7 @@ class PeriodShoes extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Reccomended Conventional Shoes&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Period Shoes&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -189,7 +189,7 @@ class PeriodShoes extends Component {
 	          <Col sm='4'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
-            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
+            &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
             <Form action='/PeriodShoesProductAdd' method='POST'>
@@ -198,7 +198,7 @@ class PeriodShoes extends Component {
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='REEBOK ENDLESS ROAD'
+                  placeholder='Revival Clothing Medieval Shoes'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -209,7 +209,7 @@ class PeriodShoes extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
+                  placeholder='https://revivalclothing.com/product/tie-ankle-boots/'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>

@@ -450,3 +450,44 @@ getTableBodyAsReactElement() {
 
     this.setState(state => ({ productNumer: { product_number } })
                     )
+
+    -------------------------
+
+    // async function main(){
+//   const emailMsg = `<p>Someone added a conventional shoes product</p>`
+
+//     // create reusable transporter object using the default SMTP transport
+//   let transporter = nodemailer.createTransport({
+//     host: "localhost",
+//     port: 3003,
+//     secure: false, // true for 465, false for other ports
+//     auth: {
+//       user: 'aaron.bolarinho@gmail.com', // generated ethereal user
+//       pass: 'Finkelthehero' // generated ethereal password
+//     },
+//     tls:{
+//       rejectUnauthorized:false
+//     }
+//   });
+
+//   // setup email data with unicode symbols
+//   let mailOptions = {
+//     from: '"Aaron Foo 👻" <aaron.bolarinho@gmail.com>', // sender address
+//     to: "aaron.bolarinho@gmail.com", // list of receivers
+//     subject: "Hello ✔", // Subject line
+//     text: "A product was added to conventional shoes", // plain text body
+//     html: emailMsg // html body
+//   };
+
+//   // send mail with defined transport object
+//   let info = await transporter.sendMail(mailOptions)
+
+//   console.log("Message sent: %s", info.messageId);
+//   // Preview only available when sending through an Ethereal account
+//   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+//   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+//   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+// }
+
+---------------

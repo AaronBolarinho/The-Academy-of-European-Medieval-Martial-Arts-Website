@@ -1,25 +1,15 @@
 import React, { Component } from 'react'
-import '../../../css/Equipment/Recruit/RecruitEquipment.css'
-import { Form, FormGroup, Label, Input, FormText, Alert, Table, TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap'
-import classnames from 'classnames'
-import AddReviewsModal from './AddReviewsModal.js'
-import ConventionalShoesTab from './ConventionalShoesTab.js'
-import IntroImage from '../../../css/images/Equipment/Knightstraining.jpg'
-import ShoesExampleImage from '../../../css/images/Equipment/shoesExample.jpg'
-import ConventionalShoeGeneric from '../../../css/images/Equipment/conventionalShoeGeneric.jpeg'
+import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
+import ConventionalShoesReviewsModal from './WhiteShirtsReviewsModal.js'
+import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
 
 class ConventionalShoes extends Component {
   constructor(props) {
     super(props)
 
-    // this.toggleGp1 = this.toggleGp1.bind(this)
-    // this.toggleGp2 = this.toggleGp2.bind(this)
-    // this.toggleGp3 = this.toggleGp3.bind(this)
     this.overallRating = this.overallRating.bind(this)
     this.getAverage = this.getAverage.bind(this)
     this.grabVariable = this.grabVariable.bind(this)
-    // this.onDismiss = this.onDismiss.bind(this)
-    // this.sendAlert = this.sendAlert.bind(this)
 
     this.state = {
       modal: false,
@@ -83,8 +73,8 @@ class ConventionalShoes extends Component {
         {products.map((products) => (
           <tr className='d-flex container'>
             <th scope='row' className='col-2'>{products.id}</th>
-            <td scope='row' className='col-2'>{products.brand_name}</td>
-            <td scope='row' className='col-2'>
+            <td className='col-2'>{products.brand_name}</td>
+            <td className='col-2'>
               <a href={products.web_link}
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -92,9 +82,9 @@ class ConventionalShoes extends Component {
               </a>
             </td>
             {this.grabVariable()}
-            <td scope='row' className='col-2'>{finalRatings[products.id - 1]}</td>
-            <td scope='row' className='col-4'>
-              <AddReviewsModal allReviews={reviews}
+            <td className='col-2'>{finalRatings[products.id - 1]}</td>
+            <td className='col-4'>
+              <ConventionalShoesReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -152,7 +142,7 @@ class ConventionalShoes extends Component {
 	   <div>
 	     <Row>
 	          <Col sm='7'>
-	            <p className='textFont introText'>
+	            <p className='ConventionalShoesAdvice'>
 	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br>While conventional shoes are not ideal, they are what many people start with - usually because they already have a pair on hand.
 	              <br></br><br></br> The major disadvantages of typical running
 	            shoes are: potential clunkyness, and thick soles.
@@ -163,41 +153,14 @@ class ConventionalShoes extends Component {
 	            foot to the ground.
 	            </p>
 	          </Col>
-	          <Col sm='4'>
-	            <p className='formTitle'>
-	              <i className='fas fa-chess-pawn'></i>
-	            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
-	              <i className='fas fa-chess-pawn'></i>
-	            </p>
-	            <Form action='/conventionalShoesProductAdd' method='POST'>
-	              <FormGroup>
-	                <Label for='exampleEmail'>Product Name</Label>
-	                <Input type='textarea'
-	                  name='createBrandName'
-	                  id='exampleText'
-	                  placeholder='REEBOK ENDLESS ROAD'
-	                  maxlength='49'
-	                  required/>
-	                <FormText>Please Indicate the Name of the Product</FormText>
-	              </FormGroup>
-	              <FormGroup>
-	                <Label for='examplePassword'>Website Link</Label>
-	                <Input type='textarea'
-	                  name='createWebLink'
-	                  id='exampleText'
-	                  maxlength='199'
-	                  placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
-	                  required/>
-	                <FormText>Copy and Paste an Accurate Website Link</FormText>
-	              </FormGroup>
-	              <div className='addProductFormButton'>
-	                <Button type='submit' onSubmit={this.submitForm}
-	                >Submit</Button>
-	              </div>
-	            </Form>
-	          </Col>
-	          <Col sm='1'>
-	          </Col>
+          <Col sm='5'>
+            <div className='tabImageDiv'>
+              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical Running Shoe'/>
+            </div>
+            <div>
+              <span className='imageLable'> Conventional Shoes</span>
+            </div>
+          </Col>
 	        </Row>
 	        <Row className='secondRow'>
 	          <Col sm='7'>
@@ -225,9 +188,39 @@ class ConventionalShoes extends Component {
 	              </div>
 	            </div>
 	          </Col>
-	          <Col sm='5'>
-	            <img src={ConventionalShoeGeneric} className='conventionalShoeImage'/>
-	          </Col>
+	          <Col sm='4'>
+            <p className='formTitle'>
+              <i className='fas fa-chess-pawn'></i>
+            &nbsp;&nbsp;Reccomend A Product!&nbsp;&nbsp;
+              <i className='fas fa-chess-pawn'></i>
+            </p>
+            <Form action='/conventionalShoesProductAdd' method='POST'>
+              <FormGroup>
+                <Label for='exampleEmail'>Product Name</Label>
+                <Input type='textarea'
+                  name='createBrandName'
+                  id='exampleText'
+                  placeholder='REEBOK ENDLESS ROAD'
+                  maxLength='49'
+                  required/>
+                <FormText>Please Indicate the Name of the Product</FormText>
+              </FormGroup>
+              <FormGroup>
+                <Label for='examplePassword'>Website Link</Label>
+                <Input type='textarea'
+                  name='createWebLink'
+                  id='exampleText'
+                  maxLength='199'
+                  placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
+                  required/>
+                <FormText>Copy and Paste an Accurate Website Link</FormText>
+              </FormGroup>
+              <div className='addProductFormButton'>
+                <Button type='submit' onSubmit={this.submitForm}
+                >Submit</Button>
+              </div>
+            </Form>
+          </Col>
 	        </Row>
 	    </div>
 	  )

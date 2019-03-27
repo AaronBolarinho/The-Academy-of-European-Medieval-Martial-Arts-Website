@@ -1,10 +1,9 @@
 import React from 'react'
-import '../../../css/Equipment/Recruit/AddReviewsModal.css'
 import { Modal, ModalBody, Table, Collapse,
   CardBody, Card, Button, Col, Row,
   Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 
-class AddReviewsModal extends React.Component {
+class AthleticShoesReviewsModal extends React.Component {
   constructor(props) {
     super(props)
 
@@ -65,9 +64,9 @@ class AddReviewsModal extends React.Component {
                   {specificReviews.map(({ id, product_number, reviewer_name, review_text, review_rating }) => {
                     return (
                       <tr className='d-flex'>
-                        <td key={id} scope='row' className='col-2'>{reviewer_name}</td>
-                        <td key={id} scope='row' className='col-8'>{review_text}</td>
-                        <td key={id} scope='row' className='col-2'>{review_rating}</td>
+                        <td key={id} className='col-2'>{reviewer_name}</td>
+                        <td key={id} className='col-8'>{review_text}</td>
+                        <td key={id} className='col-2'>{review_rating}</td>
                       </tr>
                     )
                   })}
@@ -77,7 +76,7 @@ class AddReviewsModal extends React.Component {
             <Collapse isOpen={this.state.collapse}>
               <Card>
                 <CardBody>
-                  <Form action='/conventionalShoesReviewsAdd' method='POST' target='_blank'>
+                  <Form action='/AthleticShoesReviewsAdd' method='POST' target='_blank'>
                     <Row form>
                       <Col md={6}>
                         <FormGroup className='productNumber'>
@@ -147,4 +146,4 @@ class AddReviewsModal extends React.Component {
   }
 }
 
-export default AddReviewsModal
+export default AthleticShoesReviewsModal

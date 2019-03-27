@@ -31,8 +31,13 @@ $header2 = $path_members."php-bin/members_only_header2.php"; include "$header2";
 $num = rand(1,3);
 ?>
 
+<?php
+ //include CSS Style Sheet
+ echo "<link rel='stylesheet' type='text/css' href='../css/RecruitEquipment.css' />";
+?>
+
 	<!-- begin main_content -->
-	<iframe src="http://localhost:3000/RecruitEquipment" width="100%" height="2000px" />
+	<iframe src="http://localhost:3000/RecruitEquipment" width="100%" height="2000px" class="frameSize"/>
 
 	<!-- begin footer -->
 <?php

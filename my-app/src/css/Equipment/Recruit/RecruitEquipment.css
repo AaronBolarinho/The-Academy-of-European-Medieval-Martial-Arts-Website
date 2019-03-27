@@ -1,28 +1,26 @@
-@import url(https://www.1001fonts.com/almendra-sc-font.html);
-
-body{
-}
-
 @font-face { font-family: KingsCross; 
-       src: url('../../Fonts/KingsCross.ttf'); } 
+       src: url('../../Fonts/KingsCross.ttf'); }
 
 .title {
-  text-align: -webkit-center;
-  font-family: 'Almendra Sc',serif;
+  /*text-align: -webkit-center;*/
+  font-family: 'Crimson Text', serif;
   margin-bottom: 0.5em;
   font-size: 4em;
   padding-top: 0.5em;
+  padding-left: 22%;
 }
 .title1 {
-  text-align: -webkit-center;
+  /*text-align: -webkit-center;*/
   font-family: 'KingsCross',serif;
   margin-bottom: 0.2em;
   font-size: 5em;
-  /*padding-top: 0.5em;*/
+  padding-left: 3%;
+  padding-right: 3%;
+  display: inline;
 }
 
 .textFont{
-  font-family: 'Almendra Sc',serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .buttonDiv{
@@ -38,13 +36,12 @@ body{
   width: 100%;
 }
 
-
 .backgroundDiv {
-background-image: url(/static/media/parchment-background.31a334fd.jpg);
+background-image: url(../../images/Equipment/parchment-background.jpg);
 /* background-repeat: no-repeat; */
 /* background-position: center; */
 /* background-size: cover; */
-height: 125em;
+height: 124em;
 width: 77.5em;
 z-index: -1;
 position: absolute;
@@ -62,16 +59,17 @@ position: absolute;
 }
 
 .introText {
-  display: inline-block;
+  font-family: 'Crimson Text', serif;
+  display: inline;
   width: 95%;
   height: 100%;
   margin-right: 1em;
   text-align: -webkit-center;
-  margin-top: 1.5em;
+  font-size: 1.3em;
 }
 
 .firstDay {
-  font-family: 'Almendra Sc',serif;
+  font-family: 'Crimson Text', serif;
   margin-left: 1em;
   text-align: -webkit-center;
   width: 90%;
@@ -131,9 +129,10 @@ position: absolute;
 
 .formTitle {
  text-align: -webkit-center;
- font-family: 'Almendra Sc',serif;
+ font-family: 'Crimson Text', serif;
  margin: 0.5em;
  font-size: 1.2em;
+ padding-top: 0.5em;
 }
 
 .form {
@@ -161,7 +160,7 @@ textarea.form-control {
 }
 
 .generalAdvice {
-  font-family: 'Almendra Sc',serif;
+  font-family: 'Crimson Text', serif;
   width: 73%;
   text-align: -webkit-center;
   margin-left: 13%;
@@ -170,7 +169,7 @@ textarea.form-control {
 }
 
 .generalAdviceTitle {
-  font-family: 'Almendra Sc',serif;
+  font-family: 'Crimson Text', serif;
   text-align: -webkit-center;
   font-size: 1.5em;
 }
@@ -211,8 +210,59 @@ table {
 }
 
 .my-custom-scrollbar {
-    height: 12em!important;
+    height: 16em!important;
     margin-bottom: 2em!important;
   }
 
-/*.container:hover ~ .cube { width: 2em!important; }*/
+.naveItem {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5em;
+}
+
+.naveTitle {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.2em;
+}
+
+.swordLeft {
+  display: inline;
+  height: 6em;
+  margin-bottom: 1.8em;
+}
+.swordRight {
+  /*border: solid;*/
+  display: inline;
+  height: 6em;
+  margin-bottom: 1.8em;
+}
+
+.intoTextDiv {
+  width: 95%;
+}
+
+.ConventionalShoesAdvice {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.imageLable {
+  font-family: 'Crimson Text', serif;
+  position: relative;
+  bottom: 2.2em;
+  display: block;
+  text-align: center;
+}
+
+.tabImageDiv {
+  text-align: center;
+}
+
+.shirts {
+  /*border-style: solid;*/
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 1em;
+    width: 88%;
+}

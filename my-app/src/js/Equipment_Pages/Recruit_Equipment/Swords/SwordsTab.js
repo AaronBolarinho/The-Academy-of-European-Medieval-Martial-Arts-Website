@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import WhiteShirtsReviewsModal from './WhiteShirtsReviewsModal.js'
-import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
+import SwordsReviewsModal from './SwordsReviewsModal.js'
+import LongSword from '../../../../css/images/Equipment/LongSword.jpg'
 
-class WhiteShirtsTab extends Component {
+class SwordsTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class WhiteShirtsTab extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-3'>
-              <WhiteShirtsReviewsModal allReviews={reviews}
+              <SwordsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class WhiteShirtsTab extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/whiteShirtsReviews')
+    fetch('http://localhost:3003/SwordsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class WhiteShirtsTab extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/whiteShirtsProducts')
+    fetch('http://localhost:3003/SwordsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,16 +143,39 @@ class WhiteShirtsTab extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A clean, plain, white t-shirt is standard uniform for all AEMMA students.
-              <br></br><br></br> Most standard brands of white t-shirts which are commercially available will be suitable to use as a uniform shirt.
-	            </p>
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Every AEMMA recruit needs to purchase one steel longsword from Regenyi Armory. Visit this link to view the order form: <a href="http://www.regenyei.com/en_blunts_order.php"> Steel Longsword Options Form</a>
+            </p>
+            <span className='swordsList'>Order Form Choices:</span>
+            <ul className='footwearList'>
+              <li>
+                <br></br>
+                <i className='fas fa-chess-rook'></i>
+              &nbsp;&nbsp;Blade Type: Everyone will select blade B.
+              </li>
+              <li>
+                <i className='fas fa-chess-knight'></i>
+                &nbsp;&nbsp;Guard Type: A,B,C,D,E or R for ring guard.
+              </li>
+              <li>
+                <i className='fas fa-chess-rook'></i>
+              &nbsp;&nbsp;Pommel Type: A,B,C,D,E,F
+              </li>
+              <li>
+                <i className='fas fa-chess-knight'></i>
+                &nbsp;&nbsp;Grip Type and Colour: 1,2,3,4,5 ( colour).
+              </li>
+              <li>
+                <i className='fas fa-chess-rook'></i>
+                &nbsp;&nbsp; Email <strong> regenyei.armory@gmail.com</strong> to order - Example order: BAC1 - Black.
+              </li>
+            </ul>
 	          </Col>
           <Col sm='5'>
             <div className='tabImageDiv'>
-              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical White Shirt'/>
+              <img src={LongSword} className='conventionalShoeImage' alt='Steel LongSword'/>
             </div>
             <div>
-              <span className='imageLable'> White Shirts</span>
+              <span className='imageLable'> Longswords</span>
             </div>
           </Col>
 	        </Row>
@@ -161,7 +184,7 @@ class WhiteShirtsTab extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Recommended White Shirts&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Steel LongSwords&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -188,13 +211,13 @@ class WhiteShirtsTab extends Component {
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/whiteShirtsProductAdd' method='POST'>
+            <Form action='/SwordsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='Old Navy White Shirt'
+                  placeholder='Regenyi Steel Longsword'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -205,7 +228,7 @@ class WhiteShirtsTab extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://oldnavy.gapcanada.ca/browse/product.do?pid=898233003&locale=en_CA&sdkw=soft-washed-crew-neck-tee-for-men-P898233&vid=1&sdReferer=https%3A%2F%2Fwww.oldnavy.ca%2Fproducts%2Fmens-t-shirts.jsp'
+                  placeholder='http://www.regenyei.com/en_blunts_order.php'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -221,4 +244,4 @@ class WhiteShirtsTab extends Component {
 	 }
 }
 
-export default WhiteShirtsTab
+export default SwordsTab

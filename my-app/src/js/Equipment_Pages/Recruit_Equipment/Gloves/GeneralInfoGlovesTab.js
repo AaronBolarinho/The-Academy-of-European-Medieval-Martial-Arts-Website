@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import UniformShirtExample from '../../../../css/images/Equipment/UniformShirtExample.png'
+import PeriodGlovesExample from '../../../../css/images/Equipment/PeriodGlovesExample.png'
 
-class GeneralInfoShoesTab extends Component {
+class GeneralInfoGlovesTab extends Component {
   render() {
     return (
 	   <div>
 	   	<Row>
           <Col sm='12'>
             <span className='textFont introText'>
-              <img src={UniformShirtExample} className='shirtsExample' alt='White Shirt'/>
+              <img src={PeriodGlovesExample} className='glovesExample' alt='White Shirt'/>
               <br></br>
-              <h2>Uniform Shirts</h2>
+              <h2>Light Gloves</h2>
               <ul className='footwearList'>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;AEMMA Uniform for all students includes a plain white t-shirt and black athletic pants.
+                  &nbsp;&nbsp;Leather gloves of some form are highly reccomended for standard AEMMA practice.
                 </li>
                 <li>
                   <i className='fas fa-chess-knight'></i>
-                  &nbsp;&nbsp;Students may purchase a white AEMMA uniform shirt from their local club.
+                  &nbsp;&nbsp;Students may purchase basic leather gloves - made often of pig, goat, cow hide - from stores that sell them for gardening purposes.
                 </li>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Non-white AEMMA shirts may be worn on a per case basis as individual chapter rules permit.
+                  &nbsp;&nbsp;Period gloves - which include a long cuff which covers the wrist - are even better, though they tend to be more expensive.
                 </li>
               </ul>
               <div className='ClickTabsBanner'>
@@ -39,4 +39,4 @@ class GeneralInfoShoesTab extends Component {
 	 }
 }
 
-export default GeneralInfoShoesTab
+export default GeneralInfoGlovesTab

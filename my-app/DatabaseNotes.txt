@@ -1,10 +1,10 @@
-create table Recruit_Equip_Running_Shoes (id INT NOT NULL auto_increment primary key,brand_name varchar(50) NOT NULL UNIQUE, web_link varchar(200) NOT NULL UNIQUE);
+create table Recruit_Equip_Running_Shoes (id INT NOT NULL auto_increment primary key, brand_name varchar(50) NOT NULL UNIQUE, web_link varchar(200) NOT NULL UNIQUE);
 
 INSERT INTO Recruit_Equip_Running_Shoes(brand_name, web_link) VALUES ("ASICS", "https://www.asics.com/us/en-us/matflex-5/p/0010248140.9093");
 
 INSERT INTO Recruit_Equip_Running_Shoes(brand_name, web_link) VALUES ("Nike", "https://www.nike.com/ca/t/air-zoom-pegasus-35-flyease-running-shoe-d1fvSc/AV2312-010");
 
-create table Recruit_Equip_Running_Shoes_Reviews (id INT NOT NULL auto_increment primary key, product_number INT NOT NULL, reviewer_name varchar(50) NOT NULL, review_text varchar(50) NOT NULL, review_rating INT NOT NULL);
+create table Recruit_Equip_Running_Shoes_Reviews (id INT NOT NULL auto_increment primary key, product_number INT NOT NULL, reviewer_name varchar(50) NOT NULL, review_text varchar(250) NOT NULL, review_rating INT NOT NULL);
 
 ALTER TABLE Orders ADD FOREIGN KEY (product_number) REFERENCES Recruit_Equip_Running_Shoes(id);
 

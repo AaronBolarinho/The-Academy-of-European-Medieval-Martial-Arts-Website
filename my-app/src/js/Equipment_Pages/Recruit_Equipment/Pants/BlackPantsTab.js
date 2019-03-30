@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import WhiteShirtsReviewsModal from './WhiteShirtsReviewsModal.js'
-import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
+import BlackPantsReviewsModal from './BlackPantsReviewsModal.js'
+import BlackPants from '../../../../css/images/Equipment/BlackPants.jpeg'
 
-class WhiteShirtsTab extends Component {
+class BlackPantsTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class WhiteShirtsTab extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-3'>
-              <WhiteShirtsReviewsModal allReviews={reviews}
+              <BlackPantsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class WhiteShirtsTab extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/whiteShirtsReviews')
+    fetch('http://localhost:3003/BlackPantsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class WhiteShirtsTab extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/whiteShirtsProducts')
+    fetch('http://localhost:3003/BlackPantsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,16 +143,16 @@ class WhiteShirtsTab extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A clean, plain, white t-shirt is standard uniform for all AEMMA students.
-              <br></br><br></br> Most standard brands of white t-shirts which are commercially available will be suitable to use as a uniform shirt.
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Clean, plain, black athletic pants are standard uniform for all AEMMA students.
+              <br></br><br></br> Most standard brands of black athletic pants which are commercially available will be suitable to use as uniform pants. Alternatives to black pants (for example, black shorts in summer) may only be worn on a case by case basis as per your chapter's rules.
 	            </p>
 	          </Col>
           <Col sm='5'>
             <div className='tabImageDiv'>
-              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical White Shirt'/>
+              <img src={BlackPants} className='conventionalShoeImage' alt='Typical White Shirt'/>
             </div>
             <div>
-              <span className='imageLable'> White Shirts</span>
+              <span className='imageLable'> Black Pants</span>
             </div>
           </Col>
 	        </Row>
@@ -161,7 +161,7 @@ class WhiteShirtsTab extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Recommended White Shirts&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Black Pants&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -188,13 +188,13 @@ class WhiteShirtsTab extends Component {
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/whiteShirtsProductAdd' method='POST'>
+            <Form action='/BlackPantsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='Old Navy White Shirt'
+                  placeholder='Black Track Pants'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -205,7 +205,7 @@ class WhiteShirtsTab extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://oldnavy.gapcanada.ca/browse/product.do?pid=898233003&locale=en_CA&sdkw=soft-washed-crew-neck-tee-for-men-P898233&vid=1&sdReferer=https%3A%2F%2Fwww.oldnavy.ca%2Fproducts%2Fmens-t-shirts.jsp'
+                  placeholder='http://www.cliniclazer.com/on-sale/adidas-mens-black-pants-franz-beckenbauer-track-pants-black/'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -221,4 +221,4 @@ class WhiteShirtsTab extends Component {
 	 }
 }
 
-export default WhiteShirtsTab
+export default BlackPantsTab

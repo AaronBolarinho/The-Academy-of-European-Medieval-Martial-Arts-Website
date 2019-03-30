@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import WhiteShirtsReviewsModal from './WhiteShirtsReviewsModal.js'
-import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
+import PeriodGlovesReviewsModal from './PeriodGlovesReviewsModal.js'
+import PeriodGlovesExample from '../../../../css/images/Equipment/PeriodGlovesExample.jpg'
 
-class WhiteShirtsTab extends Component {
+class PeriodGlovesTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class WhiteShirtsTab extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-3'>
-              <WhiteShirtsReviewsModal allReviews={reviews}
+              <PeriodGlovesReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class WhiteShirtsTab extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/whiteShirtsReviews')
+    fetch('http://localhost:3003/PeriodGlovesReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class WhiteShirtsTab extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/whiteShirtsProducts')
+    fetch('http://localhost:3003/PeriodGlovesProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,16 +143,16 @@ class WhiteShirtsTab extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A clean, plain, white t-shirt is standard uniform for all AEMMA students.
-              <br></br><br></br> Most standard brands of white t-shirts which are commercially available will be suitable to use as a uniform shirt.
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Period gloves are very highly recommended for use by all AEMMA students.
+                  <br></br><br></br> The long cuff on period gloves provides reduces the discomfort of making training with the dagger, and provides good protection for the hand and wrist for training with the sword. Period gloves may be purchased from places which sell other period equipement - and typically cost from around 40 to 60 dollars.
 	            </p>
 	          </Col>
           <Col sm='5'>
-            <div className='tabImageDiv'>
-              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical White Shirt'/>
+          <div className='tabImageDiv'>
+            <img src={PeriodGlovesExample} className='PeriodShoesImage' alt='Typical Running Shoe'/>
             </div>
             <div>
-              <span className='imageLable'> White Shirts</span>
+              <span className='imageLable'> Period Gloves</span>
             </div>
           </Col>
 	        </Row>
@@ -161,7 +161,7 @@ class WhiteShirtsTab extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Recommended White Shirts&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Period Gloves&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -188,13 +188,13 @@ class WhiteShirtsTab extends Component {
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/whiteShirtsProductAdd' method='POST'>
+            <Form action='/PeriodGlovesProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='Old Navy White Shirt'
+                  placeholder='AEMMA School Shirt'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -205,7 +205,7 @@ class WhiteShirtsTab extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://oldnavy.gapcanada.ca/browse/product.do?pid=898233003&locale=en_CA&sdkw=soft-washed-crew-neck-tee-for-men-P898233&vid=1&sdReferer=https%3A%2F%2Fwww.oldnavy.ca%2Fproducts%2Fmens-t-shirts.jsp'
+                  placeholder='https://www.aemma.org/UniformShirtPlaceholderUrl'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -221,4 +221,4 @@ class WhiteShirtsTab extends Component {
 	 }
 }
 
-export default WhiteShirtsTab
+export default PeriodGlovesTab

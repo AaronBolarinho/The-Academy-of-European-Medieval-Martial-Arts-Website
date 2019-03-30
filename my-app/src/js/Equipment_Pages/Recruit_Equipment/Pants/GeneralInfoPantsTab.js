@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import UniformShirtExample from '../../../../css/images/Equipment/UniformShirtExample.png'
+import BlackPantsExample from '../../../../css/images/Equipment/blackPantsExample.png'
 
-class GeneralInfoShoesTab extends Component {
+class GeneralInfoPantsTab extends Component {
   render() {
     return (
 	   <div>
 	   	<Row>
           <Col sm='12'>
             <span className='textFont introText'>
-              <img src={UniformShirtExample} className='shirtsExample' alt='White Shirt'/>
+              <img src={BlackPantsExample} className='pantsExample' alt='White Shirt'/>
               <br></br>
-              <h2>Uniform Shirts</h2>
+              <h2>Uniform Pants</h2>
               <ul className='footwearList'>
                 <li>
                   <i className='fas fa-chess-rook'></i>
@@ -19,11 +19,11 @@ class GeneralInfoShoesTab extends Component {
                 </li>
                 <li>
                   <i className='fas fa-chess-knight'></i>
-                  &nbsp;&nbsp;Students may purchase a white AEMMA uniform shirt from their local club.
+                  &nbsp;&nbsp;Students may purchase black athletic pants from most clothing stores that sell track pants, sweat pants, or other such workout pants.
                 </li>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Non-white AEMMA shirts may be worn on a per case basis as individual chapter rules permit.
+                  &nbsp;&nbsp;Alternatives to black pants (for example, black shorts in summer) may only be worn on a case by case basis as per your chapter's rules.
                 </li>
               </ul>
               <div className='ClickTabsBanner'>
@@ -39,4 +39,4 @@ class GeneralInfoShoesTab extends Component {
 	 }
 }
 
-export default GeneralInfoShoesTab
+export default GeneralInfoPantsTab

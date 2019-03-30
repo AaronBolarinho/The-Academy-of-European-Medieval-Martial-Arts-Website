@@ -170,7 +170,7 @@ class ConventionalShoes extends Component {
           </Col>
 	        </Row>
 	        <Row className='secondRow'>
-	          <Col sm='7'>
+	          <Col sm='8'>
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
@@ -195,7 +195,7 @@ class ConventionalShoes extends Component {
 	              </div>
 	            </div>
 	          </Col>
-	          <Col sm='4'>
+	          <Col sm='3'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import ShoesExampleImage from '../../../../css/images/Equipment/shoesExample.jpg'
+import ShoesExampleImage from '../../../../css/images/Equipment/shoesExample.png'
 
 class GeneralInfoShoesTab extends Component {
   render() {
@@ -31,11 +31,11 @@ class GeneralInfoShoesTab extends Component {
                     Period Shoes are preferred.
                 </li>
               </ul>
-              <span className='ClickTabsBanner'>
+              <div className='ClickTabsBanner'>
                 <i className='fas fa-chess'></i>
-              Click the Tabs above to find info
-               on recommended brands<i className='fas fa-chess'></i>
-              </span>
+              &nbsp;&nbsp;Click the Tabs above to find info
+               on reccomended brands &nbsp;&nbsp;<i className='fas fa-chess'></i>
+              </div>
             </span>
           </Col>
         </Row>

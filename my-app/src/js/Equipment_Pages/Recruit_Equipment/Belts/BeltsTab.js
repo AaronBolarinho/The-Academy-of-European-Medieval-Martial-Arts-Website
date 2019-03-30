@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Table, Button, Row, Col } from 'reactstrap'
-import WhiteShirtsReviewsModal from './WhiteShirtsReviewsModal.js'
-import WhiteShirt from '../../../../css/images/Equipment/WhiteShirt.jpeg'
+import BeltsReviewsModal from './BeltsReviewsModal.js'
+import PeriodBelt from '../../../../css/images/Equipment/PeriodBelt.jpg'
 
-class WhiteShirtsTab extends Component {
+class BeltsTab extends Component {
   constructor(props) {
     super(props)
 
@@ -84,7 +84,7 @@ class WhiteShirtsTab extends Component {
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
             <td className='col-3'>
-              <WhiteShirtsReviewsModal allReviews={reviews}
+              <BeltsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
                 productName={products.brand_name} />
@@ -110,7 +110,7 @@ class WhiteShirtsTab extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/whiteShirtsReviews')
+    fetch('http://localhost:3003/PeriodBeltsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class WhiteShirtsTab extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/whiteShirtsProducts')
+    fetch('http://localhost:3003/PeriodBeltsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -143,16 +143,16 @@ class WhiteShirtsTab extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A clean, plain, white t-shirt is standard uniform for all AEMMA students.
-              <br></br><br></br> Most standard brands of white t-shirts which are commercially available will be suitable to use as a uniform shirt.
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A fairly long, thick and robust leather belt is an important piece of equipment for students to purchase.
+              <br></br><br></br> The belt is useful for storing training swords and daggers while they are not in active use, and is part of the equipment needed for full speed fencing. Depending on the quality of the belt or the vendor, belts can begin around 30-40 dollars and continue to get more expensive as extra detail work is added.
 	            </p>
 	          </Col>
           <Col sm='5'>
             <div className='tabImageDiv'>
-              <img src={WhiteShirt} className='conventionalShoeImage' alt='Typical White Shirt'/>
+              <img src={PeriodBelt} className='conventionalShoeImage' alt='Typical White Shirt'/>
             </div>
             <div>
-              <span className='imageLable'> White Shirts</span>
+              <span className='imageLable'> Period Belts</span>
             </div>
           </Col>
 	        </Row>
@@ -161,7 +161,7 @@ class WhiteShirtsTab extends Component {
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
-	              &nbsp;&nbsp;Recommended White Shirts&nbsp;&nbsp;
+	              &nbsp;&nbsp;Recommended Period Belts&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
 	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
@@ -188,13 +188,13 @@ class WhiteShirtsTab extends Component {
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/whiteShirtsProductAdd' method='POST'>
+            <Form action='/PeriodBeltsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'
                   name='createBrandName'
                   id='exampleText'
-                  placeholder='Old Navy White Shirt'
+                  placeholder='Black Medieval Belt'
                   maxLength='49'
                   required/>
                 <FormText>Please Indicate the Name of the Product</FormText>
@@ -205,7 +205,7 @@ class WhiteShirtsTab extends Component {
                   name='createWebLink'
                   id='exampleText'
                   maxLength='199'
-                  placeholder='https://oldnavy.gapcanada.ca/browse/product.do?pid=898233003&locale=en_CA&sdkw=soft-washed-crew-neck-tee-for-men-P898233&vid=1&sdReferer=https%3A%2F%2Fwww.oldnavy.ca%2Fproducts%2Fmens-t-shirts.jsp'
+                  placeholder='https://armstreet.com/store/belts/'
                   required/>
                 <FormText>Copy and Paste an Accurate Website Link</FormText>
               </FormGroup>
@@ -221,4 +221,4 @@ class WhiteShirtsTab extends Component {
 	 }
 }
 
-export default WhiteShirtsTab
+export default BeltsTab

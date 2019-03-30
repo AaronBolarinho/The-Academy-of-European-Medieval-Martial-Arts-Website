@@ -1,29 +1,25 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import UniformShirtExample from '../../../../css/images/Equipment/UniformShirtExample.png'
+import BeltsExample from '../../../../css/images/Equipment/BeltsExample.png'
 
-class GeneralInfoShoesTab extends Component {
+class GeneralInfoBeltsTab extends Component {
   render() {
     return (
 	   <div>
 	   	<Row>
           <Col sm='12'>
             <span className='textFont introText'>
-              <img src={UniformShirtExample} className='shirtsExample' alt='White Shirt'/>
+              <img src={BeltsExample} className='pantsExample' alt='Medieval Belt'/>
               <br></br>
-              <h2>Uniform Shirts</h2>
+              <h2>Period Belts</h2>
               <ul className='footwearList'>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;AEMMA Uniform for all students includes a plain white t-shirt and black athletic pants.
+                  &nbsp;&nbsp;Belts are encouraged to be purchased and worn by AEMMA students.
                 </li>
                 <li>
                   <i className='fas fa-chess-knight'></i>
-                  &nbsp;&nbsp;Students may purchase a white AEMMA uniform shirt from their local club.
-                </li>
-                <li>
-                  <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Non-white AEMMA shirts may be worn on a per case basis as individual chapter rules permit.
+                  &nbsp;&nbsp;Students may purchase period belts from most places which sell other period cloths or gear.
                 </li>
               </ul>
               <div className='ClickTabsBanner'>
@@ -39,4 +35,4 @@ class GeneralInfoShoesTab extends Component {
 	 }
 }
 
-export default GeneralInfoShoesTab
+export default GeneralInfoBeltsTab

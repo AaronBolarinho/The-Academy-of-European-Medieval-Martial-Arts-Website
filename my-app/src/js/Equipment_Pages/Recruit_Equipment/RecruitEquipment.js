@@ -13,6 +13,27 @@ import NavTabsShirts from './Shirts/NavTabsShirts.js'
 import GeneralInfoShirtsTab from './Shirts/GeneralInfoShirtsTab.js'
 import WhiteShirtsTab from './Shirts/WhiteShirtsTab.js'
 import AEMMAShirtsTab from './Shirts/AEMMAShirtsTab.js'
+// ------These Are the Pants Components
+import NavTabsPants from './Pants/NavTabsPants.js'
+import GeneralInfoPantsTab from './Pants/GeneralInfoPantsTab.js'
+import BlackPantsTab from './Pants/BlackPantsTab.js'
+// ------These Are the Gloves Components
+import NavTabsGloves from './Gloves/NavTabsGloves.js'
+import GeneralInfoGlovesTab from './Gloves/GeneralInfoGlovesTab.js'
+import LeatherGlovesTab from './Gloves/LeatherGlovesTab.js'
+import PeriodGlovesTab from './Gloves/PeriodGlovesTab.js'
+// ------These Are the Belts Components
+import NavTabsBelts from './Belts/NavTabsBelts.js'
+import GeneralInfoBeltsTab from './Belts/GeneralInfoBeltsTab.js'
+import BeltsTab from './Belts/BeltsTab.js'
+// ------These Are the Masks Components
+import NavTabsMasks from './Masks/NavTabsMasks.js'
+import GeneralInfoMasksTab from './Masks/GeneralInfoMasksTab.js'
+import MasksTab from './Masks/MasksTab.js'
+// ------These Are the Swords Components
+import NavTabsSwords from './Swords/NavTabsSwords.js'
+import GeneralInfoSwordsTab from './Swords/GeneralInfoSwordsTab.js'
+import SwordsTab from './Swords/SwordsTab.js'
 // ------These are the css and images used on the main equip page
 import '../../../css/Equipment/Recruit/RecruitEquipment.css'
 import '../../../css/Equipment/Recruit/AddReviewsModal.css'
@@ -25,10 +46,20 @@ class RecruitEquipment extends Component {
 
     this.toggleGp1 = this.toggleGp1.bind(this)
     this.toggleGp2 = this.toggleGp2.bind(this)
+    this.toggleGp3 = this.toggleGp3.bind(this)
+    this.toggleGp4 = this.toggleGp4.bind(this)
+    this.toggleGp5 = this.toggleGp5.bind(this)
+    this.toggleGp6 = this.toggleGp6.bind(this)
+    this.toggleGp7 = this.toggleGp7.bind(this)
 
     this.state = {
       activeTabGp1: '1',
-      activeTabGp2: '1'
+      activeTabGp2: '1',
+      activeTabGp3: '1',
+      activeTabGp4: '1',
+      activeTabGp5: '1',
+      activeTabGp6: '1',
+      activeTabGp7: '1'
     }
   }
 
@@ -37,7 +68,13 @@ class RecruitEquipment extends Component {
   toggleGp1(tab) {
     if (this.state.activeTabGp1 !== tab) {
       this.setState({
-        activeTabGp1: tab
+        activeTabGp1: tab,
+        activeTabGp2: '1',
+        activeTabGp3: '1',
+        activeTabGp4: '1',
+        activeTabGp5: '1',
+        activeTabGp6: '1',
+        activeTabGp7: '1'
       })
     }
   }
@@ -45,7 +82,83 @@ class RecruitEquipment extends Component {
   toggleGp2(tab) {
     if (this.state.activeTabGp2 !== tab) {
       this.setState({
-        activeTabGp2: tab
+        activeTabGp1: '1',
+        activeTabGp2: tab,
+        activeTabGp3: '1',
+        activeTabGp4: '1',
+        activeTabGp5: '1',
+        activeTabGp6: '1',
+        activeTabGp7: '1'
+      })
+    }
+  }
+
+  toggleGp3(tab) {
+    if (this.state.activeTabGp3 !== tab) {
+      this.setState({
+        activeTabGp1: '1',
+        activeTabGp2: '1',
+        activeTabGp3: tab,
+        activeTabGp4: '1',
+        activeTabGp5: '1',
+        activeTabGp6: '1',
+        activeTabGp7: '1'
+      })
+    }
+  }
+
+  toggleGp4(tab) {
+    if (this.state.activeTabGp4 !== tab) {
+      this.setState({
+        activeTabGp1: '1',
+        activeTabGp2: '1',
+        activeTabGp3: '1',
+        activeTabGp4: tab,
+        activeTabGp5: '1',
+        activeTabGp6: '1',
+        activeTabGp7: '1'
+      })
+    }
+  }
+
+  toggleGp5(tab) {
+    if (this.state.activeTabGp5 !== tab) {
+      this.setState({
+        activeTabGp1: '1',
+        activeTabGp2: '1',
+        activeTabGp3: '1',
+        activeTabGp4: '1',
+        activeTabGp5: tab,
+        activeTabGp6: '1',
+        activeTabGp7: '1'
+      })
+    }
+  }
+
+  toggleGp6(tab) {
+    if (this.state.activeTabGp6 !== tab) {
+      this.setState({
+        activeTabGp1: '1',
+        activeTabGp2: '1',
+        activeTabGp3: '1',
+        activeTabGp4: '1',
+        activeTabGp5: '1',
+        activeTabGp6: tab,
+        activeTabGp7: '1'
+      })
+    }
+  }
+
+  toggleGp7(tab) {
+    if (this.state.activeTabGp7 !== tab) {
+      this.setState({
+        activeTabGp1: '1',
+        activeTabGp2: '1',
+        activeTabGp3: '1',
+        activeTabGp4: '1',
+        activeTabGp5: '1',
+        activeTabGp6: '1',
+        activeTabGp7: tab
       })
     }
   }
@@ -60,7 +173,9 @@ class RecruitEquipment extends Component {
   render() {
     return (
       <div>
-        <div className='backgroundDiv'>
+        <div className='backgroundDiv1'>
+        </div>
+        <div className='backgroundDiv2'>
         </div>
         <div>
           <h1 className='title'>Equipment Requirements:</h1>
@@ -97,7 +212,7 @@ class RecruitEquipment extends Component {
               </p>
             </span>
           </div>
-          <h2 className='firstDay'>Needed For Your First Day:</h2>
+          <h2 className='firstDay'><u>Needed For Your First Day:</u></h2>
 
 
           <div className='shoes'>
@@ -129,6 +244,74 @@ class RecruitEquipment extends Component {
               </TabPane>
               <TabPane tabId='3'>
                 <AEMMAShirtsTab/>
+              </TabPane>
+            </TabContent>
+          </div>
+
+          <div className='pants'>
+            <NavTabsPants toggleGp3={this.toggleGp3}/>
+            <TabContent activeTab={this.state.activeTabGp3} className='animated fadeIn'>
+              <TabPane tabId='1'>
+                <GeneralInfoPantsTab/>
+              </TabPane>
+              <TabPane tabId='2'>
+                <BlackPantsTab/>
+              </TabPane>
+            </TabContent>
+          </div>
+
+          <h2 className='firstDay'><u>Needed Within Three Months</u></h2>
+
+          <div className='gloves'>
+            <NavTabsGloves toggleGp4={this.toggleGp4}/>
+            <TabContent activeTab={this.state.activeTabGp4} className='animated fadeIn'>
+              <TabPane tabId='1'>
+                <GeneralInfoGlovesTab/>
+              </TabPane>
+              <TabPane tabId='2'>
+                <LeatherGlovesTab/>
+              </TabPane>
+              <TabPane tabId='3'>
+                <PeriodGlovesTab/>
+              </TabPane>
+            </TabContent>
+          </div>
+
+          <div className='belts'>
+            <NavTabsBelts toggleGp5={this.toggleGp5}/>
+            <TabContent activeTab={this.state.activeTabGp5} className='animated fadeIn'>
+              <TabPane tabId='1'>
+                <GeneralInfoBeltsTab/>
+              </TabPane>
+              <TabPane tabId='2'>
+                <BeltsTab/>
+              </TabPane>
+            </TabContent>
+          </div>
+
+          <a name='FirstDay'></a>
+          <h2 className='firstDay'><u>Needed Within Six Months</u></h2>
+
+          <div className='masks'>
+            <NavTabsMasks toggleGp6={this.toggleGp6}/>
+            <TabContent activeTab={this.state.activeTabGp6} className='animated fadeIn'>
+              <TabPane tabId='1'>
+                <GeneralInfoMasksTab/>
+              </TabPane>
+              <TabPane tabId='2'>
+                <MasksTab/>
+              </TabPane>
+            </TabContent>
+          </div>
+
+          <div className='swords'>
+            <NavTabsSwords toggleGp7={this.toggleGp7}/>
+            <TabContent activeTab={this.state.activeTabGp7} className='animated fadeIn'>
+              <TabPane tabId='1'>
+                <GeneralInfoSwordsTab/>
+              </TabPane>
+              <TabPane tabId='2'>
+                <SwordsTab/>
               </TabPane>
             </TabContent>
           </div>

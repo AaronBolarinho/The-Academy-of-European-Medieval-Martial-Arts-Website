@@ -11,6 +11,26 @@
     top: 67em!important;
 }
 
+.modalPants {
+    top: 92em!important;
+}
+
+.modalGloves {
+    top: 124em!important;
+}
+
+.modalBelts {
+    top: 150em!important;
+}
+
+.modalMasks {
+    top: 183em!important;
+}
+
+.modalSwords {
+    top: 208em!important;
+}
+
 .modalTitle {
 	padding: 1em;
 	text-align: -webkit-center;

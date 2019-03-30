@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
-import UniformShirtExample from '../../../../css/images/Equipment/UniformShirtExample.png'
+import MaskExample from '../../../../css/images/Equipment/MaskExample.png'
 
-class GeneralInfoShoesTab extends Component {
+class GeneralInfoMasksTab extends Component {
   render() {
     return (
 	   <div>
 	   	<Row>
           <Col sm='12'>
             <span className='textFont introText'>
-              <img src={UniformShirtExample} className='shirtsExample' alt='White Shirt'/>
+              <img src={MaskExample} className='pantsExample' alt='Fencing Mask'/>
               <br></br>
-              <h2>Uniform Shirts</h2>
+              <h2>Fencing Masks</h2>
               <ul className='footwearList'>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;AEMMA Uniform for all students includes a plain white t-shirt and black athletic pants.
+                  &nbsp;&nbsp;Fencing masks are a required purchase for all AEMMA students.
                 </li>
                 <li>
                   <i className='fas fa-chess-knight'></i>
-                  &nbsp;&nbsp;Students may purchase a white AEMMA uniform shirt from their local club.
+                  &nbsp;&nbsp;Students may purchase fencing masks from a variety of vendors though AEMMA recommends certin brands and vendors over others.
                 </li>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Non-white AEMMA shirts may be worn on a per case basis as individual chapter rules permit.
+                  &nbsp;&nbsp;Fencing masks range from aroudn 50 - 150 dollars, growing more expensive the better the quality and the more accessories are added. Specialized masks for HEMA are now availible from most vendors.
                 </li>
               </ul>
               <div className='ClickTabsBanner'>
@@ -39,4 +39,4 @@ class GeneralInfoShoesTab extends Component {
 	 }
 }
 
-export default GeneralInfoShoesTab
+export default GeneralInfoMasksTab

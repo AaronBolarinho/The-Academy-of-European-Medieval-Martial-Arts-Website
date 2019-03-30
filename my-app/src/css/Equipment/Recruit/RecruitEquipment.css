@@ -1,6 +1,10 @@
 @font-face { font-family: KingsCross; 
        src: url('../../Fonts/KingsCross.ttf'); }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title {
   /*text-align: -webkit-center;*/
   font-family: 'Crimson Text', serif;
@@ -36,7 +40,7 @@
   width: 100%;
 }
 
-.backgroundDiv {
+.backgroundDiv1 {
 background-image: url(../../images/Equipment/parchment-background.jpg);
 /* background-repeat: no-repeat; */
 /* background-position: center; */
@@ -47,6 +51,20 @@ z-index: -1;
 position: absolute;
 /* background-color: #dec3747d; */
 /*background-color: #dec3747d;*/
+}
+
+.backgroundDiv2 {
+background-image: url(../../images/Equipment/parchment-background.jpg);
+/* background-repeat: no-repeat; */
+/* background-position: center; */
+/* background-size: cover; */
+height: 100em;
+width: 77.5em;
+z-index: -1;
+position: absolute;
+/* background-color: #dec3747d; */
+/*background-color: #dec3747d;*/
+top: 200em;
 }
 
 .introImage {
@@ -81,14 +99,48 @@ position: absolute;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 1em;
-  width: 95%;
+  width: 90%;
 }
 
 .shirt {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 1em;
-  width: 95%;
+  width: 90%;
+}
+.pants {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.gloves {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.belts {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.masks {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.swords {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  width: 90%;
 }
 
 .shoesExample {
@@ -99,6 +151,46 @@ position: absolute;
   margin-right: 1em;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
+}
+
+.shirtsExample {
+  float: left;
+  width: 12em;
+  height: 10em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.pantsExample {
+  float: left;
+  width: 13em;
+  height: 13em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.glovesExample {
+  float: left;
+  width: 13em;
+  height: 15em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.swordsExample {
+  float: left;
+  width: 16em;
+  height: 13em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .footwearList {
@@ -190,6 +282,13 @@ table {
   border: solid 2px;
 }
 
+.PeriodShoesImage {
+  width: 15em;
+  height: 16em;
+  border: solid 2px;
+  margin-top: 0.5em;
+}
+
 .tab-pane.active { animation-name: fadeIn; animation-duration: 900ms; animation-timing-function: linear; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -255,6 +354,7 @@ table {
 
 .tabImageDiv {
   text-align: center;
+  height: 19em;
 }
 
 .shirts {
@@ -263,4 +363,10 @@ table {
     margin-right: 7%;
     margin-bottom: 1em;
     width: 88%;
+}
+
+.swordsList {
+  margin-left: 9.5em;
+  font-size: 1.5em;
+  font-family: 'Crimson Text', serif;
 }

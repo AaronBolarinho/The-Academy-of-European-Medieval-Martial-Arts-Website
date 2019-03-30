@@ -72,8 +72,8 @@ class AEMMAShirtsTab extends Component {
       <>
         {products.map((products) => (
           <tr className='d-flex container'>
-            <th scope='row' className='col-2'>{products.id}</th>
-            <td className='col-2'>{products.brand_name}</td>
+            <th scope='row' className='col-1'>{products.id}</th>
+            <td className='col-4'>{products.brand_name}</td>
             <td className='col-2'>
               <a href={products.web_link}
                 target='_blank'
@@ -83,7 +83,7 @@ class AEMMAShirtsTab extends Component {
             </td>
             {this.grabVariable()}
             <td className='col-2'>{finalRatings[products.id - 1]}</td>
-            <td className='col-4'>
+            <td className='col-3'>
               <AEMMAShirtsReviewsModal allReviews={reviews}
                 tableKey={products.id}
                 overallRating={this.overallRating}
@@ -157,7 +157,7 @@ class AEMMAShirtsTab extends Component {
           </Col>
 	        </Row>
 	        <Row className='secondRow'>
-	          <Col sm='7'>
+	          <Col sm='8'>
 	            <div>
 	              <p className='formTitle'>
 	                <i className='fas fa-chess-pawn'></i>
@@ -168,12 +168,12 @@ class AEMMAShirtsTab extends Component {
 	                <Table hover className=' tableProportions'>
 	                  <thead>
 	                    <tr className='d-flex'>
-	                      <th scope='col' className='col-2'>#</th>
-	                      <th scope='col' className='col-2'>Product Name</th>
-	                      <th scope='col' className='col-2'>Website Link</th>
-	                      <th scope='col' className='col-2'>Overall Rating</th>
-	                      <th scope='col' className='col-4'>Reviews and Ratings</th>
-	                    </tr>
+                        <th scope='col' className='col-1'>#</th>
+                        <th scope='col' className='col-4'>Product Name</th>
+                        <th scope='col' className='col-2'>Website Link</th>
+                        <th scope='col' className='col-2'>Overall Rating</th>
+                        <th scope='col' className='col-3'>Reviews and Ratings</th>
+                      </tr>
 	                  </thead>
 	                  <tbody>
 	                    {this.getTableBodyAsReactElement()}
@@ -182,7 +182,7 @@ class AEMMAShirtsTab extends Component {
 	              </div>
 	            </div>
 	          </Col>
-	          <Col sm='4'>
+	          <Col sm='3'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;

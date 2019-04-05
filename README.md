@@ -62,20 +62,7 @@ This new page now has:
 
 See a brief demo below:
 
-![](https://media.giphy.com/media/Q8b4YlbY9DnlWSMdrl/giphy.gif)
-
 ![alt-text](https://github.com/AaronBolarinho/aemma/blob/master/my-app/src/css/ezgif.com-optimize.gif)
-
-hmmm....my gif isnt working...
-
-
-![](https://media.giphy.com/media/fxSeKIIiI7M9e80k8W/giphy.gif)
-
-hmmm....my gif isnt working...
-
-
-
-
 
 ### Completed Pages:
 

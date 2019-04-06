@@ -23,6 +23,8 @@ After version two of the AEMMA website is complete, further development will con
 
 Please send any questions, comments, or concerns to me at aaron.bolarinho@gmail.com.
 
+*NB - Due to the fact that a number of files are .gitignored for a few reasons including file size (media files etc) and security, at this stage it isnt possible to download this repo and run it without compile failure messages.
+
 ###  Pages Under Construction:
 
 **Equipment Pages:**

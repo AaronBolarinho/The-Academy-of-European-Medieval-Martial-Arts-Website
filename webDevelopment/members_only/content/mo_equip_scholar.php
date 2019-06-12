@@ -25,7 +25,7 @@ $check_session = $path_members."php-bin/sub_check_session_expiration.php"; inclu
 $retrieve = $path_members."php-bin/retrieve_cookies.php"; include "$retrieve";
 
 $config = $path_members."config/config.php"; include "$config";
-$config_about = $path_members."config/content_mo_equip_recruit_$lang.php"; include "$config_about";
+$config_about = $path_members."config/content_mo_equip_scholar_$lang.php"; include "$config_about";
 $header = $path_members."php-bin/members_only_header.php"; include "$header";
 $header2 = $path_members."php-bin/members_only_header2.php"; include "$header2";
 $num = rand(1,3);

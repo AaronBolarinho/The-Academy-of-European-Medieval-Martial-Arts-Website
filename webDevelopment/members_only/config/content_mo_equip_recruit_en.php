@@ -4,7 +4,7 @@
 //	2017 ------------------
 //
 // English content -------------------
-$title[0] 	= "Equipment: Recruit";
+$title[0] 	= "Equipment: Recruits";
 $banner[0] 	= "<img src=\"../images/banner_recruit.jpg\" alt=\"\" width=\"100%\"/>";
 $equip_p11[0]	= "Individuals who are interested in training at the Academy are often intimiated by the potentially high capital cost of training, thinking that weapons and some form of armour is required to train. These items would be necessary if and only if the recruit decides to challenge for the scholler test and engage in advanced <i>armizare</i> training.";
 

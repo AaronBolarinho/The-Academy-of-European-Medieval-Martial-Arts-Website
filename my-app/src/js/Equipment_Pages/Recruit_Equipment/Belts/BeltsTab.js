@@ -144,7 +144,7 @@ class BeltsTab extends Component {
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
 	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> A fairly long, thick and robust leather belt is an important piece of equipment for students to purchase.
-              <br></br><br></br> The belt is useful for storing training swords and daggers while they are not in active use, and is part of the equipment needed for full speed fencing. Depending on the quality of the belt or the vendor, belts can begin around 30-40 dollars and continue to get more expensive as extra detail work is added.
+              <br></br><br></br> The belt is useful for storing training swords and daggers while they are not in active use, and is part of the equipment needed for full speed fencing. Depending on the quality of the belt or the vendor, belts can begin around $30 to $40 Canadian dollars and continue to get more expensive as extra detail work is added.
 	            </p>
 	          </Col>
           <Col sm='5'>

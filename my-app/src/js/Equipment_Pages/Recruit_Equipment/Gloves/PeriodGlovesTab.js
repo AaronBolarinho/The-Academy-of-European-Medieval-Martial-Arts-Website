@@ -144,12 +144,12 @@ class PeriodGlovesTab extends Component {
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
 	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Period gloves are very highly recommended for use by all AEMMA students.
-                  <br></br><br></br> The long cuff on period gloves provides reduces the discomfort of making training with the dagger, and provides good protection for the hand and wrist for training with the sword. Period gloves may be purchased from places which sell other period equipement - and typically cost from around 40 to 60 dollars.
+              <br></br><br></br> The long cuff on period gloves provides reduces the discomfort of making training with the dagger, and provides good protection for the hand and wrist for training with the sword. Period gloves may be purchased from places which sell other period equipement - and typically cost from around $40 to $60 Canadian dollars.
 	            </p>
 	          </Col>
           <Col sm='5'>
-          <div className='tabImageDiv'>
-            <img src={PeriodGlovesExample} className='PeriodShoesImage' alt='Typical Running Shoe'/>
+            <div className='tabImageDiv'>
+              <img src={PeriodGlovesExample} className='PeriodShoesImage' alt='Typical Running Shoe'/>
             </div>
             <div>
               <span className='imageLable'> Period Gloves</span>

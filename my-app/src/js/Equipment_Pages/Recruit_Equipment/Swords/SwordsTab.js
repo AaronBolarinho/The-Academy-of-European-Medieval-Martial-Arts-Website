@@ -143,10 +143,10 @@ class SwordsTab extends Component {
 	     <Row>
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
-	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Every AEMMA recruit needs to purchase one steel longsword from Regenyi Armory. Visit this link to view the order form: <a href="http://www.regenyei.com/en_blunts_order.php"> Steel Longsword Options Form</a>
+	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Every AEMMA recruit needs to purchase one steel longsword from Regenyi Armory. Visit this link to view the order form: <a href="http://www.regenyei.com/en_longsword_order.php?fbclid=IwAR25f7UCe0QyLV4AhrfuD0yq7VInDpJBaZJ8IpBDNuox5FsldnjMqhcuRJQ" target="blank"> Steel Longsword Options Form</a>
             </p>
-            <span className='swordsList'>Order Form Choices:</span>
-            <ul className='footwearList'>
+            <span className='swordsListTitle'>Order Form Choices:</span>
+            <ul className='swordsList'>
               <li>
                 <br></br>
                 <i className='fas fa-chess-rook'></i>
@@ -154,15 +154,15 @@ class SwordsTab extends Component {
               </li>
               <li>
                 <i className='fas fa-chess-knight'></i>
-                &nbsp;&nbsp;Guard Type: A,B,C,D,E or R for ring guard.
+                &nbsp;&nbsp;Guard Type: A,B,C,D, or E.
               </li>
               <li>
                 <i className='fas fa-chess-rook'></i>
-              &nbsp;&nbsp;Pommel Type: A,B,C,D,E,F
+              &nbsp;&nbsp;Pommel Type: A,B,C,D,E, or F.
               </li>
               <li>
                 <i className='fas fa-chess-knight'></i>
-                &nbsp;&nbsp;Grip Type and Colour: 1,2,3,4,5 ( colour).
+                &nbsp;&nbsp;Grip Type and Colour: 1,2,3,4,5,6 or 7 (each type has a limited selection of colours).
               </li>
               <li>
                 <i className='fas fa-chess-rook'></i>

@@ -144,7 +144,7 @@ class LeatherGlovesTab extends Component {
 	          <Col sm='7'>
 	            <p className='ConventionalShoesAdvice'>
 	              <span className='generalAdviceTitle'>General Advice:</span><br></br><br></br> Basic leather gloves protect the hands from incidental cuts and scraps which occur during training.
-              <br></br><br></br> Most standard brands of leather gardening gloves - like those availible from places like Canadian Tire - will suffice. They typically cost around 20 dollars or less.
+              <br></br><br></br> Most standard brands of leather gardening gloves - like those availible from places like Canadian Tire - will suffice. They typically cost around $20 Canadian dollars.
 	            </p>
 	          </Col>
           <Col sm='5'>

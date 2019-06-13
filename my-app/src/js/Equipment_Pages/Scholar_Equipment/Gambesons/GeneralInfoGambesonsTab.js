@@ -23,7 +23,7 @@ class GeneralInfoGambesonsTab extends Component {
                   &nbsp;&nbsp;There are many vendors with many styles of
                   gambeson which are fit to be used at AEMMA; as a
                   consequence, the prices will also vary. Prices tend to
-                  range from $150 to $300 Canadian dollars and up; as a
+                  range from $200 to $400 Canadian dollars and up; as a
                    general rule, you get what you pay for.
                 </li>
                 <li>

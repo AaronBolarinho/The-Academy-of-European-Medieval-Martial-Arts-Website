@@ -23,7 +23,7 @@ class GeneralInfoMasksTab extends Component {
                 </li>
                 <li>
                   <i className='fas fa-chess-rook'></i>
-                  &nbsp;&nbsp;Fencing masks range from aroudn 50 - 150 dollars, growing more expensive the better the quality and the more accessories are added. Specialized masks for HEMA are now availible from most vendors.
+                  &nbsp;&nbsp;Fencing masks range from aroudn $100 - $200 Canadian dollars and up, growing more expensive the better the quality and the more accessories are added. Specialized masks for HEMA are now availible from most vendors.
                 </li>
               </ul>
               <div className='ClickTabsBanner'>

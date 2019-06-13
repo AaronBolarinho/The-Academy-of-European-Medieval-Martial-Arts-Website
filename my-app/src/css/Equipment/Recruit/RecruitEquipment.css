@@ -18,8 +18,8 @@ html {
 .title {
   /*text-align: -webkit-center;*/
   font-family: 'Crimson Text', serif;
-  margin-bottom: 0.5em;
   font-size: 4em;
+  margin-bottom: 0.5em;
   padding-top: 0.5em;
   padding-left: 22%;
 }
@@ -204,8 +204,8 @@ top: 200em;
 }
 
 .footwearList {
-/*  list-style-image: url("");*/
-  list-style: none
+  list-style: none;
+  font-family: 'Crimson Text', serif;
 }
 
 .tabBottomBorder{
@@ -375,8 +375,14 @@ table {
     width: 88%;
 }
 
-.swordsList {
+.swordsListTitle {
   margin-left: 9.5em;
   font-size: 1.5em;
   font-family: 'Crimson Text', serif;
+}
+
+.swordsList {
+  list-style: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
 }

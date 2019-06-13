@@ -10,11 +10,18 @@ class PeriodShoesReviewsModal extends React.Component {
     this.state = {
       modal: false,
       collapse: false,
-      productNumber: this.props.tableKey
+      productNumber: this.props.tableKey,
+      value: 250
     }
 
     this.toggle = this.toggle.bind(this)
     this.toggleReviewForm = this.toggleReviewForm.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event) {
+    let message = event.target.value
+    this.setState({ value: 250 - message.length })
   }
 
   toggle() {
@@ -120,13 +127,14 @@ class PeriodShoesReviewsModal extends React.Component {
                     </Row>
                     <FormGroup>
                       <Label for='Your Review'>Your Review</Label>
-                      <Input type='textarea'
+                      <Input onChange={this.handleChange}
+                        type='textarea'
                         placeholder='This is a great product'
                         name='createReviewText'
                         maxlength='249'
                         required/>
                       <FormText>
-                        250 Characters Max; Your review goes here
+                        250 Characters Max; Your review goes here. You have {this.state.value} characters left!
                       </FormText>
                     </FormGroup>
                     <Button onSubmit={this.submitForm}>Submit Review</Button>

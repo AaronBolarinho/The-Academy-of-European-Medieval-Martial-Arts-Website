@@ -20,7 +20,7 @@ class GambesonsTab extends Component {
   }
 
   // These functions are used to achieve the list of averaged total ratings
-  // in the main running shoes tab.
+  // in the Gambesons tab.
 
   getAverage(array) {
     let count = array.length - 1
@@ -110,7 +110,7 @@ class GambesonsTab extends Component {
       return response.json()
     }
 
-    fetch('http://localhost:3003/SwordsReviews')
+    fetch('http://localhost:3003/GambesonsReviews')
       .then(status)
       .then(json)
       .then((data) => {
@@ -120,7 +120,7 @@ class GambesonsTab extends Component {
         console.log('Request failed', error)
       })
 
-    fetch('http://localhost:3003/SwordsProducts')
+    fetch('http://localhost:3003/GambesonsProducts')
       .then(status)
       .then(json)
       .then((data) => {
@@ -195,7 +195,7 @@ class GambesonsTab extends Component {
             &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
-            <Form action='/SwordsProductAdd' method='POST'>
+            <Form action='/GambesonsProductAdd' method='POST'>
               <FormGroup>
                 <Label for='exampleEmail'>Product Name</Label>
                 <Input type='textarea'

@@ -8,6 +8,7 @@ import GeneralInfoGambesonsTab from './Gambesons/GeneralInfoGambesonsTab.js'
 import GambesonsTab from './Gambesons/GambesonsTab.js'
 // ------These are the css and images used on the main equip page
 import '../../../css/Equipment/Scholar/ScholarEquipment.css'
+import '../../../css/Equipment/Recruit/RecruitEquipment.css'
 import '../../../css/Equipment/Recruit/AddReviewsModal.css'
 import DaggerLeft from '../../../css/images/Equipment/Auray-Rondel-Dagger-transparent-left.png'
 import DaggerRight from '../../../css/images/Equipment/Auray-Rondel-Dagger-transparent-right.png'

@@ -6,8 +6,11 @@ import ScholarEquipment from './Equipment_Pages/Scholar_Equipment/ScholarEquipme
 import Home from './home.js'
 import Error from './error.js'
 
+import { connect } from 'react-redux'
+
 class App extends Component {
   render() {
+    console.log('this is the store from the provider', this.props)
     return (
       <BrowserRouter>
         <div>
@@ -24,4 +27,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect()(App)

@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 })
 
 // These are all my routes
-const router = require('./routes/user.js') //This one is legacy from server creation; I have not deleted it yet.
+const router = require('./routes/user.js') // This one is legacy from server creation; I have not deleted it yet.
 const router1 = require('./routes/recruitEquipmentRoutes.js')
 const router2 = require('./routes/scholarEquipmentRoutes.js')
 

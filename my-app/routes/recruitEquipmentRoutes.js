@@ -68,8 +68,8 @@ router1.post('/conventionalShoesProductAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
-  // res.redirect('http://localhost:3000/RecruitEquipment')
-  res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
+  res.redirect('http://localhost:3000')
+  // res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
 })
 
@@ -88,6 +88,17 @@ router1.post('/conventionalShoesReviewsAdd', (req, res) => {
       return
     }
     console.log('inserted new data!')
+    res.end()
+  })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Conventional_Shoes SET Recruit_Equip_Conventional_Shoes.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Conventional_Shoes_Reviews WHERE Recruit_Equip_Conventional_Shoes.id = Recruit_Equip_Conventional_Shoes_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
     res.end()
   })
   // res.redirect('http://localhost:3000/RecruitEquipment')

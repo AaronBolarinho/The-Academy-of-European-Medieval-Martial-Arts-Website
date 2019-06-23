@@ -16,27 +16,38 @@ import {
   Button
 } from 'reactstrap'
 
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+
 import { connect } from 'react-redux'
 
 class home extends Component {
   constructor(props) {
     super(props)
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    this.state = {
-      NewData: ''
-    }
+  getData = (data) => {
+    this.props.getData(data)
   }
 
   handleClick = () => {
-    this.setState({ NewData: 'didItWork?' })
+    this.getData({ NewData: 'didItWork?' })
+    console.log('handleClick ran')
   }
 
+  handleSubmit(event) {
+    event.preventDefault()
+    const data = new FormData(event.target)
+
+    fetch('/conventionalShoesProductAdd', {
+      method: 'POST',
+      body: data
+    }).then(() => {
+            alert('Selamat email anda sudah terdaftar!')
+        })
+  }
 
   componentDidMount() {
-    const getData = () => {
-      this.props.getData(this.state)
-    }
-
     function status(response) {
       if (response.status >= 200 && response.status < 300) {
         return Promise.resolve(response)
@@ -53,11 +64,21 @@ class home extends Component {
       .then(status)
       .then(json)
       .then((data) => {
-        this.setState({ products: data })
-        getData()
+        this.getData({ conventionalShoesProducts: data })
       }).catch(function (error) {
         console.log('Request failed', error)
       })
+
+    let ratingsNumbers = {}
+
+    // const toObject = (arr) => {
+    //   for (let i = 0; i < arr.length; i++) {
+    //     ratingsNumbers[i] = arr[i]
+    //   }
+    //   return ratingsNumbers
+    // }
+    // console.log('this is the prop I want', this.props.data.conventionalShoesProducts.conventionalShoesProducts)
+    console.log('these are the ratings numbers', ratingsNumbers)
   }
 
   render() {
@@ -67,8 +88,8 @@ class home extends Component {
       <div>
         <Navbar color='inverse' light expand='md'>
           <NavbarBrand href='/'>reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <NavbarToggler />
+          <Collapse navbar>
             <Nav className='ml-auto' navbar>
               <NavItem>
                 <NavLink href='/components/'>Components</NavLink>
@@ -101,14 +122,50 @@ class home extends Component {
         </Jumbotron>
         <Button onClick={this.handleClick}>
             Add more data; see the dynamic Update!
-          </Button>
+        </Button>
         <div>
             This is a test
-            {JSON.stringify(this.props)}
+          {JSON.stringify(this.props)}
         </div>
         <div>
             This is another test
-            {JSON.stringify(this.state)}
+          {JSON.stringify(this.state)}
+        </div>
+        // this is the form test
+        <Form action='/conventionalShoesProductAdd' method='POST'>
+          <FormGroup>
+            <Label for='exampleEmail'>Product Name</Label>
+            <Input type='textarea'
+              name='createBrandName'
+              id='exampleText'
+              placeholder='REEBOK ENDLESS ROAD'
+              maxLength='49'
+              required/>
+            <FormText>Please Indicate the Name of the Product</FormText>
+          </FormGroup>
+          <FormGroup>
+            <Label for='examplePassword'>Website Link</Label>
+            <Input type='textarea'
+              name='createWebLink'
+              id='exampleText'
+              maxLength='199'
+              placeholder='https://www.reebok.ca/en/reebok-endless-road/CN6429.html'
+              required/>
+            <FormText>Copy and Paste an Accurate Website Link</FormText>
+          </FormGroup>
+          <div className='addProductFormButton'>
+            <Button type='submit' onSubmit={this.handleSubmit}
+            >Submit</Button>
+          </div>
+        </Form>
+        //this is the form test
+        <div>
+            This is the data manipulation test
+        </div>
+        <div>
+        </div>
+        <div>
+            This is the data manipulation test
         </div>
       </div>
     )
@@ -124,7 +181,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getData: (data) => {
-    console.log('This is the dispatch data', data)
+      console.log('This is the dispatch data', data)
       dispatch({ type: 'GET_DATA', data: data })
     }
   }

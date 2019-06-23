@@ -12,3 +12,52 @@ INSERT INTO Recruit_Equip_Running_Shoes_Reviews(product_number, reviewer_name, r
 
 ALTER TABLE table_name
 MODIFY COLUMN column_name datatype;
+
+ALTER TABLE Recruit_Equip_Conventional_Shoes_Reviews AUTO_INCREMENT = 1;
+
+ALTER TABLE Recruit_Equip_Conventional_Shoes ADD COLUMN Averages INT AFTER web_link;
+
+//This is my first attempt to get the average value
+
+UPDATE Recruit_Equip_Conventional_Shoes 
+SET Recruit_Equip_Conventional_Shoes.Averages = (
+    SELECT AVG(id) 
+    FROM Recruit_Equip_Conventional_Shoes_Reviews
+);
+
+//This is my second attempt to get the average value
+
+UPDATE Recruit_Equip_Conventional_Shoes 
+SET Recruit_Equip_Conventional_Shoes.Averages = (
+    SELECT AVG(review_rating) 
+    FROM Recruit_Equip_Conventional_Shoes_Reviews
+    WHERE Recruit_Equip_Conventional_Shoes.id = Recruit_Equip_Conventional_Shoes_Reviews.product_number
+);
+
+//Auto Increment Reset
+
+ ALTER TABLE Recruit_Equip_AEMMA_Shirts AUTO_INCREMENT = 1;           
+ ALTER TABLE Recruit_Equip_AEMMA_Shirts_Reviews AUTO_INCREMENT = 1;      
+ ALTER TABLE Recruit_Equip_Athletic_Shoes AUTO_INCREMENT = 1;            
+ ALTER TABLE Recruit_Equip_Athletic_Shoes_Reviews AUTO_INCREMENT = 1;     
+ ALTER TABLE Recruit_Equip_Black_Pants AUTO_INCREMENT = 1;               
+ ALTER TABLE Recruit_Equip_Black_Pants_Reviews AUTO_INCREMENT = 1;       
+ ALTER TABLE Recruit_Equip_Conventional_Shoes AUTO_INCREMENT = 1;        
+ ALTER TABLE Recruit_Equip_Conventional_Shoes_Reviews AUTO_INCREMENT = 1;
+ ALTER TABLE Recruit_Equip_Fencing_Masks AUTO_INCREMENT = 1;             
+ ALTER TABLE Recruit_Equip_Fencing_Masks_Reviews AUTO_INCREMENT = 1;     
+ ALTER TABLE Recruit_Equip_Leather_Gloves AUTO_INCREMENT = 1;            
+ ALTER TABLE Recruit_Equip_Leather_Gloves_Reviews AUTO_INCREMENT = 1;    
+ ALTER TABLE Recruit_Equip_Period_Belt_Reviews AUTO_INCREMENT = 1;       
+ ALTER TABLE Recruit_Equip_Period_Belts AUTO_INCREMENT = 1;              
+ ALTER TABLE Recruit_Equip_Period_Gloves AUTO_INCREMENT = 1;             
+ ALTER TABLE Recruit_Equip_Period_Gloves_Reviews AUTO_INCREMENT = 1;     
+ ALTER TABLE Recruit_Equip_Period_Shoes AUTO_INCREMENT = 1;              
+ ALTER TABLE Recruit_Equip_Period_Shoes_Reviews AUTO_INCREMENT = 1;      
+ ALTER TABLE Recruit_Equip_Swords AUTO_INCREMENT = 1;                    
+ ALTER TABLE Recruit_Equip_Swords_Reviews AUTO_INCREMENT = 1;           
+ ALTER TABLE Recruit_Equip_White_Shirts AUTO_INCREMENT = 1;              
+ ALTER TABLE Recruit_Equip_White_Shirts_Reviews AUTO_INCREMENT = 1;
+ ALTER TABLE Scholar_Equip_Gambesons AUTO_INCREMENT = 1;
+ ALTER TABLE Scholar_Equip_Gambesons_Reviews AUTO_INCREMENT = 1;
+

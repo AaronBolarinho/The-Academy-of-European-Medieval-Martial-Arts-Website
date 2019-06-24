@@ -24,7 +24,6 @@ const connection = getConnection()
 
 // ----These Functions below are for Conventional Shoes
 
-// This gets the conventional shoes product data from database
 router1.get('/conventionalShoesProducts', (req, res) => {
   const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Conventional_Shoes'

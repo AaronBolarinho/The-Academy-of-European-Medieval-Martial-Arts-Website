@@ -19,43 +19,6 @@ class BlackPantsTab extends Component {
     }
   }
 
-  // This functon grabbs the database data as soon as possible in the react load cycle
-  componentWillMount() {
-    function status(response) {
-      if (response.status >= 200 && response.status < 300) {
-        return Promise.resolve(response)
-      } else {
-        return Promise.reject(new Error(response.statusText))
-      }
-    }
-
-    function json(response) {
-      return response.json()
-    }
-
-    fetch('http://localhost:3003/BlackPantsReviews')
-      .then(status)
-      .then(json)
-      .then((data) => {
-        this.setState({ reviews: data })
-        console.log('This is the component state after getting the reviews', this.state)
-      }).catch(function (error) {
-        console.log('Request failed', error)
-      })
-
-    fetch('http://localhost:3003/BlackPantsProducts')
-      .then(status)
-      .then(json)
-      .then((data) => {
-        this.setState({ products: data })
-        console.log('This is the component state after getting the products', this.state)
-      }).catch(function (error) {
-        console.log('Request failed', error)
-      })
-  }
-
-  // -----------------------------------------------------
-
     // These functions are used to achieve the list of averaged total ratings
   // in the main running shoes tab.
 

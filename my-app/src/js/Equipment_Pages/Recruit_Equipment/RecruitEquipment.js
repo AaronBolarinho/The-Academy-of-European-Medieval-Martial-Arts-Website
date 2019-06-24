@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import { TabContent, TabPane } from 'reactstrap'
+
 // ------These Are the Shoes Components
 import NavTabsShoes from './Shoes/NavTabsShoes.js'
 import GeneralInfoShoesTab from './Shoes/GeneralInfoShoesTab.js'
@@ -39,18 +40,12 @@ import '../../../css/Equipment/Recruit/RecruitEquipment.css'
 import '../../../css/Equipment/Recruit/AddReviewsModal.css'
 import LongswordLeft from '../../../css/images/Equipment/longswordLeft.png'
 import LongswordRight from '../../../css/images/Equipment/longswordRight.png'
+// -------This is my React-Redux connection
+import { connect } from 'react-redux'
 // ------This is the main componant
 class RecruitEquipment extends Component {
   constructor(props) {
     super(props)
-
-    this.toggleGp1 = this.toggleGp1.bind(this)
-    this.toggleGp2 = this.toggleGp2.bind(this)
-    this.toggleGp3 = this.toggleGp3.bind(this)
-    this.toggleGp4 = this.toggleGp4.bind(this)
-    this.toggleGp5 = this.toggleGp5.bind(this)
-    this.toggleGp6 = this.toggleGp6.bind(this)
-    this.toggleGp7 = this.toggleGp7.bind(this)
 
     this.state = {
       activeTabGp1: '1',
@@ -65,7 +60,7 @@ class RecruitEquipment extends Component {
 
   // These are the functions that govern the switching of tabs in each tabbed div
 
-  toggleGp1(tab) {
+  toggleGp1 = (tab) => {
     if (this.state.activeTabGp1 !== tab) {
       this.setState({
         activeTabGp1: tab,
@@ -79,7 +74,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp2(tab) {
+  toggleGp2 = (tab) => {
     if (this.state.activeTabGp2 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -93,7 +88,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp3(tab) {
+  toggleGp3 = (tab) => {
     if (this.state.activeTabGp3 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -107,7 +102,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp4(tab) {
+  toggleGp4 = (tab) => {
     if (this.state.activeTabGp4 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -121,7 +116,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp5(tab) {
+  toggleGp5 = (tab) => {
     if (this.state.activeTabGp5 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -135,7 +130,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp6(tab) {
+  toggleGp6 = (tab) => {
     if (this.state.activeTabGp6 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -149,7 +144,7 @@ class RecruitEquipment extends Component {
     }
   }
 
-  toggleGp7(tab) {
+  toggleGp7 = (tab) => {
     if (this.state.activeTabGp7 !== tab) {
       this.setState({
         activeTabGp1: '1',
@@ -163,14 +158,43 @@ class RecruitEquipment extends Component {
     }
   }
 
+  // This is involved in the redux element of the component
+  getData = (data) => {
+    this.props.getData(data)
+  }
+
+
   // -----------------------------------------------------
 
-  componentDidMount() {}
+  componentWillMount() {
+    Promise.all([fetch('http://localhost:3003/conventionalShoesProducts'), fetch('http://localhost:3003/conventionalShoesReviews'), fetch('http://localhost:3003/AthleticShoesProducts'), fetch('http://localhost:3003/AthleticShoesReviews'), fetch('http://localhost:3003/PeriodShoesProducts'), fetch('http://localhost:3003/PeriodShoesReviews'), fetch('http://localhost:3003/whiteShirtsProducts'), fetch('http://localhost:3003/whiteShirtsReviews'), fetch('http://localhost:3003/AEMMAShirtsProducts'), fetch('http://localhost:3003/AEMMAShirtsReviews'), fetch('http://localhost:3003/BlackPantsProducts'), fetch('http://localhost:3003/BlackPantsReviews'), fetch('http://localhost:3003/LeatherGlovesProducts'), fetch('http://localhost:3003/LeatherGlovesReviews'), fetch('http://localhost:3003/PeriodGlovesProducts'), fetch('http://localhost:3003/PeriodGlovesReviews'), fetch('http://localhost:3003/PeriodBeltsProducts'), fetch('http://localhost:3003/PeriodBeltsReviews'), fetch('http://localhost:3003/FencingMasksProducts'), fetch('http://localhost:3003/FencingMasksReviews'), fetch('http://localhost:3003/SwordsProducts'), fetch('http://localhost:3003/SwordsReviews')])
+
+      .then(([res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, res11, res12, res13, res14, res15, res16, res17, res18, res19, res20, res21, res22]) => {
+        return Promise.all([res1.json(), res2.json(), res3.json(), res4.json(), res5.json(), res6.json(), res7.json(), res8.json(), res9.json(), res10.json(), res11.json(), res12.json(), res13.json(), res14.json(), res15.json(), res16.json(), res17.json(), res18.json(), res19.json(), res20.json(), res21.json(), res22.json()])
+      })
+      .then(([res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, res11, res12, res13, res14, res15, res16, res17, res18, res19, res20, res21, res22]) => {      
+        this.setState({ conventionalShoesProducts: res1,
+          conventionalShoesReviews: res2, AthleticShoesProducts: res3,
+          AthleticShoesReviews: res4, PeriodShoesProducts: res5,
+          PeriodShoesReviews: res6, whiteShirtsProducts: res7,
+          whiteShirtsReviews: res8, AEMMAShirtsProducts: res9,
+          AEMMAShirtsReviews: res10, BlackPantsProducts: res11,
+          BlackPantsReviews: res12, LeatherGlovesProducts: res13,
+          LeatherGlovesReviews: res14, PeriodGlovesProducts: res15,
+          PeriodGlovesReviews: res16, PeriodBeltsProducts: res17,
+          PeriodBeltsReviews: res18, FencingMasksProducts: res19,
+          FencingMasksReviews: res20, SwordsProducts: res21,
+          SwordsReviews: res22 })
+        this.getData(this.state)
+      })
+  }
 
   // Below is the render function; this is what displays
   // the HTML on this page.
 
   render() {
+    console.log('These are the component state', this.state)
+    console.log('These are the component props', this.props)
     return (
       <div>
         <div className='backgroundDiv1'>
@@ -222,7 +246,7 @@ class RecruitEquipment extends Component {
                 <GeneralInfoShoesTab/>
               </TabPane>
               <TabPane tabId='2'>
-                <ConventionalShoesTab/>
+                <ConventionalShoesTab data={this.props.data}/>
               </TabPane>
               <TabPane tabId='3'>
                 <AthleticShoesTab/>
@@ -322,6 +346,21 @@ class RecruitEquipment extends Component {
   }
 }
 
-export default RecruitEquipment
+const mapStateToProps = (state) => {
+  return {
+    data: state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getData: (data) => {
+      // console.log('This is the dispatch data', data)
+      dispatch({ type: 'GET_DATA', data: data })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecruitEquipment)
 
 

@@ -48,37 +48,26 @@ class home extends Component {
   }
 
   componentDidMount() {
-    function status(response) {
-      if (response.status >= 200 && response.status < 300) {
-        return Promise.resolve(response)
-      } else {
-        return Promise.reject(new Error(response.statusText))
-      }
-    }
-
-    function json(response) {
-      return response.json()
-    }
-
-    fetch('http://localhost:3003/conventionalShoesProducts')
-      .then(status)
-      .then(json)
-      .then((data) => {
-        this.getData({ conventionalShoesProducts: data })
-      }).catch(function (error) {
-        console.log('Request failed', error)
-      })
-
-    let ratingsNumbers = {}
-
-    // const toObject = (arr) => {
-    //   for (let i = 0; i < arr.length; i++) {
-    //     ratingsNumbers[i] = arr[i]
-    //   }
-    //   return ratingsNumbers
-    // }
-    // console.log('this is the prop I want', this.props.data.conventionalShoesProducts.conventionalShoesProducts)
-    console.log('these are the ratings numbers', ratingsNumbers)
+//     function status(response) {
+//       if (response.status >= 200 && response.status < 300) {
+//         return Promise.resolve(response)
+//       } else {
+//         return Promise.reject(new Error(response.statusText))
+//       }
+//     }
+// 
+//     function json(response) {
+//       return response.json()
+//     }
+// 
+//     fetch('http://localhost:3003/conventionalShoesProducts')
+//       .then(status)
+//       .then(json)
+//       .then((data) => {
+//         this.getData({ conventionalShoesProducts: data })
+//       }).catch(function (error) {
+//         console.log('Request failed', error)
+//       })
   }
 
   render() {

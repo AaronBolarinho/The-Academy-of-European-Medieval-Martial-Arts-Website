@@ -12,22 +12,49 @@ class ConventionalShoes extends Component {
     }
   }
 
-  // This is the function that maps each tab's table data
-  getTableBodyAsReactElement() {
-    return (
-      <>
-      </>
-    )
-  }
-  //  -----------------------------------------------------
-
-  componentDidMount() {
-    console.log('this log ran', this.props)
-  }
-
   render() {
-    console.log('these are the conventionalShoesProps', this.props)
-    // console.log('these are the conventionalShoesProps array', this.props.data.shoesTest)
+    const products = this.props.data.conventionalShoesProducts
+    const reviews = this.props.data.conventionalShoesReviews
+
+    const ProductsTable = () => (
+      <div className='table-wrapper-scroll-y my-custom-scrollbar'>
+        <Table hover className=' tableProportions'>
+          <thead>
+            <tr className='d-flex'>
+              <th scope='col' className='col-1'>#</th>
+              <th scope='col' className='col-4'>Product Name</th>
+              <th scope='col' className='col-2'>Website Link</th>
+              <th scope='col' className='col-2'>Overall Rating</th>
+              <th scope='col' className='col-3'>Reviews and Ratings</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((item, key) => {
+              return (
+                <tr className='d-flex container' key={key}>
+                  <td scope='col' className='col-1'>{item.id}</td>
+                  <td scope='col' className='col-4'>{item.brand_name}</td>
+                  <td scope='col' className='col-2'>
+                    <a href={item.web_link}
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                            Link
+                    </a>
+                  </td>
+                  <td scope='col' className='col-2'>{item.Averages}</td>
+                  <td scope='col' className='col-3'>
+                    <ConventionalShoesReviewsModal allReviews={reviews}
+                      tableKey={item.id}
+                      productName={item.brand_name} />
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </Table>
+      </div>
+    )
+
     return (
 	   <div>
 	     <Row>
@@ -67,28 +94,13 @@ class ConventionalShoes extends Component {
 	              &nbsp;&nbsp;Recommended Conventional Shoes&nbsp;&nbsp;
 	                <i className='fas fa-chess-pawn'></i>
 	              </p>
-	              <div className='table-wrapper-scroll-y my-custom-scrollbar'>
-	                <Table hover className=' tableProportions'>
-	                  <thead>
-	                    <tr className='d-flex'>
-	                      <th scope='col' className='col-1'>#</th>
-	                      <th scope='col' className='col-4'>Product Name</th>
-	                      <th scope='col' className='col-2'>Website Link</th>
-	                      <th scope='col' className='col-2'>Overall Rating</th>
-	                      <th scope='col' className='col-3'>Reviews and Ratings</th>
-	                    </tr>
-	                  </thead>
-	                  <tbody>
-	                    {this.getTableBodyAsReactElement()}
-	                  </tbody>
-	                </Table>
-	              </div>
+              <ProductsTable />
 	            </div>
 	          </Col>
 	          <Col sm='3'>
             <p className='formTitle'>
               <i className='fas fa-chess-pawn'></i>
-            &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
+              &nbsp;&nbsp;Recommend A Product!&nbsp;&nbsp;
               <i className='fas fa-chess-pawn'></i>
             </p>
             <Form action='/conventionalShoesProductAdd' method='POST'>

@@ -17,15 +17,7 @@ ALTER TABLE Recruit_Equip_Conventional_Shoes_Reviews AUTO_INCREMENT = 1;
 
 ALTER TABLE Recruit_Equip_Conventional_Shoes ADD COLUMN Averages INT AFTER web_link;
 
-//This is my first attempt to get the average value
-
-UPDATE Recruit_Equip_Conventional_Shoes 
-SET Recruit_Equip_Conventional_Shoes.Averages = (
-    SELECT AVG(id) 
-    FROM Recruit_Equip_Conventional_Shoes_Reviews
-);
-
-//This is my second attempt to get the average value
+//This is the Averages Value
 
 UPDATE Recruit_Equip_Conventional_Shoes 
 SET Recruit_Equip_Conventional_Shoes.Averages = (

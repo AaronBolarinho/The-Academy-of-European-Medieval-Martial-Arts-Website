@@ -7,94 +7,10 @@ class PeriodShoes extends Component {
   constructor(props) {
     super(props)
 
-    this.overallRating = this.overallRating.bind(this)
-    this.getAverage = this.getAverage.bind(this)
-    this.grabVariable = this.grabVariable.bind(this)
-
     this.state = {
-      modal: false,
-      totalRatings: [],
-      products: [],
-      reviews: []
+      modal: false
     }
   }
-
-    // These functions are used to achieve the list of averaged total ratings
-  // in the main running shoes tab.
-
-  getAverage(array) {
-    let count = array.length - 1
-    let arrayAverage = array
-    arrayAverage = array.reduce((previous, current) => current += previous)
-    arrayAverage /= count
-    return arrayAverage
-  }
-
-  grabVariable(rating) {
-    let totalRatings = this.state.totalRatings
-    if ((rating !== undefined) && (totalRatings.length <= 3)) {
-      this.setState(prevState => ({
-        totalRatings: [...prevState.totalRatings, rating.toFixed(1)]
-      }))
-    }
-  }
-
-  overallRating(filteredReviews) {
-    let rv = {}
-    const totalRating = [0]
-
-    function toObject(arr) {
-      for (let i = 0; i < arr.length; i++) {
-        rv[i] = arr[i]
-      }
-      return rv
-    }
-
-    toObject(filteredReviews)
-
-    for (let elem in rv) {
-      if (0 === 0) {
-        let singleObject = rv[elem]
-        totalRating.push(singleObject.review_rating);
-      }
-    }
-    let total = this.getAverage(totalRating)
-    this.grabVariable(total)
-  }
-  // -----------------------------------------------------
-
-  // This is the function that maps each tab's table data
-  getTableBodyAsReactElement() {
-    let products = this.state.products
-    let reviews = this.state.reviews
-    let finalRatings = this.state.totalRatings
-    return (
-      <>
-        {products.map((products) => (
-          <tr className='d-flex container'>
-            <th scope='row' className='col-1'>{products.id}</th>
-            <td className='col-4'>{products.brand_name}</td>
-            <td className='col-2'>
-              <a href={products.web_link}
-                target='_blank'
-                rel='noopener noreferrer'>
-                Link
-              </a>
-            </td>
-            {this.grabVariable()}
-            <td className='col-2'>{finalRatings[products.id - 1]}</td>
-            <td className='col-3'>
-              <PeriodShoesReviewsModal allReviews={reviews}
-                tableKey={products.id}
-                overallRating={this.overallRating}
-                productName={products.brand_name} />
-            </td>
-          </tr>
-        ))}
-      </>
-    )
-  }
-  //  -----------------------------------------------------
 
   render() {
     return (

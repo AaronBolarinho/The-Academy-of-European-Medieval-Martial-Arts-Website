@@ -25,7 +25,6 @@ const connection = getConnection()
 // ----These Functions below are for Conventional Shoes
 
 router1.get('/conventionalShoesProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Conventional_Shoes'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -39,7 +38,6 @@ router1.get('/conventionalShoesProducts', (req, res) => {
 
 // This gets the conventional shoes reviews data from database
 router1.get('/conventionalShoesReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Conventional_Shoes_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -55,7 +53,6 @@ router1.get('/conventionalShoesReviews', (req, res) => {
 router1.post('/conventionalShoesProductAdd', (req, res) => {
   const brandName = req.body.createBrandName
   const webLink = req.body.createWebLink
-
   const queryString = 'INSERT INTO Recruit_Equip_Conventional_Shoes(brand_name, web_link) VALUES (?, ?)'
   getConnection().query(queryString, [brandName, webLink], (err, results, fields) => {
     if (err) {
@@ -63,12 +60,11 @@ router1.post('/conventionalShoesProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
-  res.redirect('http://localhost:3000')
-  // res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
+  // res.redirect('http://localhost:3000')
+  res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
 })
 
@@ -78,7 +74,6 @@ router1.post('/conventionalShoesReviewsAdd', (req, res) => {
   const ReviewerName = req.body.createReviewerName
   const Rating = req.body.createRating
   const ReviewText = req.body.createReviewText
-
   const queryString = 'INSERT INTO Recruit_Equip_Conventional_Shoes_Reviews(product_number, reviewer_name, review_text, review_rating) VALUES (?, ?, ?, ?)'
   getConnection().query(queryString, [ProductNumber, ReviewerName, ReviewText, Rating], (err, results, fields) => {
     if (err) {
@@ -111,7 +106,6 @@ router1.post('/conventionalShoesReviewsAdd', (req, res) => {
 
 // This gets the Athletic Shoes product data from database
 router1.get('/AthleticShoesProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Athletic_Shoes'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -125,7 +119,6 @@ router1.get('/AthleticShoesProducts', (req, res) => {
 
 // This gets the Athletic Shoes reviews data from database
 router1.get('/AthleticShoesReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Athletic_Shoes_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -149,7 +142,6 @@ router1.post('/AthleticShoesProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -175,6 +167,17 @@ router1.post('/AthleticShoesReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+    const queryString1 = 'UPDATE Recruit_Equip_Athletic_Shoes SET Recruit_Equip_Athletic_Shoes.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Athletic_Shoes_Reviews WHERE Recruit_Equip_Athletic_Shoes.id = Recruit_Equip_Athletic_Shoes_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -186,7 +189,6 @@ router1.post('/AthleticShoesReviewsAdd', (req, res) => {
 
 // This gets the Period Shoes product data from database
 router1.get('/PeriodShoesProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Shoes'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -200,7 +202,6 @@ router1.get('/PeriodShoesProducts', (req, res) => {
 
 // This gets the Period Shoes reviews data from database
 router1.get('/PeriodShoesReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Shoes_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -224,7 +225,6 @@ router1.post('/PeriodShoesProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -250,6 +250,17 @@ router1.post('/PeriodShoesReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Period_Shoes SET Recruit_Equip_Period_Shoes.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Period_Shoes_Reviews WHERE Recruit_Equip_Period_Shoes.id = Recruit_Equip_Period_Shoes_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -261,7 +272,6 @@ router1.post('/PeriodShoesReviewsAdd', (req, res) => {
 
 // This gets the White Shirts product data from database
 router1.get('/whiteShirtsProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_White_Shirts'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -275,7 +285,6 @@ router1.get('/whiteShirtsProducts', (req, res) => {
 
 // This gets the White Shirts reviews data from database
 router1.get('/whiteShirtsReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_White_Shirts_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -299,7 +308,6 @@ router1.post('/whiteShirtsProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -325,6 +333,17 @@ router1.post('/whiteShirtsReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_White_Shirts SET Recruit_Equip_White_Shirts.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_White_Shirts_Reviews WHERE Recruit_Equip_White_Shirts.id = Recruit_Equip_White_Shirts_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -336,7 +355,6 @@ router1.post('/whiteShirtsReviewsAdd', (req, res) => {
 
 // This gets the AEMMA Shirts product data from database
 router1.get('/AEMMAShirtsProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_AEMMA_Shirts'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -350,7 +368,6 @@ router1.get('/AEMMAShirtsProducts', (req, res) => {
 
 // This gets the AEMMA Shirts reviews data from database
 router1.get('/AEMMAShirtsReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_AEMMA_Shirts_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -374,7 +391,6 @@ router1.post('/AEMMAShirtsProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -400,6 +416,17 @@ router1.post('/AEMMAShirtsReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_AEMMA_Shirts SET Recruit_Equip_AEMMA_Shirts.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_AEMMA_Shirts_Reviews WHERE Recruit_Equip_AEMMA_Shirts.id = Recruit_Equip_AEMMA_Shirts_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -411,7 +438,6 @@ router1.post('/AEMMAShirtsReviewsAdd', (req, res) => {
 
 // This gets the Black Pants product data from database
 router1.get('/BlackPantsProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Black_Pants'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -425,7 +451,6 @@ router1.get('/BlackPantsProducts', (req, res) => {
 
 // This gets the Black Pants reviews data from database
 router1.get('/BlackPantsReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Black_Pants_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -449,7 +474,6 @@ router1.post('/BlackPantsProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -475,6 +499,17 @@ router1.post('/BlackPantsReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Black_Pants SET Recruit_Equip_Black_Pants.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Black_Pants_Reviews WHERE Recruit_Equip_Black_Pants.id = Recruit_Equip_Black_Pants_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -486,7 +521,6 @@ router1.post('/BlackPantsReviewsAdd', (req, res) => {
 
 // This gets the Leather Gloves product data from database
 router1.get('/LeatherGlovesProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Leather_Gloves'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -500,7 +534,6 @@ router1.get('/LeatherGlovesProducts', (req, res) => {
 
 // This gets the Leather Gloves reviews data from database
 router1.get('/LeatherGlovesReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Leather_Gloves_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -524,7 +557,6 @@ router1.post('/LeatherGlovesProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -550,6 +582,17 @@ router1.post('/LeatherGlovesReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Leather_Gloves SET Recruit_Equip_Leather_Gloves.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Leather_Gloves_Reviews WHERE Recruit_Equip_Leather_Gloves.id = Recruit_Equip_Leather_Gloves.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -561,7 +604,6 @@ router1.post('/LeatherGlovesReviewsAdd', (req, res) => {
 
 // This gets the Period Gloves product data from database
 router1.get('/PeriodGlovesProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Gloves'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -575,7 +617,6 @@ router1.get('/PeriodGlovesProducts', (req, res) => {
 
 // This gets the Period Gloves reviews data from database
 router1.get('/PeriodGlovesReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Gloves_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -599,7 +640,6 @@ router1.post('/PeriodGlovesProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -625,6 +665,17 @@ router1.post('/PeriodGlovesReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Period_Gloves SET Recruit_Equip_Period_Gloves.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Period_Gloves_Reviews WHERE Recruit_Equip_Period_Gloves.id = Recruit_Equip_Period_Gloves_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -636,7 +687,6 @@ router1.post('/PeriodGlovesReviewsAdd', (req, res) => {
 
 // This gets the Period Belts product data from database
 router1.get('/PeriodBeltsProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Belts'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -650,7 +700,6 @@ router1.get('/PeriodBeltsProducts', (req, res) => {
 
 // This gets the Period Belts reviews data from database
 router1.get('/PeriodBeltsReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Period_Belt_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -674,7 +723,6 @@ router1.post('/PeriodBeltsProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -700,6 +748,17 @@ router1.post('/PeriodBeltsReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Period_Belts SET Recruit_Equip_Period_Belts.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Period_Belt_Reviews WHERE Recruit_Equip_Period_Belts.id = Recruit_Equip_Period_Belt_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -711,7 +770,6 @@ router1.post('/PeriodBeltsReviewsAdd', (req, res) => {
 
 // This gets the Masks product data from database
 router1.get('/FencingMasksProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Fencing_Masks'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -725,7 +783,6 @@ router1.get('/FencingMasksProducts', (req, res) => {
 
 // This gets the Masks reviews data from database
 router1.get('/FencingMasksReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Fencing_Masks_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -749,7 +806,6 @@ router1.post('/FencingMasksProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -775,6 +831,17 @@ router1.post('/FencingMasksReviewsAdd', (req, res) => {
     console.log('inserted new data!')
     res.end()
   })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Fencing_Masks SET Recruit_Equip_Fencing_Masks.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Fencing_Masks_Reviews WHERE Recruit_Equip_Fencing_Masks.id = Recruit_Equip_Fencing_Masks_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
+    res.end()
+  })
   // res.redirect('http://localhost:3000/RecruitEquipment')
   res.redirect('http://aemma.local/members_only/content/mo_equip_recruit.php')
   res.end()
@@ -786,7 +853,6 @@ router1.post('/FencingMasksReviewsAdd', (req, res) => {
 
 // This gets the Swords product data from database
 router1.get('/SwordsProducts', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Swords'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -800,7 +866,6 @@ router1.get('/SwordsProducts', (req, res) => {
 
 // This gets the Swords reviews data from database
 router1.get('/SwordsReviews', (req, res) => {
-  const connection = getConnection()
   const queryString = 'SELECT * FROM Recruit_Equip_Swords_Reviews'
   connection.query(queryString, (err, rows, fields) => {
     if (err) {
@@ -824,7 +889,6 @@ router1.post('/SwordsProductAdd', (req, res) => {
       res.sendStatus(500)
       return
     }
-
     console.log('inserted new data!')
     res.end()
   })
@@ -848,6 +912,17 @@ router1.post('/SwordsReviewsAdd', (req, res) => {
       return
     }
     console.log('inserted new data!')
+    res.end()
+  })
+
+  const queryString1 = 'UPDATE Recruit_Equip_Swords SET Recruit_Equip_Swords.Averages = (SELECT AVG(review_rating) FROM Recruit_Equip_Swords_Reviews WHERE Recruit_Equip_Swords.id = Recruit_Equip_Swords_Reviews.product_number)'
+  getConnection().query(queryString1, (err, results, fields) => {
+    if (err) {
+      console.log('Failed to add a new data' + err)
+      res.sendStatus(500)
+      return
+    }
+    console.log('updated based on new data!')
     res.end()
   })
   // res.redirect('http://localhost:3000/RecruitEquipment')

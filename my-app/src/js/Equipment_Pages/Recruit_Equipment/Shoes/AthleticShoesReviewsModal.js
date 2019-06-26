@@ -13,40 +13,31 @@ class AthleticShoesReviewsModal extends React.Component {
       productNumber: this.props.tableKey,
       value: 250
     }
-
-    this.toggle = this.toggle.bind(this)
-    this.toggleReviewForm = this.toggleReviewForm.bind(this)
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     let message = event.target.value
     this.setState({ value: 250 - message.length })
   }
 
-  toggle() {
+  toggle = () => {
     console.log('Toggle ran')
     this.setState(prevState => ({
       modal: !prevState.modal
     }))
   }
 
-  toggleReviewForm() {
+  toggleReviewForm = () => {
     this.setState(state => ({ collapse: !state.collapse }))
-  }
-
-  componentDidMount() {
   }
 
   render() {
     let allReviews = this.props.allReviews
-    let key = this.props.tableKey
+    let tablekey = this.props.tableKey
 
     let specificReviews = allReviews.filter(function (review) {
-      return review.product_number === key
+      return review.product_number === tablekey
     })
-
-    this.props.overallRating(specificReviews, key)
 
     return (
       <div>
@@ -68,12 +59,12 @@ class AthleticShoesReviewsModal extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {specificReviews.map(({ id, product_number, reviewer_name, review_text, review_rating }) => {
+                  {specificReviews.map((item, key) => {
                     return (
-                      <tr className='d-flex'>
-                        <td key={id} className='col-2'>{reviewer_name}</td>
-                        <td key={id} className='col-8'>{review_text}</td>
-                        <td key={id} className='col-2'>{review_rating}</td>
+                      <tr className='d-flex' key={key}>
+                        <td className='col-2'>{item.reviewer_name}</td>
+                        <td className='col-8'>{item.review_text}</td>
+                        <td className='col-2'>{item.review_rating}</td>
                       </tr>
                     )
                   })}
@@ -83,7 +74,7 @@ class AthleticShoesReviewsModal extends React.Component {
             <Collapse isOpen={this.state.collapse}>
               <Card>
                 <CardBody>
-                  <Form action='/AthleticShoesReviewsAdd' method='POST' target='_blank'>
+                  <Form action='/AthleticShoesReviewsAdd' method='POST'>
                     <Row form>
                       <Col md={6}>
                         <FormGroup className='productNumber'>
